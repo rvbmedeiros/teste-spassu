@@ -90,6 +90,7 @@
     "hideStory": "Hide story",
     "storyTitle": "Flow narrative",
     "emptyStory": "No narrative available for this flow.",
+    "mergePoint": "Merge point",
     "openNodeDetails": "View node details",
     "closeNodeDetails": "Close details",
     "nodeDetailsTitle": "Node details",

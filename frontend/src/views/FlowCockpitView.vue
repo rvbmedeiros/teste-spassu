@@ -58,6 +58,14 @@ const selectedNode = computed(() => {
   }
   return selectedWorkflow.value.nodes.find(node => node.nodeId === selectedNodeId.value) ?? null
 })
+const isNarrativePathSelected = (path: string) => {
+  if (!selectedNode.value) {
+    return false
+  }
+
+  return path.includes(selectedNode.value.name)
+}
+
 const typeLabel = (type: NodeType) => {
   if (type === 'START_EVENT') return t('flowcockpit.nodeType.start')
   if (type === 'END_EVENT') return t('flowcockpit.nodeType.end')
@@ -172,8 +180,19 @@ const selectNode = (nodeId: string) => {
             <p class="text-sm font-semibold text-(--ui-text)">{{ t('flowcockpit.storyTitle') }}</p>
             <div v-if="store.loadingNarrative" class="mt-2 text-sm text-(--ui-text-muted)">{{ t('common.loading') }}</div>
             <div v-else-if="store.narrativeError" class="mt-2 text-sm text-(--ui-danger)">{{ store.narrativeError }}</div>
-            <ol v-else-if="store.narrative?.paths?.length" class="mt-2 space-y-1 text-sm text-(--ui-text-muted)">
-              <li v-for="(path, idx) in store.narrative.paths" :key="path">{{ idx + 1 }}. {{ path }}</li>
+            <ol v-else-if="store.narrative?.paths?.length" class="mt-2 space-y-2 text-sm text-(--ui-text-muted)">
+              <li
+                v-for="(path, idx) in store.narrative.paths"
+                :key="path"
+                :data-test="`narrative-path-${idx}`"
+                class="rounded-2xl border px-3 py-2 transition-colors"
+                :class="isNarrativePathSelected(path)
+                  ? 'border-(--ui-brand) bg-(--ui-brand-soft) text-(--ui-text)'
+                  : 'border-(--ui-border) bg-(--ui-panel)'
+                "
+              >
+                {{ idx + 1 }}. {{ path }}
+              </li>
             </ol>
             <p v-else class="mt-2 text-sm text-(--ui-text-muted)">{{ t('flowcockpit.emptyStory') }}</p>
           </div>
@@ -182,6 +201,7 @@ const selectNode = (nodeId: string) => {
             :nodes="selectedWorkflow.nodes || []"
             :edges="selectedWorkflow.edges || []"
             :type-label="typeLabel"
+            :selected-node-id="selectedNodeId"
             @select-node="selectNode"
           />
         </BaseCard>

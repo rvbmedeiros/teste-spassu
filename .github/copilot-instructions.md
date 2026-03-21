@@ -346,6 +346,7 @@ Usuários de teste: `admin/admin123` (ADMIN) | `usuario/usuario123` (USER, somen
 - **Pinia é o único ViewModel** — nunca buscar dados via `fetch`/`axios` diretamente em componentes Vue.
 - **Todo secret Java vai para o Vault** — nunca colocar credencial em `application.yml`.
 - **Não rode comandos mvn e npm sem pedir permissão antes ao usuário**
+- **Em toda sessão de Copilot Chat que implemente qualquer funcionalidade, correção ou refatoração, é obrigatório implementar também os testes UT/SIT correspondentes, sem exceção.**
 
 ---
 

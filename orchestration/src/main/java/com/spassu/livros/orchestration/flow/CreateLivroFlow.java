@@ -6,6 +6,7 @@ import com.spassu.livros.orchestration.dto.LivroResponse;
 import com.spassu.livros.orchestration.flowcockpit.FlowBranch;
 import com.spassu.livros.orchestration.flowcockpit.FlowDefinition;
 import com.spassu.livros.orchestration.flowcockpit.FlowEndEvent;
+import com.spassu.livros.orchestration.flowcockpit.GatewayExecutionCoordinator;
 import com.spassu.livros.orchestration.flowcockpit.FlowGateway;
 import com.spassu.livros.orchestration.flowcockpit.FlowStartEvent;
 import com.spassu.livros.orchestration.flowcockpit.FlowStep;
@@ -13,6 +14,8 @@ import com.spassu.livros.orchestration.flowcockpit.NodeType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
+
+import java.util.Map;
 
 /**
  * Flow: Criar Livro
@@ -37,7 +40,7 @@ import reactor.core.publisher.Mono;
     description = "Decide se o fluxo pode continuar",
     type = NodeType.EXCLUSIVE_GATEWAY,
     branches = {
-        @FlowBranch(label = "Sim", nextStep = "gw-prepare"),
+        @FlowBranch(label = "Sim", nextStep = "gw-prepare", edgeIntent = "validation-pass"),
         @FlowBranch(label = "Não", nextStep = "fim-invalido", edgeIntent = "validation-fail")
     }
 )
@@ -56,9 +59,11 @@ import reactor.core.publisher.Mono;
 public class CreateLivroFlow {
 
     private final MicroserviceClient client;
+    private final GatewayExecutionCoordinator gatewayExecutionCoordinator;
 
-    public CreateLivroFlow(MicroserviceClient client) {
+    public CreateLivroFlow(MicroserviceClient client, GatewayExecutionCoordinator gatewayExecutionCoordinator) {
         this.client = client;
+        this.gatewayExecutionCoordinator = gatewayExecutionCoordinator;
     }
 
     @FlowStep(
@@ -124,7 +129,50 @@ public class CreateLivroFlow {
 
     /** Entry point called by the controller — chains all steps in order. */
     public Mono<LivroResponse> execute(LivroRequest request) {
-        return validarPayload(request)
-                .then(persistir(request));
+        String validationIntent = evaluatePayloadGatewayIntent(request);
+
+        return gatewayExecutionCoordinator.routeExclusive(
+                "create-livro",
+                "gw-validacao",
+                validationIntent,
+                Map.of(
+                        "validation-pass", () -> validarPayload(request)
+                                .then(gatewayExecutionCoordinator.runParallel(
+                                        "create-livro",
+                                        "gw-prepare",
+                                        Map.of(
+                                                "check-authors", () -> validarAutores(request),
+                                                "check-subjects", () -> validarAssuntos(request)
+                                        )
+                                ))
+                                .then(persistir(request)),
+                        "validation-fail", () -> Mono.error(new IllegalArgumentException("Payload invalido para criação de livro"))
+                )
+        );
+    }
+
+    private String evaluatePayloadGatewayIntent(LivroRequest request) {
+        if (request == null) {
+            return "validation-fail";
+        }
+        if (request.titulo() == null || request.titulo().isBlank()) {
+            return "validation-fail";
+        }
+        if (request.editora() == null || request.editora().isBlank()) {
+            return "validation-fail";
+        }
+        if (request.edicao() == null || request.edicao() < 1) {
+            return "validation-fail";
+        }
+        if (request.valor() == null || request.valor().signum() <= 0) {
+            return "validation-fail";
+        }
+        if (request.autoresCodAu() == null || request.autoresCodAu().isEmpty()) {
+            return "validation-fail";
+        }
+        if (request.assuntosCodAs() == null || request.assuntosCodAs().isEmpty()) {
+            return "validation-fail";
+        }
+        return "validation-pass";
     }
 }

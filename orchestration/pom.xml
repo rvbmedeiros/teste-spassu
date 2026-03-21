@@ -122,10 +122,44 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <configuration>
+              <compilerArgs>
+                <arg>-processorpath</arg>
+                <arg>${project.build.directory}/flow-processor</arg>
+                <arg>-processor</arg>
+                <arg>com.spassu.livros.orchestration.flowcockpit.processor.FlowDefinitionProcessor</arg>
+              </compilerArgs>
+            </configuration>
+          </execution>
+          <execution>
+            <id>bootstrap-flow-processor</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <configuration>
+              <proc>none</proc>
+              <outputDirectory>${project.build.directory}/flow-processor</outputDirectory>
+              <includes>
+                <include>com/spassu/livros/orchestration/flowcockpit/processor/**</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/observability/**</exclude>
+            <exclude>**/flowcockpit/FlowRegistry.class</exclude>
+            <exclude>**/flowcockpit/FlowWebSocketHandler.class</exclude>
+          </excludes>
+        </configuration>
       </plugin>
     </plugins>
   </build>

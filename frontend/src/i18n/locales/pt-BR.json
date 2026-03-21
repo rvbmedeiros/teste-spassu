@@ -90,6 +90,7 @@
     "hideStory": "Ocultar história",
     "storyTitle": "Narrativa do fluxo",
     "emptyStory": "Nenhuma narrativa disponível para este fluxo.",
+    "mergePoint": "Ponto de merge",
     "openNodeDetails": "Ver detalhes do nó",
     "closeNodeDetails": "Fechar detalhes",
     "nodeDetailsTitle": "Detalhes do nó",

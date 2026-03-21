@@ -3,17 +3,22 @@ package com.spassu.livros.orchestration.flow;
 import com.spassu.livros.orchestration.client.MicroserviceClient;
 import com.spassu.livros.orchestration.dto.AssuntoRequest;
 import com.spassu.livros.orchestration.dto.AssuntoResponse;
+import com.spassu.livros.orchestration.flowcockpit.GatewayExecutionCoordinator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Mono;
 
+import java.util.Map;
+import java.util.function.Supplier;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
+import static org.mockito.ArgumentMatchers.anyMap;
+import static org.mockito.ArgumentMatchers.eq;
 
 @ExtendWith(MockitoExtension.class)
 class AssuntoFlowsTest {
@@ -21,20 +26,26 @@ class AssuntoFlowsTest {
     @Mock
     private MicroserviceClient client;
 
-    @InjectMocks
-    private CreateAssuntoFlow createFlow;
+    @Mock
+    private GatewayExecutionCoordinator gatewayExecutionCoordinator;
 
-    @InjectMocks
+    @org.mockito.InjectMocks
     private UpdateAssuntoFlow updateFlow;
 
-    @InjectMocks
+    @org.mockito.InjectMocks
     private DeleteAssuntoFlow deleteFlow;
 
     @Test
     @DisplayName("create flow deve persistir assunto")
     void createFlow_devePersistirAssunto() {
+        CreateAssuntoFlow createFlow = new CreateAssuntoFlow(client, gatewayExecutionCoordinator);
         var request = new AssuntoRequest("Arquitetura");
         var response = new AssuntoResponse(1, "Arquitetura");
+        given(gatewayExecutionCoordinator.routeExclusive(eq("create-assunto"), eq("gw-validacao"), eq("validation-pass"), anyMap()))
+                .willAnswer(invocation -> {
+                    Map<String, Supplier<Mono<AssuntoResponse>>> routes = invocation.getArgument(3);
+                    return routes.get("validation-pass").get();
+                });
         given(client.criarAssunto(request)).willReturn(Mono.just(response));
 
         var result = createFlow.execute(request).block();

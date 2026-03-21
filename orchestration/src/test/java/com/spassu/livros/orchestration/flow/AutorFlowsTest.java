@@ -3,17 +3,22 @@ package com.spassu.livros.orchestration.flow;
 import com.spassu.livros.orchestration.client.MicroserviceClient;
 import com.spassu.livros.orchestration.dto.AutorRequest;
 import com.spassu.livros.orchestration.dto.AutorResponse;
+import com.spassu.livros.orchestration.flowcockpit.GatewayExecutionCoordinator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Mono;
 
+import java.util.Map;
+import java.util.function.Supplier;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
+import static org.mockito.ArgumentMatchers.anyMap;
+import static org.mockito.ArgumentMatchers.eq;
 
 @ExtendWith(MockitoExtension.class)
 class AutorFlowsTest {
@@ -21,20 +26,26 @@ class AutorFlowsTest {
     @Mock
     private MicroserviceClient client;
 
-    @InjectMocks
-    private CreateAutorFlow createFlow;
+    @Mock
+    private GatewayExecutionCoordinator gatewayExecutionCoordinator;
 
-    @InjectMocks
+    @org.mockito.InjectMocks
     private UpdateAutorFlow updateFlow;
 
-    @InjectMocks
+    @org.mockito.InjectMocks
     private DeleteAutorFlow deleteFlow;
 
     @Test
     @DisplayName("create flow deve persistir autor")
     void createFlow_devePersistirAutor() {
+        CreateAutorFlow createFlow = new CreateAutorFlow(client, gatewayExecutionCoordinator);
         var request = new AutorRequest("Martin Fowler");
         var response = new AutorResponse(1, "Martin Fowler");
+        given(gatewayExecutionCoordinator.routeExclusive(eq("create-autor"), eq("gw-validacao"), eq("validation-pass"), anyMap()))
+                .willAnswer(invocation -> {
+                    Map<String, Supplier<Mono<AutorResponse>>> routes = invocation.getArgument(3);
+                    return routes.get("validation-pass").get();
+                });
         given(client.criarAutor(request)).willReturn(Mono.just(response));
 
         var result = createFlow.execute(request).block();

@@ -7,12 +7,15 @@ import com.spassu.livros.orchestration.flowcockpit.FlowBranch;
 import com.spassu.livros.orchestration.flowcockpit.FlowDefinition;
 import com.spassu.livros.orchestration.flowcockpit.FlowEndEvent;
 import com.spassu.livros.orchestration.flowcockpit.FlowGateway;
+import com.spassu.livros.orchestration.flowcockpit.GatewayExecutionCoordinator;
 import com.spassu.livros.orchestration.flowcockpit.FlowStartEvent;
 import com.spassu.livros.orchestration.flowcockpit.FlowStep;
 import com.spassu.livros.orchestration.flowcockpit.NodeType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
+
+import java.util.Map;
 
 @Slf4j
 @Component
@@ -32,7 +35,7 @@ import reactor.core.publisher.Mono;
     description = "Decide continuidade da criação",
     type = NodeType.EXCLUSIVE_GATEWAY,
     branches = {
-        @FlowBranch(label = "Sim", nextStep = "persistir"),
+        @FlowBranch(label = "Sim", nextStep = "persistir", edgeIntent = "validation-pass"),
         @FlowBranch(label = "Não", nextStep = "fim-invalido", edgeIntent = "validation-fail")
     }
 )
@@ -41,9 +44,11 @@ import reactor.core.publisher.Mono;
 public class CreateAutorFlow {
 
     private final MicroserviceClient client;
+    private final GatewayExecutionCoordinator gatewayExecutionCoordinator;
 
-    public CreateAutorFlow(MicroserviceClient client) {
+    public CreateAutorFlow(MicroserviceClient client, GatewayExecutionCoordinator gatewayExecutionCoordinator) {
         this.client = client;
+        this.gatewayExecutionCoordinator = gatewayExecutionCoordinator;
     }
 
     @FlowStep(
@@ -77,7 +82,18 @@ public class CreateAutorFlow {
     }
 
     public Mono<AutorResponse> execute(AutorRequest request) {
-        return validarPayload(request)
-                .then(persistir(request));
+        String validationIntent = (request != null && request.nome() != null && !request.nome().isBlank())
+            ? "validation-pass"
+            : "validation-fail";
+
+        return gatewayExecutionCoordinator.routeExclusive(
+            "create-autor",
+            "gw-validacao",
+            validationIntent,
+            Map.of(
+                "validation-pass", () -> validarPayload(request).then(persistir(request)),
+                "validation-fail", () -> Mono.error(new IllegalArgumentException("Payload invalido para criação de autor"))
+            )
+        );
     }
 }

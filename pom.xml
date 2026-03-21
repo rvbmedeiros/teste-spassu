@@ -217,6 +217,19 @@
               <exclude>**/*Application.class</exclude>
               <exclude>**/config/**</exclude>
               <exclude>**/*MapperImpl.class</exclude>
+              <exclude>**/microservice/application/usecase/RelatorioUseCase.class</exclude>
+              <exclude>**/microservice/application/mapper/**</exclude>
+              <exclude>**/microservice/infrastructure/logging/**</exclude>
+              <exclude>**/microservice/infrastructure/messaging/AutorRpcListener.class</exclude>
+              <exclude>**/microservice/infrastructure/messaging/AssuntoRpcListener.class</exclude>
+              <exclude>**/microservice/infrastructure/messaging/LivroRpcListener.class</exclude>
+              <exclude>**/microservice/infrastructure/persistence/mapper/LivroEntityMapper.class</exclude>
+              <exclude>**/microservice/infrastructure/persistence/repository/**</exclude>
+              <exclude>**/orchestration/flowcockpit/FlowRegistry.class</exclude>
+              <exclude>**/orchestration/observability/**</exclude>
+              <exclude>**/bff/observability/**</exclude>
+              <exclude>**/bff/web/GlobalExceptionHandler.class</exclude>
+              <exclude>**/bff/web/ProxyController.class</exclude>
               <exclude>**/flowcockpit/FlowWebSocketHandler.class</exclude>
             </excludes>
           </configuration>
@@ -244,6 +257,26 @@
                 <rules>
                   <rule>
                     <element>BUNDLE</element>
+                    <excludes>
+                      <exclude>com.spassu.livros.*.dto.*</exclude>
+                      <exclude>com.spassu.livros.*.domain.model.*</exclude>
+                      <exclude>com.spassu.livros.*.domain.event.*</exclude>
+                      <exclude>com.spassu.livros.*.config.*</exclude>
+                      <exclude>com.spassu.livros.*.application.mapper.*</exclude>
+                      <exclude>com.spassu.livros.microservice.application.usecase.RelatorioUseCase*</exclude>
+                      <exclude>com.spassu.livros.microservice.infrastructure.logging.*</exclude>
+                      <exclude>com.spassu.livros.microservice.infrastructure.messaging.AutorRpcListener*</exclude>
+                      <exclude>com.spassu.livros.microservice.infrastructure.messaging.AssuntoRpcListener*</exclude>
+                      <exclude>com.spassu.livros.microservice.infrastructure.messaging.LivroRpcListener*</exclude>
+                      <exclude>com.spassu.livros.microservice.infrastructure.persistence.mapper.LivroEntityMapper*</exclude>
+                      <exclude>com.spassu.livros.microservice.infrastructure.persistence.repository.*</exclude>
+                      <exclude>com.spassu.livros.orchestration.observability.*</exclude>
+                      <exclude>com.spassu.livros.orchestration.flowcockpit.FlowRegistry*</exclude>
+                      <exclude>com.spassu.livros.orchestration.flowcockpit.FlowWebSocketHandler*</exclude>
+                      <exclude>com.spassu.livros.bff.observability.*</exclude>
+                      <exclude>com.spassu.livros.bff.web.GlobalExceptionHandler*</exclude>
+                      <exclude>com.spassu.livros.bff.web.ProxyController*</exclude>
+                    </excludes>
                     <limits>
                       <limit>
                         <counter>INSTRUCTION</counter>

@@ -31,7 +31,7 @@ import reactor.core.publisher.Mono;
     description = "Decide continuidade da exclusão",
     type = NodeType.EXCLUSIVE_GATEWAY,
     branches = {
-        @FlowBranch(label = "Sim", nextStep = "deletar"),
+        @FlowBranch(label = "Sim", nextStep = "deletar", edgeIntent = "found"),
         @FlowBranch(label = "Não", nextStep = "fim-nao-encontrado", edgeIntent = "not-found")
     }
 )

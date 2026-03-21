@@ -42,7 +42,7 @@ const flowStore = vi.hoisted(() => ({
   }],
   loadingFlows: false,
   flowsError: null as string | null,
-  narrative: { flowId: 'create-livro', flowName: 'Criar Livro', businessGoal: 'Cadastrar', paths: ['Início -> Validar'] },
+  narrative: { flowId: 'create-livro', flowName: 'Criar Livro', businessGoal: 'Cadastrar', paths: ['Início -> Validar payload'] },
   loadingNarrative: false,
   narrativeError: null as string | null,
   fetchFlows: vi.fn().mockResolvedValue(undefined),
@@ -101,6 +101,46 @@ describe('FlowCockpitView', () => {
 
     expect(document.body.textContent).toContain('Detalhes do nó')
     expect(document.body.textContent).toContain('Fechar detalhes')
+
+    wrapper.unmount()
+  })
+
+  it('destaca narrativa compatível com o nó selecionado', async () => {
+    const wrapper = mount(FlowCockpitView, { attachTo: document.body })
+
+    await nextTick()
+
+    await wrapper.find('button[aria-label="Selecionar workflow"]').trigger('click')
+    await nextTick()
+
+    const workflowOption = wrapper
+      .findAll('button')
+      .find(button => button.text().includes('Criar Livro') && button.attributes('aria-selected') === 'false')
+
+    expect(workflowOption).toBeTruthy()
+    await workflowOption!.trigger('click')
+    await nextTick()
+
+    await wrapper.find('button').trigger('click')
+    await nextTick()
+
+    const storyToggle = wrapper
+      .findAll('button')
+      .find(button => button.text().includes('Ver história do fluxo'))
+
+    expect(storyToggle).toBeTruthy()
+    await storyToggle!.trigger('click')
+    await nextTick()
+
+    const nodeButton = wrapper
+      .findAll('button')
+      .find(button => button.text().includes('Validar payload'))
+
+    expect(nodeButton).toBeTruthy()
+    await nodeButton!.trigger('click')
+    await nextTick()
+
+    expect(wrapper.get('[data-test="narrative-path-0"]').classes()).toContain('border-(--ui-brand)')
 
     wrapper.unmount()
   })

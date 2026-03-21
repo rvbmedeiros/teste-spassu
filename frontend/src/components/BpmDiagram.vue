@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { GitBranch, Play, Plus, Square, X } from 'lucide-vue-next'
 import type { FlowEdge, FlowNode } from '@/stores/flows'
+import BpmTrailNode from '@/components/BpmTrailNode.vue'
+import type { BpmTrailNode as BpmTrailTreeNode } from '@/components/bpmTrailTypes'
 
 const props = withDefaults(defineProps<{
   nodes?: FlowNode[]
   edges?: FlowEdge[]
   typeLabel: (type: FlowNode['type']) => string
+  selectedNodeId?: string | null
 }>(), {
   nodes: () => [],
   edges: () => [],
+  selectedNodeId: null,
 })
 
 const emit = defineEmits<{
@@ -17,6 +20,14 @@ const emit = defineEmits<{
 }>()
 
 const nodeById = computed(() => new Map(props.nodes.map(node => [node.nodeId, node])))
+
+const incomingCountByNodeId = computed(() => {
+  const index = new Map<string, number>()
+  for (const edge of props.edges) {
+    index.set(edge.to, (index.get(edge.to) ?? 0) + 1)
+  }
+  return index
+})
 
 const outgoingByNodeId = computed(() => {
   const index = new Map<string, FlowEdge[]>()
@@ -29,103 +40,162 @@ const outgoingByNodeId = computed(() => {
   return index
 })
 
-const orderedNodes = computed(() => {
-  const visited = new Set<string>()
-  const result: FlowNode[] = []
-  const start = props.nodes.find(node => node.type === 'START_EVENT')
+const orderFor = (nodeId: string) => nodeById.value.get(nodeId)?.order ?? Number.MAX_SAFE_INTEGER
 
-  const walk = (nodeId: string): void => {
-    if (visited.has(nodeId)) {
-      return
-    }
-
-    const node = nodeById.value.get(nodeId)
-    if (!node) {
-      return
-    }
-
-    visited.add(nodeId)
-    result.push(node)
-
-    const outgoing = outgoingByNodeId.value.get(nodeId) ?? []
-    for (const edge of outgoing) {
-      walk(edge.to)
-    }
+const sortEdges = (edges: FlowEdge[]) => edges.slice().sort((left, right) => {
+  const orderDiff = orderFor(left.to) - orderFor(right.to)
+  if (orderDiff !== 0) {
+    return orderDiff
   }
-
-  if (start) {
-    walk(start.nodeId)
-  }
-
-  for (const node of props.nodes) {
-    if (!visited.has(node.nodeId)) {
-      result.push(node)
-    }
-  }
-
-  return result
+  return (left.label || left.edgeIntent || left.to).localeCompare(right.label || right.edgeIntent || right.to)
 })
 
-const branchesFor = (nodeId: string) => outgoingByNodeId.value.get(nodeId) ?? []
+const sharedMergeNodeId = (mergeNodeIds: Array<string | null>) => {
+  if (!mergeNodeIds.length) {
+    return null
+  }
 
-const shapeClass = (type: FlowNode['type']) => {
-  if (type === 'START_EVENT') {
-    return 'h-14 w-14 rounded-full bg-(--ui-brand) text-(--ui-on-brand)'
+  const [first] = mergeNodeIds
+  if (!first) {
+    return null
   }
-  if (type === 'END_EVENT') {
-    return 'h-14 w-14 rounded-full border-4 border-(--ui-text) bg-transparent text-(--ui-text)'
-  }
-  if (type === 'EXCLUSIVE_GATEWAY' || type === 'PARALLEL_GATEWAY') {
-    return 'h-12 w-12 rotate-45 rounded-sm border-2 border-(--ui-brand) bg-(--ui-brand-soft) text-(--ui-brand)'
-  }
-  return 'w-full rounded-2xl border border-(--ui-border) bg-(--ui-surface-interactive) p-4 text-left'
+
+  return mergeNodeIds.every(mergeNodeId => mergeNodeId === first) ? first : null
 }
+
+const buildTrail = (nodeId: string, visited: Set<string>, stopAtMerge: boolean): { item: BpmTrailTreeNode | null, mergeNodeId: string | null } => {
+  if (visited.has(nodeId)) {
+    return { item: null, mergeNodeId: null }
+  }
+
+  if (stopAtMerge && (incomingCountByNodeId.value.get(nodeId) ?? 0) > 1) {
+    return { item: null, mergeNodeId: nodeId }
+  }
+
+  const node = nodeById.value.get(nodeId)
+  if (!node) {
+    return { item: null, mergeNodeId: null }
+  }
+
+  const nextVisited = new Set(visited)
+  nextVisited.add(nodeId)
+
+  const outgoing = sortEdges(outgoingByNodeId.value.get(nodeId) ?? [])
+  if (!outgoing.length) {
+    return {
+      item: {
+        node,
+        isMerge: (incomingCountByNodeId.value.get(node.nodeId) ?? 0) > 1,
+        branches: [],
+        continuation: null,
+      },
+      mergeNodeId: null,
+    }
+  }
+
+  const isBranchingNode = outgoing.length > 1 || node.type === 'EXCLUSIVE_GATEWAY' || node.type === 'PARALLEL_GATEWAY'
+  if (!isBranchingNode) {
+    const next = buildTrail(outgoing[0].to, nextVisited, stopAtMerge)
+    return {
+      item: {
+        node,
+        isMerge: (incomingCountByNodeId.value.get(node.nodeId) ?? 0) > 1,
+        branches: [],
+        continuation: next.item,
+      },
+      mergeNodeId: next.mergeNodeId,
+    }
+  }
+
+  const branches = outgoing.map(edge => {
+    const branch = buildTrail(edge.to, new Set(nextVisited), true)
+    return {
+      edge,
+      trail: branch.item,
+      mergeNodeId: branch.mergeNodeId,
+    }
+  })
+
+  const mergeNodeId = sharedMergeNodeId(branches.map(branch => branch.mergeNodeId))
+  const continuation = mergeNodeId
+    ? buildTrail(mergeNodeId, nextVisited, stopAtMerge)
+    : { item: null, mergeNodeId: null }
+
+  return {
+    item: {
+      node,
+      isMerge: (incomingCountByNodeId.value.get(node.nodeId) ?? 0) > 1,
+      branches: branches.map(branch => ({ edge: branch.edge, trail: branch.trail })),
+      continuation: continuation.item,
+    },
+    mergeNodeId: continuation.mergeNodeId,
+  }
+}
+
+const collectRenderedNodeIds = (item: BpmTrailTreeNode | null, renderedNodeIds: Set<string>) => {
+  if (!item || renderedNodeIds.has(item.node.nodeId)) {
+    return
+  }
+
+  renderedNodeIds.add(item.node.nodeId)
+  for (const branch of item.branches) {
+    collectRenderedNodeIds(branch.trail, renderedNodeIds)
+  }
+  collectRenderedNodeIds(item.continuation, renderedNodeIds)
+}
+
+const trailRoots = computed(() => {
+  const sortedNodes = props.nodes.slice().sort((left, right) => left.order - right.order)
+  const explicitStart = sortedNodes.find(node => node.type === 'START_EVENT')
+  const rootNodeIds = explicitStart
+    ? [explicitStart.nodeId]
+    : sortedNodes
+        .filter(node => (incomingCountByNodeId.value.get(node.nodeId) ?? 0) === 0)
+        .map(node => node.nodeId)
+
+  const resolvedRootNodeIds = rootNodeIds.length ? rootNodeIds : sortedNodes.slice(0, 1).map(node => node.nodeId)
+  const renderedNodeIds = new Set<string>()
+  const roots: BpmTrailTreeNode[] = []
+
+  for (const rootNodeId of resolvedRootNodeIds) {
+    const trail = buildTrail(rootNodeId, new Set(), false).item
+    if (!trail) {
+      continue
+    }
+    roots.push(trail)
+    collectRenderedNodeIds(trail, renderedNodeIds)
+  }
+
+  for (const node of sortedNodes) {
+    if (renderedNodeIds.has(node.nodeId)) {
+      continue
+    }
+
+    const trail = buildTrail(node.nodeId, new Set(), false).item
+    if (!trail) {
+      continue
+    }
+    roots.push(trail)
+    collectRenderedNodeIds(trail, renderedNodeIds)
+  }
+
+  return roots
+})
 </script>
 
 <template>
-  <div class="space-y-4">
-    <ol>
-      <li v-for="(node, index) in orderedNodes" :key="node.nodeId">
-        <button
-          type="button"
-          class="mx-auto block w-full max-w-3xl rounded-3xl border border-(--ui-border) bg-(--ui-panel) p-5 text-left"
-          @click="emit('select-node', node.nodeId)"
-        >
-          <div class="flex flex-col items-center gap-3 text-center">
-            <div class="flex items-center justify-center" :class="shapeClass(node.type)">
-              <Play v-if="node.type === 'START_EVENT'" class="h-5 w-5" />
-              <Square v-else-if="node.type === 'END_EVENT'" class="h-5 w-5" />
-              <X v-else-if="node.type === 'EXCLUSIVE_GATEWAY'" class="h-5 w-5 -rotate-45" />
-              <Plus v-else-if="node.type === 'PARALLEL_GATEWAY'" class="h-5 w-5 -rotate-45" />
-              <GitBranch v-else class="h-5 w-5 text-(--ui-brand)" />
-            </div>
-
-            <span class="rounded-full bg-(--ui-brand-soft) px-3 py-1 text-xs font-semibold text-(--ui-brand)">
-              {{ typeLabel(node.type) }}
-            </span>
-
-            <div class="space-y-1">
-              <p class="font-semibold text-(--ui-text)">{{ node.name }}</p>
-              <p v-if="node.description" class="text-sm text-(--ui-text-muted)">{{ node.description }}</p>
-              <p v-if="node.purpose" class="text-xs text-(--ui-text-muted)">{{ node.purpose }}</p>
-            </div>
-
-            <div v-if="branchesFor(node.nodeId).length" class="flex flex-wrap justify-center gap-2">
-              <span
-                v-for="edge in branchesFor(node.nodeId)"
-                :key="`${edge.from}-${edge.to}-${edge.label}`"
-                class="rounded-full border border-(--ui-border-strong) bg-(--ui-surface-interactive-hover) px-2.5 py-1 text-xs text-(--ui-text-muted)"
-              >
-                {{ edge.label || edge.to }}
-              </span>
-            </div>
-          </div>
-        </button>
-
-        <div v-if="index !== orderedNodes.length - 1" class="flex justify-center py-2">
-          <div class="h-6 w-px bg-(--ui-border-strong)" />
-        </div>
-      </li>
-    </ol>
+  <div class="space-y-6">
+    <section
+      v-for="trail in trailRoots"
+      :key="trail.node.nodeId"
+      class="rounded-4xl border border-(--ui-border) bg-(--ui-panel-soft) p-4 sm:p-6"
+    >
+      <BpmTrailNode
+        :item="trail"
+        :type-label="typeLabel"
+        :selected-node-id="selectedNodeId"
+        @select-node="emit('select-node', $event)"
+      />
+    </section>
   </div>
 </template>

@@ -32,7 +32,7 @@ import reactor.core.publisher.Mono;
     description = "Decide continuidade da atualização",
     type = NodeType.EXCLUSIVE_GATEWAY,
     branches = {
-        @FlowBranch(label = "Sim", nextStep = "atualizar"),
+        @FlowBranch(label = "Sim", nextStep = "atualizar", edgeIntent = "found"),
         @FlowBranch(label = "Não", nextStep = "fim-nao-encontrado", edgeIntent = "not-found")
     }
 )

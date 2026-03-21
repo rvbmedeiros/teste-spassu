@@ -25,6 +25,7 @@ import java.util.Set;
 public class FlowRegistry implements ApplicationContextAware {
 
     private ApplicationContext ctx;
+    private final FlowGraphValidator flowGraphValidator = new FlowGraphValidator();
     private List<FlowGraph> graphs = List.of();
 
     @Override
@@ -97,6 +98,8 @@ public class FlowRegistry implements ApplicationContextAware {
             FlowGraph.FlowNode to = nodes.get(i + 1);
             edges.add(new FlowGraph.FlowEdge(from.nodeId(), to.nodeId(), "", ""));
         }
+
+        flowGraphValidator.validate(def.id(), nodes, edges);
 
         return createGraph(def, nodes, edges);
     }
@@ -179,6 +182,7 @@ public class FlowRegistry implements ApplicationContextAware {
         }
 
         applyLegacyEdgesWhenNoExplicitLinks(nodes, edges);
+        flowGraphValidator.validate(def.id(), nodes, edges);
         validateReadability(def, nodes, edges);
         return createGraph(def, nodes, edges);
     }
@@ -206,8 +210,7 @@ public class FlowRegistry implements ApplicationContextAware {
             String flowId
     ) {
         if (nodeById.containsKey(node.nodeId())) {
-            log.warn("flow={} duplicated nodeId={} ignored", flowId, node.nodeId());
-            return;
+            throw new FlowValidationException("flow=" + flowId + " duplicated nodeId='" + node.nodeId() + "'");
         }
 
         nodes.add(node);

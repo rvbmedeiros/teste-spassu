@@ -5,21 +5,25 @@ import com.spassu.livros.orchestration.dto.AssuntoResponse;
 import com.spassu.livros.orchestration.dto.AutorResponse;
 import com.spassu.livros.orchestration.dto.LivroRequest;
 import com.spassu.livros.orchestration.dto.LivroResponse;
+import com.spassu.livros.orchestration.flowcockpit.GatewayExecutionCoordinator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Mono;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.function.Supplier;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
+import static org.mockito.ArgumentMatchers.anyMap;
+import static org.mockito.ArgumentMatchers.eq;
 
 @ExtendWith(MockitoExtension.class)
 class LivroFlowsTest {
@@ -27,20 +31,28 @@ class LivroFlowsTest {
     @Mock
     private MicroserviceClient client;
 
-    @InjectMocks
-    private CreateLivroFlow createFlow;
+    @Mock
+    private GatewayExecutionCoordinator gatewayExecutionCoordinator;
 
-    @InjectMocks
+    @org.mockito.InjectMocks
     private UpdateLivroFlow updateFlow;
 
-    @InjectMocks
+    @org.mockito.InjectMocks
     private DeleteLivroFlow deleteFlow;
 
     @Test
     @DisplayName("create flow deve persistir livro")
     void createFlow_devePersistirLivro() {
+        CreateLivroFlow createFlow = new CreateLivroFlow(client, gatewayExecutionCoordinator);
         var request = novoLivroRequest();
         var response = novoLivroResponse("Clean Code");
+        given(gatewayExecutionCoordinator.routeExclusive(eq("create-livro"), eq("gw-validacao"), eq("validation-pass"), anyMap()))
+            .willAnswer(invocation -> {
+                Map<String, Supplier<Mono<LivroResponse>>> routes = invocation.getArgument(3);
+                return routes.get("validation-pass").get();
+            });
+        given(gatewayExecutionCoordinator.runParallel(eq("create-livro"), eq("gw-prepare"), anyMap()))
+            .willReturn(Mono.empty());
         given(client.criarLivro(request)).willReturn(Mono.just(response));
 
         var result = createFlow.execute(request).block();
