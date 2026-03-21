@@ -10,7 +10,7 @@ import TheNavbar from '@/components/layout/TheNavbar.vue'
 
     <div class="relative flex min-h-screen flex-col">
       <TheNavbar />
-      <main class="mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8 lg:pt-8">
+      <main class="mx-auto flex w-full max-w-384 flex-1 flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8 lg:pt-8">
         <RouterView />
       </main>
     </div>

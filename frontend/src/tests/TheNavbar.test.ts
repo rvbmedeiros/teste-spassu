@@ -69,6 +69,7 @@ describe('TheNavbar', () => {
     const { wrapper } = await createNavbarWrapper()
 
     expect(wrapper.text()).toContain('admin')
+    expect(wrapper.find('img[alt="Spassu Livros"]').exists()).toBe(true)
 
     const localeButton = wrapper.findAll('button').find(button => button.text().includes('EN'))
     expect(localeButton).toBeDefined()
@@ -81,11 +82,12 @@ describe('TheNavbar', () => {
   it('fecha o menu mobile ao trocar de rota', async () => {
     const { wrapper, router } = await createNavbarWrapper()
 
-    const toggleButton = wrapper.findAll('button').at(-1)
-    expect(toggleButton).toBeDefined()
+    const toggleButton = wrapper.find('button[aria-label="Abrir navegacao"]')
+    expect(toggleButton.exists()).toBe(true)
 
-    await toggleButton!.trigger('click')
+    await toggleButton.trigger('click')
     expect(wrapper.findAll('a[href="/livros"]')).toHaveLength(2)
+    expect(wrapper.findAll('base-switcher-stub')).toHaveLength(1)
 
     await router.push('/autores')
     await flushPromises()
