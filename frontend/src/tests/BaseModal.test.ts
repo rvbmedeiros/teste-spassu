@@ -28,7 +28,7 @@ describe('BaseModal', () => {
       global: { stubs: { Teleport: true, Transition: false } },
     })
 
-    await wrapper.find('button[aria-label="Close dialog"]').trigger('click')
+    await wrapper.find('button[aria-label="Fechar diálogo"]').trigger('click')
 
     expect(wrapper.emitted('close')).toBeTruthy()
   })

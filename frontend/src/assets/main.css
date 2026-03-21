@@ -1,48 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --ui-bg: #f3f7fc;
-  --ui-bg-elevated: #ffffff;
-  --ui-panel: rgba(255, 255, 255, 0.76);
-  --ui-panel-strong: rgba(255, 255, 255, 0.9);
-  --ui-panel-muted: rgba(226, 232, 240, 0.55);
-  --ui-border: rgba(148, 163, 184, 0.18);
-  --ui-border-strong: rgba(100, 116, 139, 0.28);
-  --ui-text: #0f172a;
-  --ui-text-muted: #475569;
-  --ui-brand: #2563eb;
-  --ui-brand-strong: #1d4ed8;
-  --ui-brand-soft: rgba(37, 99, 235, 0.1);
+  --ui-bg: #fff7f2;
+  --ui-bg-elevated: #fffdfb;
+  --ui-panel: rgba(255, 251, 247, 0.82);
+  --ui-panel-strong: rgba(255, 252, 249, 0.94);
+  --ui-panel-muted: rgba(252, 233, 221, 0.62);
+  --ui-surface-interactive: rgba(255, 255, 255, 0.84);
+  --ui-surface-interactive-hover: rgba(255, 247, 242, 0.98);
+  --ui-surface-active: rgba(241, 90, 36, 0.14);
+  --ui-surface-brand: linear-gradient(135deg, #f15a24 0%, #ff7b45 100%);
+  --ui-border: rgba(183, 117, 83, 0.18);
+  --ui-border-strong: rgba(183, 117, 83, 0.32);
+  --ui-overlay: rgba(44, 19, 10, 0.42);
+  --ui-text: #2f160d;
+  --ui-text-muted: #7f5a4d;
+  --ui-placeholder: #b48a7b;
+  --ui-brand: #f15a24;
+  --ui-brand-strong: #d94a18;
+  --ui-brand-soft: rgba(241, 90, 36, 0.12);
+  --ui-brand-soft-strong: rgba(241, 90, 36, 0.2);
+  --ui-on-brand: #fff8f4;
+  --ui-focus-ring: rgba(241, 90, 36, 0.2);
   --ui-success: #059669;
   --ui-success-soft: rgba(5, 150, 105, 0.12);
   --ui-danger: #dc2626;
   --ui-danger-soft: rgba(220, 38, 38, 0.12);
   --ui-warning: #d97706;
   --ui-warning-soft: rgba(217, 119, 6, 0.12);
+  --ui-info: #c24a1d;
+  --ui-info-soft: rgba(241, 90, 36, 0.14);
+  --ui-shadow-brand: 0 14px 34px rgba(241, 90, 36, 0.24);
+  --ui-shadow-danger: 0 14px 34px rgba(220, 38, 38, 0.2);
   --radius-sm: 0.75rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
-  --shadow-panel: 0 20px 60px rgba(15, 23, 42, 0.08);
-  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --shadow-panel: 0 22px 60px rgba(103, 51, 29, 0.1);
+  --shadow-soft: 0 10px 30px rgba(103, 51, 29, 0.08);
 }
 
 .dark {
   color-scheme: dark;
-  --ui-bg: #08111f;
-  --ui-bg-elevated: #0f172a;
-  --ui-panel: rgba(15, 23, 42, 0.7);
-  --ui-panel-strong: rgba(15, 23, 42, 0.86);
-  --ui-panel-muted: rgba(30, 41, 59, 0.74);
-  --ui-border: rgba(148, 163, 184, 0.14);
-  --ui-border-strong: rgba(148, 163, 184, 0.2);
-  --ui-text: #e5eefb;
-  --ui-text-muted: #94a3b8;
-  --ui-brand-soft: rgba(96, 165, 250, 0.14);
+  --ui-bg: #180e0a;
+  --ui-bg-elevated: #22130d;
+  --ui-panel: rgba(34, 19, 13, 0.78);
+  --ui-panel-strong: rgba(40, 23, 16, 0.9);
+  --ui-panel-muted: rgba(68, 41, 28, 0.7);
+  --ui-surface-interactive: rgba(66, 38, 26, 0.72);
+  --ui-surface-interactive-hover: rgba(86, 49, 31, 0.82);
+  --ui-surface-active: rgba(241, 90, 36, 0.22);
+  --ui-border: rgba(255, 196, 165, 0.12);
+  --ui-border-strong: rgba(255, 196, 165, 0.22);
+  --ui-overlay: rgba(7, 4, 3, 0.58);
+  --ui-text: #fff0ea;
+  --ui-text-muted: #ddb4a4;
+  --ui-placeholder: #b88775;
+  --ui-brand-soft: rgba(255, 138, 92, 0.18);
+  --ui-brand-soft-strong: rgba(255, 138, 92, 0.28);
+  --ui-focus-ring: rgba(255, 138, 92, 0.24);
   --ui-success-soft: rgba(16, 185, 129, 0.16);
   --ui-danger-soft: rgba(248, 113, 113, 0.16);
   --ui-warning-soft: rgba(251, 191, 36, 0.14);
-  --shadow-panel: 0 20px 60px rgba(2, 6, 23, 0.42);
-  --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.3);
+  --ui-shadow-brand: 0 14px 34px rgba(241, 90, 36, 0.28);
+  --ui-shadow-danger: 0 14px 34px rgba(220, 38, 38, 0.22);
+  --shadow-panel: 0 22px 60px rgba(7, 4, 3, 0.38);
+  --shadow-soft: 0 10px 24px rgba(7, 4, 3, 0.3);
 }
 
 *, *::before, *::after {
@@ -56,7 +78,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 35%),
+    radial-gradient(circle at top left, rgba(241, 90, 36, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 168, 120, 0.12), transparent 24%),
     var(--ui-bg);
   color: var(--ui-text);
   font-family: Manrope, "Space Grotesk", "Segoe UI Variable Text", "Noto Sans", sans-serif;
@@ -75,7 +98,7 @@ select {
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(241, 90, 36, 0.2);
 }
 
 @layer components {
@@ -96,6 +119,57 @@ select {
   .surface-muted {
     background: var(--ui-panel-muted);
     border: 1px solid var(--ui-border);
+  }
+
+  .interactive-surface {
+    background: var(--ui-surface-interactive);
+    border: 1px solid var(--ui-border-strong);
+    box-shadow: var(--shadow-soft);
+    @apply transition-[background-color,border-color,box-shadow,transform] duration-200;
+  }
+
+  .interactive-surface:hover {
+    background: var(--ui-surface-interactive-hover);
+  }
+
+  .icon-button-shell {
+    @apply inline-flex items-center justify-center rounded-2xl border transition-colors duration-200;
+    background: var(--ui-surface-interactive);
+    border-color: var(--ui-border);
+    color: var(--ui-text-muted);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .icon-button-shell:hover {
+    background: var(--ui-surface-interactive-hover);
+    color: var(--ui-text);
+  }
+
+  .field-shell {
+    @apply w-full rounded-2xl border px-4 py-3 text-sm outline-none transition-[background-color,border-color,box-shadow] duration-200;
+    background: var(--ui-surface-interactive);
+    border-color: var(--ui-border-strong);
+    color: var(--ui-text);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .field-shell::placeholder {
+    color: var(--ui-placeholder);
+  }
+
+  .nav-item {
+    @apply inline-flex items-center gap-2 rounded-2xl text-sm font-medium transition-colors;
+    color: var(--ui-text-muted);
+  }
+
+  .nav-item:hover {
+    background: var(--ui-surface-active);
+    color: var(--ui-text);
+  }
+
+  .status-badge {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium;
+    border: 1px solid var(--ui-border-strong);
   }
 
   .page-shell {
@@ -119,7 +193,7 @@ select {
   }
 
   .metric-tile {
-    @apply rounded-[1.5rem] p-4 sm:p-5;
+    @apply rounded-3xl p-4 sm:p-5;
     background: var(--ui-panel);
     border: 1px solid var(--ui-border);
     box-shadow: var(--shadow-soft);
@@ -127,7 +201,7 @@ select {
   }
 
   .table-shell {
-    @apply overflow-hidden rounded-[1.5rem];
+    @apply overflow-hidden rounded-3xl;
     border: 1px solid var(--ui-border);
     background: color-mix(in srgb, var(--ui-panel-strong) 86%, transparent);
   }
@@ -164,6 +238,6 @@ select {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(100, 116, 139, 0.45);
+  background: rgba(183, 117, 83, 0.5);
   border-radius: 999px;
 }

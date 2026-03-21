@@ -39,8 +39,20 @@ class FlowRegistryTest {
         FlowGraph graph = registry.getAllFlows().get(0);
         assertThat(graph.id()).isEqualTo("test-flow");
         assertThat(graph.name()).isEqualTo("Fluxo de Teste");
-        assertThat(graph.steps()).hasSize(1);
-        assertThat(graph.steps().get(0).order()).isEqualTo(1);
+        assertThat(graph.nodes()).hasSize(3);
+        assertThat(graph.nodes()).anySatisfy(node -> {
+            assertThat(node.nodeId()).isEqualTo("start");
+            assertThat(node.type()).isEqualTo(NodeType.START_EVENT);
+        });
+        assertThat(graph.nodes()).anySatisfy(node -> {
+            assertThat(node.nodeId()).isEqualTo("validar");
+            assertThat(node.type()).isEqualTo(NodeType.ACTIVITY);
+        });
+        assertThat(graph.nodes()).anySatisfy(node -> {
+            assertThat(node.nodeId()).isEqualTo("fim");
+            assertThat(node.type()).isEqualTo(NodeType.END_EVENT);
+        });
+        assertThat(graph.edges()).hasSize(2);
     }
 
     @Test
@@ -53,8 +65,17 @@ class FlowRegistryTest {
     }
 
     @FlowDefinition(id = "test-flow", name = "Fluxo de Teste")
+    @FlowStartEvent(nextStep = "validar")
+    @FlowEndEvent(nodeId = "fim")
     static class SampleFlow {
-        @FlowStep(order = 1, name = "Passo 1")
+        @FlowStep(
+                order = 1,
+                nodeId = "validar",
+                name = "Passo 1",
+                description = "Valida",
+                purpose = "Garantir consistencia",
+                nextSteps = {"fim"}
+        )
         public void paso1() {}
     }
 }

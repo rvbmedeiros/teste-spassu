@@ -24,7 +24,7 @@ import BaseCard from '@/components/base/BaseCard.vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseInput from '@/components/base/BaseInput.vue'
 import BaseModal from '@/components/base/BaseModal.vue'
-import BaseSelectionDrawer from '@/components/base/BaseSelectionDrawer.vue'
+import SelectionDrawer from '@/components/SelectionDrawer.vue'
 import BaseToast from '@/components/base/BaseToast.vue'
 
 const { t } = useI18n()
@@ -445,7 +445,7 @@ function selectedLabel(total: number): string {
       </template>
     </BaseModal>
 
-    <BaseSelectionDrawer
+    <SelectionDrawer
       :open="selectorOpen"
       :title="selectorTitle"
       :description="selectorDescription"

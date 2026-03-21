@@ -18,12 +18,11 @@ const props = withDefaults(defineProps<{
 
 const slots = useSlots()
 
-// Static variant and size maps to avoid repeated computed evaluation
 const variantMap = {
-  primary: 'border-transparent bg-[color:var(--ui-brand)] text-white shadow-[0_14px_34px_rgba(37,99,235,0.28)] hover:-translate-y-0.5 hover:bg-[color:var(--ui-brand-strong)] focus-visible:ring-[color:var(--ui-brand)]',
-  secondary: 'border-[color:var(--ui-border-strong)] bg-white/80 text-[color:var(--ui-text)] shadow-[var(--shadow-soft)] hover:-translate-y-0.5 hover:bg-white dark:bg-white/6 dark:hover:bg-white/10 focus-visible:ring-[color:var(--ui-brand)]',
-  danger: 'border-transparent bg-[color:var(--ui-danger)] text-white shadow-[0_14px_34px_rgba(220,38,38,0.22)] hover:-translate-y-0.5 hover:bg-red-700 focus-visible:ring-[color:var(--ui-danger)]',
-  ghost: 'border-transparent bg-transparent text-[color:var(--ui-text-muted)] hover:bg-black/5 hover:text-[color:var(--ui-text)] dark:hover:bg-white/8 focus-visible:ring-[color:var(--ui-brand)]',
+  primary: 'border-transparent bg-(--ui-brand) text-(--ui-on-brand) shadow-[var(--ui-shadow-brand)] hover:-translate-y-0.5 hover:bg-(--ui-brand-strong) focus-visible:ring-(--ui-brand)',
+  secondary: 'interactive-surface text-(--ui-text) hover:-translate-y-0.5 focus-visible:ring-(--ui-brand)',
+  danger: 'border-transparent bg-(--ui-danger) text-(--ui-on-brand) shadow-[var(--ui-shadow-danger)] hover:-translate-y-0.5 hover:brightness-95 focus-visible:ring-(--ui-danger)',
+  ghost: 'border-transparent bg-transparent text-(--ui-text-muted) hover:bg-(--ui-surface-active) hover:text-(--ui-text) focus-visible:ring-(--ui-brand)',
 }
 
 const iconSizeMap = {

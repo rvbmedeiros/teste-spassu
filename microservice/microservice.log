@@ -1009,3 +1009,48 @@ Caused by: java.lang.ClassNotFoundException: Assunto
 2026-03-20 19:51:26.393 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-20 19:51:26.400 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-03-20 19:51:26.403 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-21 12:53:11.236 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 12:53:11.247 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 54721 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-21 12:53:11.248 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-21 12:53:11.373 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-21 12:53:11.374 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-21 12:53:13.750 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-21 12:53:13.922 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 3 JPA repository interfaces.
+2026-03-21 12:53:14.798 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=0a91fb4e-2d8b-3c8b-9838-af9da26959b0
+2026-03-21 12:53:16.114 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-21 12:53:16.135 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-21 12:53:16.137 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-21 12:53:16.138 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-21 12:53:16.181 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4805 ms
+2026-03-21 12:53:16.560 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-21 12:53:16.642 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-21 12:53:17.407 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-21 12:53:17.482 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-21 12:53:17.649 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@24afb364
+2026-03-21 12:53:17.650 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-21 12:53:17.674 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-21 12:53:17.693 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-21 12:53:18.808 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-21 12:53:18.979 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-21 12:53:19.092 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-21 12:53:21.377 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 12:53:21.457 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-21 12:53:21.472 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-21 12:53:21.475 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-21 12:53:21.534 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3c566fc8:0/SimpleConnection@7bddc886 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=56294]
+2026-03-21 12:53:22.080 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 12.712 seconds (process running for 13.83)
+2026-03-21 12:55:51.316 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-1] [spassu-microservice] traceId= requestId= c.s.l.m.i.m.RelatorioRpcListener - RPC relatorio gerado. bytes=1566
+2026-03-21 12:55:54.154 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-21 12:55:54.154 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-21 12:55:54.157 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms

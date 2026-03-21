@@ -22,4 +22,16 @@ public @interface FlowDefinition {
 
     /** Brief description of what this flow orchestrates. */
     String description() default "";
+
+    /** Team or role responsible for this flow. */
+    String owner() default "";
+
+    /** Human-readable flow version (example: 1.0.0). */
+    String version() default "";
+
+    /** Domain grouping used by FlowCockpit catalog filters. */
+    String domainTag() default "";
+
+    /** Business goal expressed in one concise sentence. */
+    String businessGoal() default "";
 }

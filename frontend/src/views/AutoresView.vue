@@ -94,7 +94,7 @@ async function confirmDelete(codAu: number) {
         <div v-if="store.loading" class="flex min-h-60 items-center justify-center px-6 text-sm font-medium text-(--ui-text-muted)">
           {{ t('common.loading') }}
         </div>
-        <div v-else-if="store.error" class="flex min-h-60 items-center justify-center px-6 text-sm font-medium text-red-500">
+        <div v-else-if="store.error" class="flex min-h-60 items-center justify-center px-6 text-sm font-medium text-(--ui-danger)">
           {{ store.error }}
         </div>
         <div v-else-if="!store.autores.length" class="flex min-h-60 flex-col items-center justify-center gap-3 px-6 text-center text-(--ui-text-muted)">
@@ -104,7 +104,7 @@ async function confirmDelete(codAu: number) {
         <table v-else class="min-w-full text-sm">
           <thead>
             <tr class="table-head">
-              <th class="px-5 py-4">Cód.</th>
+              <th class="px-5 py-4">{{ t('common.cod') }}</th>
               <th class="px-5 py-4">{{ t('autores.nome') }}</th>
               <th v-if="auth.isAdmin" class="px-5 py-4 text-right">{{ t('common.acoes') }}</th>
             </tr>

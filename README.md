@@ -78,6 +78,22 @@ Frontend (Vue 3)  :3000
 - **Filtros de logs**: `source`, `level`, `limit` e `search`.
 - **Atualização de logs**: ocorre por polling HTTP a cada 5 segundos.
 
+### Flow Cockpit
+
+O FlowCockpit existe para tornar os workflows de negócio legíveis no produto sem exigir leitura de classes Java. A interface mostra eventos, atividades e gateways em formato BPM-like, permitindo que desenvolvimento, QA e negócio entendam o fluxo fim a fim no mesmo ponto de consulta.
+
+**Por que a tecnologia atual foi adotada (annotation scan + grafo estático):**
+
+- Menor atrito com a arquitetura existente (Spring + WebFlux + RabbitMQ RPC), sem introduzir runtime adicional de processo.
+- Baixa latência e baixa complexidade operacional para o objetivo atual, que é legibilidade e documentação executável do fluxo.
+- Versionamento junto ao código e revisão via PR, mantendo rastreabilidade natural das mudanças de fluxo.
+
+**Por que não Operaton/Camunda 7 como library nesta entrega:**
+
+- A necessidade atual não exige engine BPM stateful (timers, user tasks, histórico de instância, versionamento de execução).
+- Incluir engine agora adicionaria sobrecarga de operação e governança sem ganho proporcional para o problema imediato.
+- A decisão atual preserva simplicidade; engine BPM pode ser reavaliada quando houver requisitos explícitos de execução de processo além de visualização.
+
 ---
 
 ## Tecnologias e Justificativas

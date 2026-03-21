@@ -196,10 +196,12 @@ public class MicroserviceClient {
     }
 
     private <T> Mono<RpcResponse<T>> rpcRaw(String routingKey, Object request, ParameterizedTypeReference<RpcResponse<T>> type) {
-        return Mono.fromCallable(() -> rabbitTemplate.convertSendAndReceiveAsType(RPC_EXCHANGE, routingKey, request, type))
-                .subscribeOn(Schedulers.boundedElastic())
-                .flatMap(response -> response == null
-                        ? Mono.error(new IllegalStateException("RPC response is null"))
-                        : Mono.just(response));
+        return Mono.defer(() -> {
+                RpcResponse<T> response = rabbitTemplate.convertSendAndReceiveAsType(RPC_EXCHANGE, routingKey, request, type);
+                return response == null
+                    ? Mono.error(new IllegalStateException("RPC response is null"))
+                    : Mono.just(response);
+            })
+            .subscribeOn(Schedulers.boundedElastic());
     }
 }

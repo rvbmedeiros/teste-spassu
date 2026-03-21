@@ -21,9 +21,9 @@ const iconMap = {
 }
 
 const variantClassMap = {
-  success: 'border-emerald-500/20 bg-emerald-500 text-white',
-  error: 'border-red-500/20 bg-red-600 text-white',
-  info: 'border-blue-500/20 bg-[color:var(--ui-brand)] text-white',
+  success: 'border-(--ui-success) bg-(--ui-success) text-(--ui-on-brand)',
+  error: 'border-(--ui-danger) bg-(--ui-danger) text-(--ui-on-brand)',
+  info: 'border-(--ui-brand) bg-(--ui-brand) text-(--ui-on-brand)',
 }
 
 const icon = iconMap[props.type]
@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
       <div class="min-w-0 flex-1">
         <p class="text-sm font-medium leading-6">{{ message }}</p>
       </div>
-      <button class="rounded-full p-1 text-white/75 transition hover:bg-white/10 hover:text-white" type="button" @click="emit('close')">
+      <button class="rounded-full p-1 text-(--ui-on-brand)/75 transition hover:bg-(--ui-on-brand)/10 hover:text-(--ui-on-brand)" type="button" @click="emit('close')">
         <X class="h-4 w-4" />
       </button>
     </div>

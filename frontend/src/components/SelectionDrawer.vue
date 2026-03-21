@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
 import { Search, X } from 'lucide-vue-next'
-import BaseButton from './BaseButton.vue'
-import BaseInput from './BaseInput.vue'
+import BaseButton from './base/BaseButton.vue'
+import BaseInput from './base/BaseInput.vue'
 
 interface SelectableItem {
   id: number
@@ -150,7 +150,7 @@ function onListboxKeydown(event: KeyboardEvent): void {
     <Transition name="drawer-slide">
       <div
         v-if="open"
-        class="fixed inset-0 z-70 bg-slate-950/45"
+        class="fixed inset-0 z-70 bg-(--ui-overlay)"
         @click.self="emit('close')"
       >
         <aside
@@ -167,7 +167,7 @@ function onListboxKeydown(event: KeyboardEvent): void {
             </div>
             <button
               type="button"
-              class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-(--ui-border) bg-white/70 text-slate-500 transition-colors hover:text-(--ui-text) dark:bg-white/6"
+              class="icon-button-shell h-10 w-10"
               :aria-label="cancelLabel"
               @click="emit('close')"
             >
@@ -210,9 +210,9 @@ function onListboxKeydown(event: KeyboardEvent): void {
                     role="option"
                     :aria-selected="isSelected(item.id)"
                     :class="[
-                      'flex w-full items-center justify-between rounded-2xl px-3 py-2.5 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/45',
+                      'flex w-full items-center justify-between rounded-2xl px-3 py-2.5 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--ui-focus-ring)',
                       isSelected(item.id)
-                        ? 'bg-(--ui-brand) text-white'
+                        ? 'bg-(--ui-brand) text-(--ui-on-brand)'
                         : 'text-(--ui-text) hover:bg-(--ui-brand-soft)'
                     ]"
                     @click="toggleSelection(item.id)"
@@ -223,7 +223,7 @@ function onListboxKeydown(event: KeyboardEvent): void {
                       :class="[
                         'inline-flex h-5 w-5 items-center justify-center rounded-md border text-xs',
                         isSelected(item.id)
-                          ? 'border-white/65 bg-white/22 text-white'
+                          ? 'border-(--ui-on-brand)/65 bg-(--ui-on-brand)/18 text-(--ui-on-brand)'
                           : 'border-(--ui-border-strong) text-transparent'
                       ]"
                       aria-hidden="true"

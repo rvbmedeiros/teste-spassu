@@ -1,14 +1,14 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import BaseWorkflowSelect from '../components/base/BaseWorkflowSelect.vue'
+import WorkflowSelect from '../components/WorkflowSelect.vue'
 
-describe('BaseWorkflowSelect', () => {
+describe('WorkflowSelect', () => {
   afterEach(() => {
     document.body.innerHTML = ''
   })
 
   it('renderiza placeholder quando nao ha item selecionado', () => {
-    const wrapper = mount(BaseWorkflowSelect, {
+    const wrapper = mount(WorkflowSelect, {
       attachTo: document.body,
       props: {
         modelValue: null,
@@ -25,7 +25,7 @@ describe('BaseWorkflowSelect', () => {
   })
 
   it('emite update:modelValue ao selecionar opcao', async () => {
-    const wrapper = mount(BaseWorkflowSelect, {
+    const wrapper = mount(WorkflowSelect, {
       attachTo: document.body,
       props: {
         modelValue: null,
@@ -45,7 +45,7 @@ describe('BaseWorkflowSelect', () => {
   })
 
   it('fecha dropdown ao clicar fora do componente', async () => {
-    const wrapper = mount(BaseWorkflowSelect, {
+    const wrapper = mount(WorkflowSelect, {
       attachTo: document.body,
       props: {
         modelValue: null,

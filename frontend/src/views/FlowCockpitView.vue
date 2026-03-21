@@ -1,27 +1,48 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
   Activity,
   AlertTriangle,
-  ArrowDown,
+  BookOpenText,
   RotateCcw,
   Workflow,
 } from 'lucide-vue-next'
-import { useFlowStore, type FlowGraph } from '@/stores/flows'
+import { useFlowStore, type NodeType } from '@/stores/flows'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseButton from '@/components/base/BaseButton.vue'
-import BaseWorkflowSelect from '@/components/base/BaseWorkflowSelect.vue'
+import WorkflowSelect from '@/components/WorkflowSelect.vue'
+import BpmDiagram from '@/components/BpmDiagram.vue'
+import NodeDetailsDrawer from '@/components/NodeDetailsDrawer.vue'
 
 const { t } = useI18n()
 const store = useFlowStore()
-const STEPS_VISIBLE = 3
 
 const selectedWorkflowId = ref<string | null>(null)
-const expandedFlows = ref<Set<string>>(new Set())
+const selectedNodeId = ref<string | null>(null)
+const nodeDetailsOpen = ref(false)
+const showStory = ref(false)
 
 onMounted(async () => {
   await store.fetchFlows()
+})
+
+watch(selectedWorkflowId, async flowId => {
+  selectedNodeId.value = null
+  nodeDetailsOpen.value = false
+  showStory.value = false
+  if (!flowId) {
+    store.narrative = null
+    return
+  }
+
+  const workflowExists = store.flows.some(flow => flow.id === flowId)
+  if (!workflowExists) {
+    store.narrative = null
+    return
+  }
+
+  await store.fetchNarrative(flowId)
 })
 
 const activeFlows = computed(() => store.flows.length)
@@ -31,20 +52,23 @@ const workflowOptions = computed(() => store.flows.map(flow => ({
   description: flow.description,
 })))
 const selectedWorkflow = computed(() => store.flows.find(flow => flow.id === selectedWorkflowId.value) ?? null)
-const selectedVisibleSteps = computed(() => selectedWorkflow.value ? visibleSteps(selectedWorkflow.value) : [])
-
-const isExpanded = (flowId: string) => expandedFlows.value.has(flowId)
-
-const visibleSteps = (flow: FlowGraph) => (isExpanded(flow.id) ? flow.steps : flow.steps.slice(0, STEPS_VISIBLE))
-
-const toggleFlow = (flowId: string) => {
-  const nextExpanded = new Set(expandedFlows.value)
-  if (nextExpanded.has(flowId)) {
-    nextExpanded.delete(flowId)
-  } else {
-    nextExpanded.add(flowId)
+const selectedNode = computed(() => {
+  if (!selectedWorkflow.value || !selectedNodeId.value) {
+    return null
   }
-  expandedFlows.value = nextExpanded
+  return selectedWorkflow.value.nodes.find(node => node.nodeId === selectedNodeId.value) ?? null
+})
+const typeLabel = (type: NodeType) => {
+  if (type === 'START_EVENT') return t('flowcockpit.nodeType.start')
+  if (type === 'END_EVENT') return t('flowcockpit.nodeType.end')
+  if (type === 'EXCLUSIVE_GATEWAY') return t('flowcockpit.nodeType.exclusiveGateway')
+  if (type === 'PARALLEL_GATEWAY') return t('flowcockpit.nodeType.parallelGateway')
+  return t('flowcockpit.nodeType.activity')
+}
+
+const selectNode = (nodeId: string) => {
+  selectedNodeId.value = nodeId
+  nodeDetailsOpen.value = true
 }
 </script>
 
@@ -64,7 +88,7 @@ const toggleFlow = (flowId: string) => {
         </div>
 
         <div class="flex flex-wrap items-center gap-3">
-          <BaseWorkflowSelect
+          <WorkflowSelect
             v-model="selectedWorkflowId"
             :options="workflowOptions"
             :label="t('flowcockpit.workflowSelectorLabel')"
@@ -122,44 +146,59 @@ const toggleFlow = (flowId: string) => {
 
       <div v-else class="flex flex-col gap-5">
         <BaseCard :title="selectedWorkflow.name" :subtitle="selectedWorkflow.description">
-          <ol>
-            <li v-for="(step, index) in selectedVisibleSteps" :key="step.order">
-              <div class="mx-auto max-w-2xl rounded-3xl border border-(--ui-border) bg-white/55 p-5 dark:bg-white/4">
-                <span class="inline-flex items-center justify-center rounded-full bg-(--ui-brand-soft) px-2.5 py-1 text-xs font-semibold text-(--ui-brand)">
-                  {{ t('flowcockpit.step') }} {{ step.order }}
-                </span>
+          <div class="mb-4 grid gap-2 rounded-2xl border border-(--ui-border) bg-(--ui-panel-muted) p-4 text-sm md:grid-cols-2">
+            <p class="text-(--ui-text-muted)">{{ t('flowcockpit.owner') }}: <span class="text-(--ui-text)">{{ selectedWorkflow.owner || '-' }}</span></p>
+            <p class="text-(--ui-text-muted)">{{ t('flowcockpit.version') }}: <span class="text-(--ui-text)">{{ selectedWorkflow.version || '-' }}</span></p>
+            <p class="text-(--ui-text-muted)">{{ t('flowcockpit.domainTag') }}: <span class="text-(--ui-text)">{{ selectedWorkflow.domainTag || '-' }}</span></p>
+            <p class="text-(--ui-text-muted)">{{ t('flowcockpit.businessGoal') }}: <span class="text-(--ui-text)">{{ selectedWorkflow.businessGoal || '-' }}</span></p>
+          </div>
 
-                <div class="mt-3 flex items-start justify-between gap-3">
-                  <div>
-                    <p class="font-semibold text-(--ui-text)">{{ step.name }}</p>
-                    <p v-if="step.description" class="mt-1 text-sm leading-6 text-(--ui-text-muted)">{{ step.description }}</p>
-                  </div>
-                </div>
-
-                <p v-if="step.rollbackStep" class="mt-3 inline-flex items-center gap-2 rounded-full bg-amber-500/12 px-3 py-1 text-xs font-medium text-amber-700 dark:text-amber-300">
-                  <RotateCcw class="h-3.5 w-3.5" />
-                  {{ step.rollbackStep }}
-                </p>
-              </div>
-
-              <div v-if="index !== selectedVisibleSteps.length - 1" class="flex justify-center py-3">
-                <div class="flex flex-col items-center text-(--ui-text-muted)">
-                  <span class="h-4 w-px bg-(--ui-border-strong)" />
-                  <span class="rounded-full bg-(--ui-brand-soft) p-1 text-(--ui-brand)">
-                    <ArrowDown class="h-3.5 w-3.5" />
-                  </span>
-                  <span class="h-4 w-px bg-(--ui-border-strong)" />
-                </div>
-              </div>
-            </li>
-          </ol>
-
-          <div v-if="selectedWorkflow.steps.length > STEPS_VISIBLE" class="mt-4 flex justify-center">
-            <BaseButton variant="ghost" size="sm" @click="toggleFlow(selectedWorkflow.id)">
-              {{ isExpanded(selectedWorkflow.id) ? t('flowcockpit.showLess') : t('flowcockpit.showAllSteps', { n: selectedWorkflow.steps.length }) }}
+          <div class="mb-4 flex justify-end gap-2">
+            <BaseButton variant="ghost" size="sm" @click="showStory = !showStory">
+              <template #leading><BookOpenText /></template>
+              {{ showStory ? t('flowcockpit.hideStory') : t('flowcockpit.showStory') }}
+            </BaseButton>
+            <BaseButton
+              variant="ghost"
+              size="sm"
+              :disabled="!selectedNode"
+              @click="nodeDetailsOpen = true"
+            >
+              {{ t('flowcockpit.openNodeDetails') }}
             </BaseButton>
           </div>
+
+          <div v-if="showStory" class="mb-4 rounded-2xl border border-(--ui-border) bg-(--ui-panel-muted) p-4">
+            <p class="text-sm font-semibold text-(--ui-text)">{{ t('flowcockpit.storyTitle') }}</p>
+            <div v-if="store.loadingNarrative" class="mt-2 text-sm text-(--ui-text-muted)">{{ t('common.loading') }}</div>
+            <div v-else-if="store.narrativeError" class="mt-2 text-sm text-(--ui-danger)">{{ store.narrativeError }}</div>
+            <ol v-else-if="store.narrative?.paths?.length" class="mt-2 space-y-1 text-sm text-(--ui-text-muted)">
+              <li v-for="(path, idx) in store.narrative.paths" :key="path">{{ idx + 1 }}. {{ path }}</li>
+            </ol>
+            <p v-else class="mt-2 text-sm text-(--ui-text-muted)">{{ t('flowcockpit.emptyStory') }}</p>
+          </div>
+
+          <BpmDiagram
+            :nodes="selectedWorkflow.nodes || []"
+            :edges="selectedWorkflow.edges || []"
+            :type-label="typeLabel"
+            @select-node="selectNode"
+          />
         </BaseCard>
+
+        <NodeDetailsDrawer
+          :open="nodeDetailsOpen"
+          :node="selectedNode"
+          :title="t('flowcockpit.nodeDetailsTitle')"
+          :empty-label="t('flowcockpit.nodeDetailsEmpty')"
+          :purpose-label="t('flowcockpit.purpose')"
+          :input-label="t('flowcockpit.inputHint')"
+          :output-label="t('flowcockpit.outputHint')"
+          :failure-label="t('flowcockpit.failureHint')"
+          :close-label="t('flowcockpit.closeNodeDetails')"
+          :close-aria-label="t('common.a11y.closeDialog')"
+          @close="nodeDetailsOpen = false"
+        />
       </div>
     </section>
   </div>

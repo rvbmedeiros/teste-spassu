@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
 
     <button
       type="button"
-      class="surface-panel flex w-full items-center justify-between rounded-2xl border border-(--ui-border) px-4 py-3 text-left transition-colors hover:border-(--ui-brand-soft)"
+      class="field-shell flex items-center justify-between text-left hover:border-(--ui-brand) focus-visible:border-(--ui-brand) focus-visible:ring-4 focus-visible:ring-(--ui-focus-ring)"
       :aria-expanded="open"
       :aria-label="label"
       @click="toggleOpen"
@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
       >
         <button
           type="button"
-          class="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-(--ui-text-muted) transition-colors hover:bg-(--ui-brand-soft)"
+          class="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-(--ui-text-muted) transition-colors hover:bg-(--ui-brand-soft) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--ui-focus-ring)"
           :aria-selected="modelValue === null"
           @click="selectOption(null)"
         >
@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
           <li v-for="option in options" :key="option.id">
             <button
               type="button"
-              class="flex w-full items-start justify-between gap-3 px-4 py-3 text-left transition-colors hover:bg-(--ui-brand-soft)"
+              class="flex w-full items-start justify-between gap-3 px-4 py-3 text-left transition-colors hover:bg-(--ui-brand-soft) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--ui-focus-ring)"
               :aria-selected="option.id === modelValue"
               @click="selectOption(option.id)"
             >

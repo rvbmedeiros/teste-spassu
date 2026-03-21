@@ -22,12 +22,23 @@ describe('useFlowStore', () => {
         id: 'create-livro',
         name: 'Criar Livro',
         description: 'Persiste livro',
-        steps: [{
+        owner: 'orchestration-team',
+        version: '1.0.0',
+        domainTag: 'livros',
+        businessGoal: 'Cadastrar livro',
+        nodes: [{
+          nodeId: 'step-1',
+          type: 'ACTIVITY',
           order: 1,
           name: 'Validar',
           description: 'Valida payload',
+          purpose: 'Validar dados',
+          inputHint: 'LivroRequest',
+          outputHint: 'Payload valido',
+          failureHint: '422',
           rollbackStep: 'N/A',
         }],
+        edges: [],
       }],
     })
 
@@ -49,5 +60,38 @@ describe('useFlowStore', () => {
     expect(store.flows).toEqual([])
     expect(store.loadingFlows).toBe(false)
     expect(store.flowsError).toBe('Falha ao carregar fluxos')
+  })
+
+  it('fetchFlows converte payload legado com steps para nodes e edges', async () => {
+    vi.mocked(api.get).mockResolvedValue({
+      data: [{
+        id: 'create-assunto',
+        name: 'Criar Assunto',
+        description: 'Fluxo legado',
+        steps: [
+          {
+            order: 1,
+            name: 'Validar payload',
+            description: 'Valida request',
+          },
+          {
+            order: 2,
+            name: 'Enviar para microservice',
+            description: 'RPC para microservice',
+          },
+        ],
+      }],
+    })
+
+    const store = useFlowStore()
+    await store.fetchFlows()
+
+    expect(store.flows).toHaveLength(1)
+    expect(store.flows[0].nodes).toHaveLength(2)
+    expect(store.flows[0].nodes[0].nodeId).toBe('step-1')
+    expect(store.flows[0].nodes[1].nodeId).toBe('step-2')
+    expect(store.flows[0].edges).toEqual([
+      { from: 'step-1', to: 'step-2', label: '', edgeIntent: '' },
+    ])
   })
 })

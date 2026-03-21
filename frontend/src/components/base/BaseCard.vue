@@ -16,7 +16,7 @@ const slots = useSlots()
 // Static tone class map to avoid repeated computed evaluation
 const toneClassMap = {
   default: 'surface-panel',
-  brand: 'surface-panel border-[color:var(--ui-brand-soft)]',
+  brand: 'surface-panel border-(--ui-brand-soft)',
   muted: 'surface-muted shadow-none',
 }
 
@@ -27,13 +27,13 @@ const toneClass = toneClassMap[props.tone]
 
 <template>
   <section :class="['overflow-hidden rounded-[1.75rem]', toneClass]">
-    <div v-if="hasHeader" class="flex flex-col gap-4 border-b border-[color:var(--ui-border)] px-6 py-5 sm:flex-row sm:items-start sm:justify-between">
+    <div v-if="hasHeader" class="flex flex-col gap-4 border-b border-(--ui-border) px-6 py-5 sm:flex-row sm:items-start sm:justify-between">
       <div class="min-w-0">
         <slot name="header">
-          <h2 v-if="title" class="text-lg font-semibold tracking-tight text-[color:var(--ui-text)]">
+          <h2 v-if="title" class="text-lg font-semibold tracking-tight text-(--ui-text)">
             {{ title }}
           </h2>
-          <p v-if="subtitle" class="mt-1 text-sm leading-6 text-[color:var(--ui-text-muted)]">
+          <p v-if="subtitle" class="mt-1 text-sm leading-6 text-(--ui-text-muted)">
             {{ subtitle }}
           </p>
         </slot>
@@ -47,7 +47,7 @@ const toneClass = toneClassMap[props.tone]
       <slot />
     </div>
 
-    <div v-if="$slots.footer" class="border-t border-[color:var(--ui-border)] px-6 py-4">
+    <div v-if="$slots.footer" class="border-t border-(--ui-border) px-6 py-4">
       <slot name="footer" />
     </div>
   </section>

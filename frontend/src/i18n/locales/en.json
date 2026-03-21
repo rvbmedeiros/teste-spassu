@@ -62,6 +62,8 @@
   "relatorio": {
     "title": "Books Report",
     "subtitle": "Export a consolidated PDF built for audit and stakeholder sharing.",
+    "exportType": "PDF",
+    "exportLabel": "Export",
     "gerar": "Generate PDF",
     "gerando": "Generating...",
     "downloadIniciado": "Download started successfully!"
@@ -78,10 +80,31 @@
     "loadingFlows": "Loading flows...",
     "errorFlows": "Failed to load flow definitions.",
     "emptyFlows": "No flows registered in the orchestrator.",
-    "showAllSteps": "Show all {n} steps",
-    "showLess": "Show less",
     "activeFlows": "Active flows",
-    "step": "Step"
+    "step": "Step",
+    "owner": "Owner",
+    "version": "Version",
+    "domainTag": "Domain",
+    "businessGoal": "Business goal",
+    "showStory": "Show flow story",
+    "hideStory": "Hide story",
+    "storyTitle": "Flow narrative",
+    "emptyStory": "No narrative available for this flow.",
+    "openNodeDetails": "View node details",
+    "closeNodeDetails": "Close details",
+    "nodeDetailsTitle": "Node details",
+    "nodeDetailsEmpty": "Select a node in the diagram to view details.",
+    "purpose": "Purpose",
+    "inputHint": "Expected input",
+    "outputHint": "Expected output",
+    "failureHint": "Main failure",
+    "nodeType": {
+      "start": "Start event",
+      "end": "End event",
+      "activity": "Activity",
+      "exclusiveGateway": "Exclusive gateway",
+      "parallelGateway": "Parallel gateway"
+    }
   },
   "logs": {
     "title": "Logs Center",
@@ -134,6 +157,13 @@
     "editar": "Edit",
     "excluir": "Delete",
     "buscar": "Search",
+    "a11y": {
+      "closeDialog": "Close dialog",
+      "switchToLight": "Switch to light mode",
+      "switchToDark": "Switch to dark mode",
+      "openNavigation": "Open navigation",
+      "closeNavigation": "Close navigation"
+    },
     "localeSwitcher": "PT"
   }
 }

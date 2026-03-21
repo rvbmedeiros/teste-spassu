@@ -62,13 +62,15 @@
   "relatorio": {
     "title": "Relatório de Livros",
     "subtitle": "Exporte um PDF consolidado com visão pronta para auditoria e compartilhamento.",
+    "exportType": "PDF",
+    "exportLabel": "Exportar",
     "gerar": "Gerar PDF",
     "gerando": "Gerando...",
     "downloadIniciado": "Download iniciado com sucesso!"
   },
   "flowcockpit": {
     "title": "FlowCockpit",
-    "subtitle": "Orquestração de Fluxos em Tempo Real",
+    "subtitle": "Fluxos Declarativos a partir de código programático",
     "workflowSelectorLabel": "Selecionar workflow",
     "workflowSelectorPlaceholder": "Escolha um workflow para visualizar",
     "workflowSelectorClear": "Nenhum workflow selecionado",
@@ -78,10 +80,31 @@
     "loadingFlows": "Carregando fluxos...",
     "errorFlows": "Falha ao carregar definições de fluxo.",
     "emptyFlows": "Nenhum fluxo registrado no orquestrador.",
-    "showAllSteps": "Ver todos os {n} passos",
-    "showLess": "Mostrar menos",
     "activeFlows": "Fluxos ativos",
-    "step": "Passo"
+    "step": "Passo",
+    "owner": "Responsável",
+    "version": "Versão",
+    "domainTag": "Domínio",
+    "businessGoal": "Objetivo de negócio",
+    "showStory": "Ver história do fluxo",
+    "hideStory": "Ocultar história",
+    "storyTitle": "Narrativa do fluxo",
+    "emptyStory": "Nenhuma narrativa disponível para este fluxo.",
+    "openNodeDetails": "Ver detalhes do nó",
+    "closeNodeDetails": "Fechar detalhes",
+    "nodeDetailsTitle": "Detalhes do nó",
+    "nodeDetailsEmpty": "Selecione um nó do diagrama para ver detalhes.",
+    "purpose": "Propósito",
+    "inputHint": "Entrada esperada",
+    "outputHint": "Saída esperada",
+    "failureHint": "Falha principal",
+    "nodeType": {
+      "start": "Evento de início",
+      "end": "Evento de fim",
+      "activity": "Atividade",
+      "exclusiveGateway": "Gateway exclusivo",
+      "parallelGateway": "Gateway paralelo"
+    }
   },
   "logs": {
     "title": "Central de Logs",
@@ -134,6 +157,13 @@
     "editar": "Editar",
     "excluir": "Excluir",
     "buscar": "Buscar",
+    "a11y": {
+      "closeDialog": "Fechar diálogo",
+      "switchToLight": "Alternar para tema claro",
+      "switchToDark": "Alternar para tema escuro",
+      "openNavigation": "Abrir navegação",
+      "closeNavigation": "Fechar navegação"
+    },
     "localeSwitcher": "EN"
   }
 }

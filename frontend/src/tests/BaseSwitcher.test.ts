@@ -19,7 +19,7 @@ describe('BaseSwitcher', () => {
   it('renderiza com label de alternancia para dark mode quando tema atual e light', () => {
     const wrapper = mount(BaseSwitcher)
 
-    expect(wrapper.attributes('aria-label')).toBe('Switch to dark mode')
+    expect(wrapper.attributes('aria-label')).toBe('Alternar para tema escuro')
   })
 
   it('ao clicar alterna tema e atualiza aria-label', async () => {
@@ -27,7 +27,7 @@ describe('BaseSwitcher', () => {
 
     await wrapper.trigger('click')
 
-    expect(wrapper.attributes('aria-label')).toBe('Switch to light mode')
+    expect(wrapper.attributes('aria-label')).toBe('Alternar para tema claro')
     expect(document.documentElement.classList.contains('dark')).toBe(true)
   })
 

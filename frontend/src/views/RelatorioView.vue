@@ -48,10 +48,10 @@ async function gerarRelatorio() {
 
         <div class="metric-tile">
           <div class="flex items-center justify-between">
-            <span class="text-sm font-medium text-(--ui-text-muted)">PDF</span>
+            <span class="text-sm font-medium text-(--ui-text-muted)">{{ t('relatorio.exportType') }}</span>
             <Sparkles class="h-4 w-4 text-(--ui-brand)" />
           </div>
-          <p class="mt-4 text-3xl font-semibold tracking-tight text-(--ui-text)">Export</p>
+          <p class="mt-4 text-3xl font-semibold tracking-tight text-(--ui-text)">{{ t('relatorio.exportLabel') }}</p>
         </div>
       </div>
     </section>

@@ -48,7 +48,7 @@ function switchLocale() {
     <div class="surface-panel-strong mx-auto max-w-7xl rounded-4xl px-4 py-3 sm:px-5">
       <div class="flex items-center justify-between gap-4">
         <RouterLink to="/" class="flex min-w-0 items-center gap-3">
-          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-(--ui-brand) text-white shadow-[0_16px_36px_rgba(37,99,235,0.24)]">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-(--ui-brand) text-(--ui-on-brand) shadow-[var(--ui-shadow-brand)]">
             <LibraryBig class="h-5 w-5" />
           </span>
           <span class="min-w-0">
@@ -62,8 +62,8 @@ function switchLocale() {
             v-for="link in navLinks"
             :key="link.to"
             :to="link.to"
-            class="inline-flex items-center gap-2 rounded-2xl px-3.5 py-2 text-sm font-medium text-(--ui-text-muted) transition-colors hover:bg-black/5 hover:text-(--ui-text) dark:hover:bg-white/8"
-            active-class="bg-[color:var(--ui-brand-soft)] text-[color:var(--ui-brand)]"
+            class="nav-item px-3.5 py-2"
+            active-class="bg-(--ui-brand-soft) text-(--ui-brand)"
           >
             <component :is="link.icon" class="h-4 w-4" />
             <span>{{ link.label }}</span>
@@ -71,7 +71,7 @@ function switchLocale() {
         </div>
 
         <div class="flex items-center gap-2 sm:gap-3">
-          <span v-if="auth.username" class="hidden rounded-full border border-(--ui-border) bg-white/60 px-3 py-1.5 text-xs font-medium text-(--ui-text-muted) md:inline-flex dark:bg-white/6">
+          <span v-if="auth.username" class="status-badge hidden bg-(--ui-panel-muted) text-(--ui-text-muted) md:inline-flex">
             {{ auth.username }}
           </span>
 
@@ -92,9 +92,9 @@ function switchLocale() {
           </BaseButton>
 
           <button
-            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-(--ui-border) bg-white/70 text-(--ui-text) shadow-(--shadow-soft) transition-colors hover:bg-white dark:bg-white/6 lg:hidden"
+            class="icon-button-shell h-11 w-11 text-(--ui-text) lg:hidden"
             type="button"
-            :aria-label="mobileOpen ? 'Close navigation' : 'Open navigation'"
+            :aria-label="mobileOpen ? t('common.a11y.closeNavigation') : t('common.a11y.openNavigation')"
             @click="mobileOpen = !mobileOpen"
           >
             <X v-if="mobileOpen" class="h-4 w-4" />
@@ -110,8 +110,8 @@ function switchLocale() {
               v-for="link in navLinks"
               :key="link.to"
               :to="link.to"
-              class="inline-flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-(--ui-text-muted) transition-colors hover:bg-black/5 hover:text-(--ui-text) dark:hover:bg-white/8"
-              active-class="bg-[color:var(--ui-brand-soft)] text-[color:var(--ui-brand)]"
+              class="nav-item px-4 py-3"
+              active-class="bg-(--ui-brand-soft) text-(--ui-brand)"
             >
               <component :is="link.icon" class="h-4 w-4" />
               <span>{{ link.label }}</span>

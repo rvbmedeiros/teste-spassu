@@ -1804,3 +1804,536 @@ java.util.concurrent.RejectedExecutionException: event executor terminated
 2026-03-21 12:30:30.396 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Started BffSecurityTest in 3.463 seconds (process running for 5.291)
 2026-03-21 12:30:31.439 INFO  [SpringApplicationShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2026-03-21 12:30:31.441 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 12:53:11.886 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 12:53:11.971 INFO  [restartedMain] [bff] traceId= requestId= c.spassu.livros.bff.BffApplication - Starting BffApplication using Java 25.0.2 with PID 54623 (/home/pc/Projetos/Teste Spassu/bff/target/classes started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 12:53:11.973 INFO  [restartedMain] [bff] traceId= requestId= c.spassu.livros.bff.BffApplication - The following 1 profile is active: "local"
+2026-03-21 12:53:12.071 INFO  [restartedMain] [bff] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-21 12:53:14.210 INFO  [restartedMain] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e1f3bf71-609c-3020-9328-dbbd6e52ffb1
+2026-03-21 12:53:14.999 INFO  [restartedMain] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 12:53:16.307 INFO  [restartedMain] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 12:53:16.765 INFO  [restartedMain] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 8083 (http)
+2026-03-21 12:53:16.783 INFO  [restartedMain] [bff] traceId= requestId= c.spassu.livros.bff.BffApplication - Started BffApplication in 7.829 seconds (process running for 9.458)
+2026-03-21 12:55:31.656 INFO  [parallel-4] [bff] traceId= requestId=e23bc463-ee7d-42e1-a5b0-0120c69931af c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=e23bc463-ee7d-42e1-a5b0-0120c69931af
+2026-03-21 12:55:31.656 INFO  [parallel-3] [bff] traceId= requestId=c25cd570-ed75-409e-8682-224f4d034691 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=c25cd570-ed75-409e-8682-224f4d034691
+2026-03-21 12:55:31.656 INFO  [parallel-2] [bff] traceId= requestId=2b94cd7a-3572-48ea-934e-701f9c1b3502 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=2b94cd7a-3572-48ea-934e-701f9c1b3502
+2026-03-21 12:55:31.657 DEBUG [parallel-3] [bff] traceId= requestId=c25cd570-ed75-409e-8682-224f4d034691 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=c25cd570-ed75-409e-8682-224f4d034691, headerCount=16
+2026-03-21 12:55:31.657 DEBUG [parallel-2] [bff] traceId= requestId=2b94cd7a-3572-48ea-934e-701f9c1b3502 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=2b94cd7a-3572-48ea-934e-701f9c1b3502, headerCount=16
+2026-03-21 12:55:31.657 DEBUG [parallel-4] [bff] traceId= requestId=e23bc463-ee7d-42e1-a5b0-0120c69931af c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=e23bc463-ee7d-42e1-a5b0-0120c69931af, headerCount=16
+2026-03-21 12:55:32.203 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=2b94cd7a-3572-48ea-934e-701f9c1b3502
+2026-03-21 12:55:32.203 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=e23bc463-ee7d-42e1-a5b0-0120c69931af
+2026-03-21 12:55:32.208 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=c25cd570-ed75-409e-8682-224f4d034691
+2026-03-21 12:55:35.945 INFO  [parallel-5] [bff] traceId= requestId=045620a6-1d9d-4018-9f19-763eff53095e c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=045620a6-1d9d-4018-9f19-763eff53095e
+2026-03-21 12:55:35.946 DEBUG [parallel-5] [bff] traceId= requestId=045620a6-1d9d-4018-9f19-763eff53095e c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=045620a6-1d9d-4018-9f19-763eff53095e, headerCount=16
+2026-03-21 12:55:35.966 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=045620a6-1d9d-4018-9f19-763eff53095e
+2026-03-21 12:55:37.453 INFO  [parallel-6] [bff] traceId= requestId=36d89dad-aaba-438f-af1d-d8263620c6d8 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=36d89dad-aaba-438f-af1d-d8263620c6d8
+2026-03-21 12:55:37.453 DEBUG [parallel-6] [bff] traceId= requestId=36d89dad-aaba-438f-af1d-d8263620c6d8 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=36d89dad-aaba-438f-af1d-d8263620c6d8, headerCount=16
+2026-03-21 12:55:37.508 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=36d89dad-aaba-438f-af1d-d8263620c6d8
+2026-03-21 12:55:39.986 INFO  [parallel-8] [bff] traceId= requestId=9ae6985f-dd72-4a7e-87a1-d41a0df24a4b c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=9ae6985f-dd72-4a7e-87a1-d41a0df24a4b
+2026-03-21 12:55:39.986 INFO  [parallel-7] [bff] traceId= requestId=8a3dfe7f-9f8f-44e8-b2c0-898ace41afd5 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=8a3dfe7f-9f8f-44e8-b2c0-898ace41afd5
+2026-03-21 12:55:39.987 DEBUG [parallel-7] [bff] traceId= requestId=8a3dfe7f-9f8f-44e8-b2c0-898ace41afd5 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=8a3dfe7f-9f8f-44e8-b2c0-898ace41afd5, headerCount=16
+2026-03-21 12:55:39.988 DEBUG [parallel-8] [bff] traceId= requestId=9ae6985f-dd72-4a7e-87a1-d41a0df24a4b c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=9ae6985f-dd72-4a7e-87a1-d41a0df24a4b, headerCount=16
+2026-03-21 12:55:39.992 INFO  [parallel-1] [bff] traceId= requestId=37892835-de5d-41cd-95fd-0f66ce77826c c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=37892835-de5d-41cd-95fd-0f66ce77826c
+2026-03-21 12:55:39.992 DEBUG [parallel-1] [bff] traceId= requestId=37892835-de5d-41cd-95fd-0f66ce77826c c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=37892835-de5d-41cd-95fd-0f66ce77826c, headerCount=16
+2026-03-21 12:55:40.032 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=37892835-de5d-41cd-95fd-0f66ce77826c
+2026-03-21 12:55:40.033 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=8a3dfe7f-9f8f-44e8-b2c0-898ace41afd5
+2026-03-21 12:55:40.053 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=9ae6985f-dd72-4a7e-87a1-d41a0df24a4b
+2026-03-21 12:55:42.885 INFO  [parallel-2] [bff] traceId= requestId=0afcea3b-9f6a-4060-a804-153091e834af c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=0afcea3b-9f6a-4060-a804-153091e834af
+2026-03-21 12:55:42.886 DEBUG [parallel-2] [bff] traceId= requestId=0afcea3b-9f6a-4060-a804-153091e834af c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=0afcea3b-9f6a-4060-a804-153091e834af, headerCount=16
+2026-03-21 12:55:42.902 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=0afcea3b-9f6a-4060-a804-153091e834af
+2026-03-21 12:55:43.671 INFO  [parallel-3] [bff] traceId= requestId=edd5a7df-546f-4a5a-8562-389d584dd8e2 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=edd5a7df-546f-4a5a-8562-389d584dd8e2
+2026-03-21 12:55:43.671 DEBUG [parallel-3] [bff] traceId= requestId=edd5a7df-546f-4a5a-8562-389d584dd8e2 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=edd5a7df-546f-4a5a-8562-389d584dd8e2, headerCount=16
+2026-03-21 12:55:43.672 INFO  [parallel-4] [bff] traceId= requestId=64ae12b2-637d-4e7a-bcf4-a9ddace127a6 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=64ae12b2-637d-4e7a-bcf4-a9ddace127a6
+2026-03-21 12:55:43.672 DEBUG [parallel-4] [bff] traceId= requestId=64ae12b2-637d-4e7a-bcf4-a9ddace127a6 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=64ae12b2-637d-4e7a-bcf4-a9ddace127a6, headerCount=16
+2026-03-21 12:55:43.676 INFO  [parallel-5] [bff] traceId= requestId=7d6a23c2-3336-413a-9e00-9e67a360cdd6 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=7d6a23c2-3336-413a-9e00-9e67a360cdd6
+2026-03-21 12:55:43.676 DEBUG [parallel-5] [bff] traceId= requestId=7d6a23c2-3336-413a-9e00-9e67a360cdd6 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=7d6a23c2-3336-413a-9e00-9e67a360cdd6, headerCount=16
+2026-03-21 12:55:43.690 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=edd5a7df-546f-4a5a-8562-389d584dd8e2
+2026-03-21 12:55:43.695 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=7d6a23c2-3336-413a-9e00-9e67a360cdd6
+2026-03-21 12:55:43.707 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=64ae12b2-637d-4e7a-bcf4-a9ddace127a6
+2026-03-21 12:55:44.083 INFO  [parallel-6] [bff] traceId= requestId=3fc2e52f-06c6-4fc6-ac51-c8de09127275 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=3fc2e52f-06c6-4fc6-ac51-c8de09127275
+2026-03-21 12:55:44.083 DEBUG [parallel-6] [bff] traceId= requestId=3fc2e52f-06c6-4fc6-ac51-c8de09127275 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=3fc2e52f-06c6-4fc6-ac51-c8de09127275, headerCount=16
+2026-03-21 12:55:44.097 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=3fc2e52f-06c6-4fc6-ac51-c8de09127275
+2026-03-21 12:55:45.734 INFO  [parallel-7] [bff] traceId= requestId=5bad994c-eb6b-44de-af27-a87e5b5992e1 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=5bad994c-eb6b-44de-af27-a87e5b5992e1
+2026-03-21 12:55:45.735 DEBUG [parallel-7] [bff] traceId= requestId=5bad994c-eb6b-44de-af27-a87e5b5992e1 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=5bad994c-eb6b-44de-af27-a87e5b5992e1, headerCount=16
+2026-03-21 12:55:45.763 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=5bad994c-eb6b-44de-af27-a87e5b5992e1
+2026-03-21 12:55:47.987 INFO  [parallel-8] [bff] traceId= requestId=3c999ac1-0441-4172-b05e-44eda2d70c87 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/relatorio/pdf, requestId=3c999ac1-0441-4172-b05e-44eda2d70c87
+2026-03-21 12:55:47.988 DEBUG [parallel-8] [bff] traceId= requestId=3c999ac1-0441-4172-b05e-44eda2d70c87 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=3c999ac1-0441-4172-b05e-44eda2d70c87, headerCount=16
+2026-03-21 12:55:51.332 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/relatorio/pdf, status=200, requestId=3c999ac1-0441-4172-b05e-44eda2d70c87
+2026-03-21 13:01:18.821 INFO  [parallel-1] [bff] traceId= requestId=84ab16d2-428e-407f-88d1-809e6200a3bf c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=84ab16d2-428e-407f-88d1-809e6200a3bf
+2026-03-21 13:01:18.823 DEBUG [parallel-1] [bff] traceId= requestId=84ab16d2-428e-407f-88d1-809e6200a3bf c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=84ab16d2-428e-407f-88d1-809e6200a3bf, headerCount=16
+2026-03-21 13:01:18.830 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=84ab16d2-428e-407f-88d1-809e6200a3bf
+2026-03-21 13:01:35.815 INFO  [parallel-2] [bff] traceId= requestId=e50f2225-0227-4c00-a1a5-c803e254b236 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=e50f2225-0227-4c00-a1a5-c803e254b236
+2026-03-21 13:01:35.818 DEBUG [parallel-2] [bff] traceId= requestId=e50f2225-0227-4c00-a1a5-c803e254b236 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=e50f2225-0227-4c00-a1a5-c803e254b236, headerCount=16
+2026-03-21 13:01:35.829 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=e50f2225-0227-4c00-a1a5-c803e254b236
+2026-03-21 13:02:26.573 INFO  [parallel-3] [bff] traceId= requestId=f7397ba8-eb35-4788-a094-5f018f38ed97 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=f7397ba8-eb35-4788-a094-5f018f38ed97
+2026-03-21 13:02:26.574 DEBUG [parallel-3] [bff] traceId= requestId=f7397ba8-eb35-4788-a094-5f018f38ed97 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=f7397ba8-eb35-4788-a094-5f018f38ed97, headerCount=16
+2026-03-21 13:02:26.590 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=f7397ba8-eb35-4788-a094-5f018f38ed97
+2026-03-21 13:02:42.328 INFO  [parallel-4] [bff] traceId= requestId=161e3d44-ce21-4ce6-844e-589463a2c32f c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=161e3d44-ce21-4ce6-844e-589463a2c32f
+2026-03-21 13:02:42.329 DEBUG [parallel-4] [bff] traceId= requestId=161e3d44-ce21-4ce6-844e-589463a2c32f c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=161e3d44-ce21-4ce6-844e-589463a2c32f, headerCount=16
+2026-03-21 13:02:42.339 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=161e3d44-ce21-4ce6-844e-589463a2c32f
+2026-03-21 13:03:04.314 INFO  [parallel-5] [bff] traceId= requestId=1b610e29-3e90-47c0-91f4-8691aaaafcd1 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=1b610e29-3e90-47c0-91f4-8691aaaafcd1
+2026-03-21 13:03:04.322 DEBUG [parallel-5] [bff] traceId= requestId=1b610e29-3e90-47c0-91f4-8691aaaafcd1 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=1b610e29-3e90-47c0-91f4-8691aaaafcd1, headerCount=16
+2026-03-21 13:03:04.335 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=1b610e29-3e90-47c0-91f4-8691aaaafcd1
+2026-03-21 13:03:41.969 INFO  [parallel-6] [bff] traceId= requestId=5413b057-df0b-473a-ad0f-469d104861af c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=5413b057-df0b-473a-ad0f-469d104861af
+2026-03-21 13:03:41.971 DEBUG [parallel-6] [bff] traceId= requestId=5413b057-df0b-473a-ad0f-469d104861af c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=5413b057-df0b-473a-ad0f-469d104861af, headerCount=16
+2026-03-21 13:03:41.991 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=5413b057-df0b-473a-ad0f-469d104861af
+2026-03-21 13:03:44.215 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 13:03:44.376 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Starting BffSecurityTest using Java 25.0.2 with PID 76556 (started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 13:03:44.378 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-21 13:03:45.806 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 13:03:45.945 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Starting BffSecurityTest using Java 25.0.2 with PID 76641 (started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 13:03:45.947 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-21 13:03:48.431 INFO  [main] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=1f558dc7-301d-365b-915a-fb19522b78c3
+2026-03-21 13:03:49.448 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 13:03:49.472 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:03:49.655 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:8081 to http://127.0.0.1:8081 to avoid IPv6 localhost resolution issues
+2026-03-21 13:03:49.676 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:03:49.863 INFO  [main] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=1f558dc7-301d-365b-915a-fb19522b78c3
+2026-03-21 13:03:51.250 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 13:03:51.275 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:03:51.475 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:8081 to http://127.0.0.1:8081 to avoid IPv6 localhost resolution issues
+2026-03-21 13:03:51.543 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:03:53.694 INFO  [main] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 13:03:55.699 INFO  [main] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 13:03:55.936 INFO  [main] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 37933 (http)
+2026-03-21 13:03:55.961 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Started BffSecurityTest in 14.193 seconds (process running for 22.37)
+2026-03-21 13:03:57.491 INFO  [main] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 45899 (http)
+2026-03-21 13:03:57.522 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Started BffSecurityTest in 13.437 seconds (process running for 21.73)
+2026-03-21 13:04:00.405 INFO  [SpringApplicationShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-21 13:04:00.422 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 13:04:01.041 INFO  [SpringApplicationShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-21 13:04:01.355 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 13:04:02.200 INFO  [parallel-7] [bff] traceId= requestId=fca86ad9-5ccb-47c6-bbbd-d8bc1d8d7c72 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=fca86ad9-5ccb-47c6-bbbd-d8bc1d8d7c72
+2026-03-21 13:04:02.201 DEBUG [parallel-7] [bff] traceId= requestId=fca86ad9-5ccb-47c6-bbbd-d8bc1d8d7c72 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=fca86ad9-5ccb-47c6-bbbd-d8bc1d8d7c72, headerCount=16
+2026-03-21 13:04:02.210 INFO  [parallel-8] [bff] traceId= requestId=1a74f635-e591-4e31-bba0-0e4a2ebdc1fb c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=1a74f635-e591-4e31-bba0-0e4a2ebdc1fb
+2026-03-21 13:04:02.212 DEBUG [parallel-8] [bff] traceId= requestId=1a74f635-e591-4e31-bba0-0e4a2ebdc1fb c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=1a74f635-e591-4e31-bba0-0e4a2ebdc1fb, headerCount=16
+2026-03-21 13:04:02.220 INFO  [parallel-1] [bff] traceId= requestId=824c4d67-e9de-46a0-a7d3-debfdf705d1f c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=824c4d67-e9de-46a0-a7d3-debfdf705d1f
+2026-03-21 13:04:02.222 DEBUG [parallel-1] [bff] traceId= requestId=824c4d67-e9de-46a0-a7d3-debfdf705d1f c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=824c4d67-e9de-46a0-a7d3-debfdf705d1f, headerCount=16
+2026-03-21 13:04:02.327 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=824c4d67-e9de-46a0-a7d3-debfdf705d1f
+2026-03-21 13:04:02.329 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=1a74f635-e591-4e31-bba0-0e4a2ebdc1fb
+2026-03-21 13:04:02.335 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=fca86ad9-5ccb-47c6-bbbd-d8bc1d8d7c72
+2026-03-21 13:04:02.640 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 13:04:02.781 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Starting BffSecurityTest using Java 25.0.2 with PID 77669 (started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 13:04:02.782 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-21 13:04:03.570 INFO  [parallel-2] [bff] traceId= requestId=e1612d91-03eb-46fe-8652-f9b6b106bbc3 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=e1612d91-03eb-46fe-8652-f9b6b106bbc3
+2026-03-21 13:04:03.571 DEBUG [parallel-2] [bff] traceId= requestId=e1612d91-03eb-46fe-8652-f9b6b106bbc3 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=e1612d91-03eb-46fe-8652-f9b6b106bbc3, headerCount=16
+2026-03-21 13:04:03.619 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=e1612d91-03eb-46fe-8652-f9b6b106bbc3
+2026-03-21 13:04:05.448 INFO  [parallel-3] [bff] traceId= requestId=3a0d5844-73e5-4780-aae7-65fbb21ae6ac c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=3a0d5844-73e5-4780-aae7-65fbb21ae6ac
+2026-03-21 13:04:05.449 DEBUG [parallel-3] [bff] traceId= requestId=3a0d5844-73e5-4780-aae7-65fbb21ae6ac c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=3a0d5844-73e5-4780-aae7-65fbb21ae6ac, headerCount=16
+2026-03-21 13:04:05.490 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=3a0d5844-73e5-4780-aae7-65fbb21ae6ac
+2026-03-21 13:04:06.557 INFO  [parallel-4] [bff] traceId= requestId=62e74e96-4e83-4d7c-a244-f7d9094150b0 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=62e74e96-4e83-4d7c-a244-f7d9094150b0
+2026-03-21 13:04:06.558 DEBUG [parallel-4] [bff] traceId= requestId=62e74e96-4e83-4d7c-a244-f7d9094150b0 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=62e74e96-4e83-4d7c-a244-f7d9094150b0, headerCount=16
+2026-03-21 13:04:06.568 INFO  [parallel-6] [bff] traceId= requestId=979757a3-7f1c-4c20-aca8-76d2f1a4bb27 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=979757a3-7f1c-4c20-aca8-76d2f1a4bb27
+2026-03-21 13:04:06.568 INFO  [parallel-5] [bff] traceId= requestId=eb77372c-de01-44b7-8620-a6a9c527bfa9 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=eb77372c-de01-44b7-8620-a6a9c527bfa9
+2026-03-21 13:04:06.569 DEBUG [parallel-6] [bff] traceId= requestId=979757a3-7f1c-4c20-aca8-76d2f1a4bb27 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=979757a3-7f1c-4c20-aca8-76d2f1a4bb27, headerCount=16
+2026-03-21 13:04:06.569 DEBUG [parallel-5] [bff] traceId= requestId=eb77372c-de01-44b7-8620-a6a9c527bfa9 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=eb77372c-de01-44b7-8620-a6a9c527bfa9, headerCount=16
+2026-03-21 13:04:06.594 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=979757a3-7f1c-4c20-aca8-76d2f1a4bb27
+2026-03-21 13:04:06.595 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=eb77372c-de01-44b7-8620-a6a9c527bfa9
+2026-03-21 13:04:06.613 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=62e74e96-4e83-4d7c-a244-f7d9094150b0
+2026-03-21 13:04:06.968 INFO  [main] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=1f558dc7-301d-365b-915a-fb19522b78c3
+2026-03-21 13:04:07.490 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 13:04:07.518 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:04:07.615 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:8081 to http://127.0.0.1:8081 to avoid IPv6 localhost resolution issues
+2026-03-21 13:04:07.634 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:04:09.604 INFO  [main] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 13:04:10.359 INFO  [main] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 34717 (http)
+2026-03-21 13:04:10.382 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Started BffSecurityTest in 8.97 seconds (process running for 17.707)
+2026-03-21 13:04:12.216 INFO  [SpringApplicationShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-21 13:04:12.380 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 13:04:35.388 INFO  [parallel-8] [bff] traceId= requestId=8b5d472b-2e72-45f3-ac09-3b41e137ab39 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=8b5d472b-2e72-45f3-ac09-3b41e137ab39
+2026-03-21 13:04:35.388 DEBUG [parallel-8] [bff] traceId= requestId=8b5d472b-2e72-45f3-ac09-3b41e137ab39 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=8b5d472b-2e72-45f3-ac09-3b41e137ab39, headerCount=16
+2026-03-21 13:04:35.388 INFO  [parallel-7] [bff] traceId= requestId=c77e8a30-3fd7-4b8c-9f7a-a7039daa1d7c c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=c77e8a30-3fd7-4b8c-9f7a-a7039daa1d7c
+2026-03-21 13:04:35.390 DEBUG [parallel-7] [bff] traceId= requestId=c77e8a30-3fd7-4b8c-9f7a-a7039daa1d7c c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=c77e8a30-3fd7-4b8c-9f7a-a7039daa1d7c, headerCount=16
+2026-03-21 13:04:35.393 INFO  [parallel-1] [bff] traceId= requestId=233d560f-3917-40c3-b6eb-42ebd2a96731 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=233d560f-3917-40c3-b6eb-42ebd2a96731
+2026-03-21 13:04:35.394 DEBUG [parallel-1] [bff] traceId= requestId=233d560f-3917-40c3-b6eb-42ebd2a96731 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=233d560f-3917-40c3-b6eb-42ebd2a96731, headerCount=16
+2026-03-21 13:04:35.437 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=c77e8a30-3fd7-4b8c-9f7a-a7039daa1d7c
+2026-03-21 13:04:35.449 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=233d560f-3917-40c3-b6eb-42ebd2a96731
+2026-03-21 13:04:35.466 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=8b5d472b-2e72-45f3-ac09-3b41e137ab39
+2026-03-21 13:05:35.794 INFO  [parallel-3] [bff] traceId= requestId=61323a68-559b-4d99-948e-18b12f7e6cf9 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=61323a68-559b-4d99-948e-18b12f7e6cf9
+2026-03-21 13:05:35.794 DEBUG [parallel-3] [bff] traceId= requestId=61323a68-559b-4d99-948e-18b12f7e6cf9 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=61323a68-559b-4d99-948e-18b12f7e6cf9, headerCount=16
+2026-03-21 13:05:35.802 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=61323a68-559b-4d99-948e-18b12f7e6cf9
+2026-03-21 13:05:37.497 INFO  [parallel-4] [bff] traceId= requestId=c4d76364-fd8e-4651-a377-aaae83f03dd0 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-autor/narrative, requestId=c4d76364-fd8e-4651-a377-aaae83f03dd0
+2026-03-21 13:05:37.497 DEBUG [parallel-4] [bff] traceId= requestId=c4d76364-fd8e-4651-a377-aaae83f03dd0 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=c4d76364-fd8e-4651-a377-aaae83f03dd0, headerCount=16
+2026-03-21 13:05:37.587 ERROR [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response error. method=GET, path=/flows/create-autor/narrative, status=500, requestId=c4d76364-fd8e-4651-a377-aaae83f03dd0, body={"detail":"Internal server error","instance":"/flows/create-autor/narrative","status":500,"title":"Internal Server Error","type":"https://spassu.com/problems/internal-error"}
+2026-03-21 13:06:57.548 INFO  [parallel-5] [bff] traceId= requestId=a9cd5445-e535-484c-9966-d7b5982ac96f c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=a9cd5445-e535-484c-9966-d7b5982ac96f
+2026-03-21 13:06:57.548 DEBUG [parallel-5] [bff] traceId= requestId=a9cd5445-e535-484c-9966-d7b5982ac96f c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=a9cd5445-e535-484c-9966-d7b5982ac96f, headerCount=16
+2026-03-21 13:06:57.580 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=a9cd5445-e535-484c-9966-d7b5982ac96f
+2026-03-21 13:06:59.445 INFO  [parallel-6] [bff] traceId= requestId=9a928979-6034-4c0a-ac04-55a38c894330 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=9a928979-6034-4c0a-ac04-55a38c894330
+2026-03-21 13:06:59.446 DEBUG [parallel-6] [bff] traceId= requestId=9a928979-6034-4c0a-ac04-55a38c894330 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=9a928979-6034-4c0a-ac04-55a38c894330, headerCount=16
+2026-03-21 13:06:59.458 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=9a928979-6034-4c0a-ac04-55a38c894330
+2026-03-21 13:07:01.018 INFO  [parallel-7] [bff] traceId= requestId=581931d7-bd61-469c-be9a-57c42d9fc635 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/delete-assunto/narrative, requestId=581931d7-bd61-469c-be9a-57c42d9fc635
+2026-03-21 13:07:01.018 DEBUG [parallel-7] [bff] traceId= requestId=581931d7-bd61-469c-be9a-57c42d9fc635 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=581931d7-bd61-469c-be9a-57c42d9fc635, headerCount=16
+2026-03-21 13:07:01.028 ERROR [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response error. method=GET, path=/flows/delete-assunto/narrative, status=500, requestId=581931d7-bd61-469c-be9a-57c42d9fc635, body={"detail":"Internal server error","instance":"/flows/delete-assunto/narrative","status":500,"title":"Internal Server Error","type":"https://spassu.com/problems/internal-error"}
+2026-03-21 13:07:41.300 INFO  [parallel-8] [bff] traceId= requestId=ea295c48-3900-4c60-be86-ecb2d3448d83 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-livro/narrative, requestId=ea295c48-3900-4c60-be86-ecb2d3448d83
+2026-03-21 13:07:41.300 DEBUG [parallel-8] [bff] traceId= requestId=ea295c48-3900-4c60-be86-ecb2d3448d83 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=ea295c48-3900-4c60-be86-ecb2d3448d83, headerCount=16
+2026-03-21 13:07:41.307 ERROR [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response error. method=GET, path=/flows/create-livro/narrative, status=500, requestId=ea295c48-3900-4c60-be86-ecb2d3448d83, body={"detail":"Internal server error","instance":"/flows/create-livro/narrative","status":500,"title":"Internal Server Error","type":"https://spassu.com/problems/internal-error"}
+2026-03-21 13:08:56.686 INFO  [parallel-5] [bff] traceId= requestId=ee313a27-6ddd-4e71-a25c-79a9141c4cb1 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=ee313a27-6ddd-4e71-a25c-79a9141c4cb1
+2026-03-21 13:08:56.686 DEBUG [parallel-5] [bff] traceId= requestId=ee313a27-6ddd-4e71-a25c-79a9141c4cb1 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=ee313a27-6ddd-4e71-a25c-79a9141c4cb1, headerCount=16
+2026-03-21 13:08:56.720 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=ee313a27-6ddd-4e71-a25c-79a9141c4cb1
+2026-03-21 13:08:57.256 INFO  [parallel-6] [bff] traceId= requestId=99c60d0e-2b9a-48f0-8256-da1efc2819cb c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=99c60d0e-2b9a-48f0-8256-da1efc2819cb
+2026-03-21 13:08:57.257 DEBUG [parallel-6] [bff] traceId= requestId=99c60d0e-2b9a-48f0-8256-da1efc2819cb c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=99c60d0e-2b9a-48f0-8256-da1efc2819cb, headerCount=16
+2026-03-21 13:08:57.272 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=99c60d0e-2b9a-48f0-8256-da1efc2819cb
+2026-03-21 13:08:57.803 INFO  [parallel-7] [bff] traceId= requestId=4bf956eb-2561-42c1-93fb-15335e12864d c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=4bf956eb-2561-42c1-93fb-15335e12864d
+2026-03-21 13:08:57.803 DEBUG [parallel-7] [bff] traceId= requestId=4bf956eb-2561-42c1-93fb-15335e12864d c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=4bf956eb-2561-42c1-93fb-15335e12864d, headerCount=16
+2026-03-21 13:08:57.804 INFO  [parallel-8] [bff] traceId= requestId=4f52497a-5605-4314-afd7-dad10f59d291 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=4f52497a-5605-4314-afd7-dad10f59d291
+2026-03-21 13:08:57.805 INFO  [parallel-1] [bff] traceId= requestId=970b36c3-081e-44b3-bd72-36f9f34ef0b2 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=970b36c3-081e-44b3-bd72-36f9f34ef0b2
+2026-03-21 13:08:57.805 DEBUG [parallel-1] [bff] traceId= requestId=970b36c3-081e-44b3-bd72-36f9f34ef0b2 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=970b36c3-081e-44b3-bd72-36f9f34ef0b2, headerCount=16
+2026-03-21 13:08:57.805 DEBUG [parallel-8] [bff] traceId= requestId=4f52497a-5605-4314-afd7-dad10f59d291 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=4f52497a-5605-4314-afd7-dad10f59d291, headerCount=16
+2026-03-21 13:08:57.822 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=4bf956eb-2561-42c1-93fb-15335e12864d
+2026-03-21 13:08:57.834 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=4f52497a-5605-4314-afd7-dad10f59d291
+2026-03-21 13:08:57.844 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=970b36c3-081e-44b3-bd72-36f9f34ef0b2
+2026-03-21 13:08:58.818 INFO  [parallel-2] [bff] traceId= requestId=12259d30-d69c-4888-bf6e-adf63b64b6ff c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=12259d30-d69c-4888-bf6e-adf63b64b6ff
+2026-03-21 13:08:58.819 DEBUG [parallel-2] [bff] traceId= requestId=12259d30-d69c-4888-bf6e-adf63b64b6ff c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=12259d30-d69c-4888-bf6e-adf63b64b6ff, headerCount=16
+2026-03-21 13:08:58.827 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=12259d30-d69c-4888-bf6e-adf63b64b6ff
+2026-03-21 13:09:02.089 INFO  [parallel-4] [bff] traceId= requestId=5caa2625-7eb1-41fc-a698-aee572b64b03 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=5caa2625-7eb1-41fc-a698-aee572b64b03
+2026-03-21 13:09:02.090 DEBUG [parallel-4] [bff] traceId= requestId=5caa2625-7eb1-41fc-a698-aee572b64b03 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=5caa2625-7eb1-41fc-a698-aee572b64b03, headerCount=16
+2026-03-21 13:09:02.097 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=5caa2625-7eb1-41fc-a698-aee572b64b03
+2026-03-21 13:09:15.101 INFO  [parallel-6] [bff] traceId= requestId=26737b8d-0fdb-4892-a8a5-4ad6aa38d5fa c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=26737b8d-0fdb-4892-a8a5-4ad6aa38d5fa
+2026-03-21 13:09:15.101 DEBUG [parallel-6] [bff] traceId= requestId=26737b8d-0fdb-4892-a8a5-4ad6aa38d5fa c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=26737b8d-0fdb-4892-a8a5-4ad6aa38d5fa, headerCount=16
+2026-03-21 13:09:15.106 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=26737b8d-0fdb-4892-a8a5-4ad6aa38d5fa
+2026-03-21 13:09:18.097 INFO  [parallel-7] [bff] traceId= requestId=2db89208-fc7e-420e-aee3-4fc63c80c266 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/delete-assunto/narrative, requestId=2db89208-fc7e-420e-aee3-4fc63c80c266
+2026-03-21 13:09:18.097 DEBUG [parallel-7] [bff] traceId= requestId=2db89208-fc7e-420e-aee3-4fc63c80c266 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=2db89208-fc7e-420e-aee3-4fc63c80c266, headerCount=16
+2026-03-21 13:09:18.107 ERROR [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response error. method=GET, path=/flows/delete-assunto/narrative, status=500, requestId=2db89208-fc7e-420e-aee3-4fc63c80c266, body={"detail":"Internal server error","instance":"/flows/delete-assunto/narrative","status":500,"title":"Internal Server Error","type":"https://spassu.com/problems/internal-error"}
+2026-03-21 13:10:06.297 INFO  [parallel-8] [bff] traceId= requestId=f2c82753-df6a-4bab-854a-e02cf97c9381 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=f2c82753-df6a-4bab-854a-e02cf97c9381
+2026-03-21 13:10:06.297 DEBUG [parallel-8] [bff] traceId= requestId=f2c82753-df6a-4bab-854a-e02cf97c9381 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=f2c82753-df6a-4bab-854a-e02cf97c9381, headerCount=16
+2026-03-21 13:10:06.305 INFO  [reactor-http-epoll-5] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=f2c82753-df6a-4bab-854a-e02cf97c9381
+2026-03-21 13:10:14.919 INFO  [parallel-1] [bff] traceId= requestId=27edd2aa-40ba-4b4c-9a54-cf832d520ddc c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=27edd2aa-40ba-4b4c-9a54-cf832d520ddc
+2026-03-21 13:10:14.922 DEBUG [parallel-1] [bff] traceId= requestId=27edd2aa-40ba-4b4c-9a54-cf832d520ddc c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=27edd2aa-40ba-4b4c-9a54-cf832d520ddc, headerCount=16
+2026-03-21 13:10:14.931 INFO  [reactor-http-epoll-1] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=27edd2aa-40ba-4b4c-9a54-cf832d520ddc
+2026-03-21 13:10:17.236 INFO  [parallel-2] [bff] traceId= requestId=0e228f3d-388d-49f5-b32b-e2f6a98b1a7a c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=0e228f3d-388d-49f5-b32b-e2f6a98b1a7a
+2026-03-21 13:10:17.237 DEBUG [parallel-2] [bff] traceId= requestId=0e228f3d-388d-49f5-b32b-e2f6a98b1a7a c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=0e228f3d-388d-49f5-b32b-e2f6a98b1a7a, headerCount=16
+2026-03-21 13:10:17.245 INFO  [reactor-http-epoll-7] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=0e228f3d-388d-49f5-b32b-e2f6a98b1a7a
+2026-03-21 13:11:09.922 INFO  [SpringContextShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-21 13:11:09.927 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 13:11:14.811 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 13:11:14.851 INFO  [restartedMain] [bff] traceId= requestId= c.spassu.livros.bff.BffApplication - Starting BffApplication using Java 25.0.2 with PID 92141 (/home/pc/Projetos/Teste Spassu/bff/target/classes started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 13:11:14.851 INFO  [restartedMain] [bff] traceId= requestId= c.spassu.livros.bff.BffApplication - The following 1 profile is active: "local"
+2026-03-21 13:11:14.884 INFO  [restartedMain] [bff] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-21 13:11:15.689 INFO  [restartedMain] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e1f3bf71-609c-3020-9328-dbbd6e52ffb1
+2026-03-21 13:11:15.832 INFO  [restartedMain] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 13:11:16.289 INFO  [restartedMain] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 13:11:16.545 INFO  [restartedMain] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 8083 (http)
+2026-03-21 13:11:16.554 INFO  [restartedMain] [bff] traceId= requestId= c.spassu.livros.bff.BffApplication - Started BffApplication in 3.088 seconds (process running for 3.636)
+2026-03-21 13:12:46.542 INFO  [parallel-2] [bff] traceId= requestId=5d8409ff-37f3-41eb-96bd-2483b30a931d c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-autor/narrative, requestId=5d8409ff-37f3-41eb-96bd-2483b30a931d
+2026-03-21 13:12:46.543 DEBUG [parallel-2] [bff] traceId= requestId=5d8409ff-37f3-41eb-96bd-2483b30a931d c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=5d8409ff-37f3-41eb-96bd-2483b30a931d, headerCount=16
+2026-03-21 13:12:46.642 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-autor/narrative, status=200, requestId=5d8409ff-37f3-41eb-96bd-2483b30a931d
+2026-03-21 13:12:56.394 INFO  [parallel-3] [bff] traceId= requestId=9521fd8d-a15b-47bc-96e6-ce8378bb58a5 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-assunto/narrative, requestId=9521fd8d-a15b-47bc-96e6-ce8378bb58a5
+2026-03-21 13:12:56.395 DEBUG [parallel-3] [bff] traceId= requestId=9521fd8d-a15b-47bc-96e6-ce8378bb58a5 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=9521fd8d-a15b-47bc-96e6-ce8378bb58a5, headerCount=16
+2026-03-21 13:12:56.419 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-assunto/narrative, status=200, requestId=9521fd8d-a15b-47bc-96e6-ce8378bb58a5
+2026-03-21 13:14:47.725 INFO  [parallel-4] [bff] traceId= requestId=80a2a5fd-cf2b-48e7-9175-2010feb09d17 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=80a2a5fd-cf2b-48e7-9175-2010feb09d17
+2026-03-21 13:14:47.725 DEBUG [parallel-4] [bff] traceId= requestId=80a2a5fd-cf2b-48e7-9175-2010feb09d17 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=80a2a5fd-cf2b-48e7-9175-2010feb09d17, headerCount=16
+2026-03-21 13:14:47.746 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=80a2a5fd-cf2b-48e7-9175-2010feb09d17
+2026-03-21 13:14:52.577 INFO  [parallel-5] [bff] traceId= requestId=60e9a430-6907-4b2e-9a9a-237a10bc0cc4 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=60e9a430-6907-4b2e-9a9a-237a10bc0cc4
+2026-03-21 13:14:52.578 DEBUG [parallel-5] [bff] traceId= requestId=60e9a430-6907-4b2e-9a9a-237a10bc0cc4 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=60e9a430-6907-4b2e-9a9a-237a10bc0cc4, headerCount=16
+2026-03-21 13:14:52.597 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=60e9a430-6907-4b2e-9a9a-237a10bc0cc4
+2026-03-21 13:14:56.594 INFO  [parallel-6] [bff] traceId= requestId=e76c2091-15e6-41a4-94fc-66891aabb9a3 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=e76c2091-15e6-41a4-94fc-66891aabb9a3
+2026-03-21 13:14:56.594 DEBUG [parallel-6] [bff] traceId= requestId=e76c2091-15e6-41a4-94fc-66891aabb9a3 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=e76c2091-15e6-41a4-94fc-66891aabb9a3, headerCount=16
+2026-03-21 13:14:56.619 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=e76c2091-15e6-41a4-94fc-66891aabb9a3
+2026-03-21 13:14:59.260 INFO  [parallel-7] [bff] traceId= requestId=75a4ac04-89cb-42bb-abac-51ce695c1cfb c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-autor/narrative, requestId=75a4ac04-89cb-42bb-abac-51ce695c1cfb
+2026-03-21 13:14:59.260 DEBUG [parallel-7] [bff] traceId= requestId=75a4ac04-89cb-42bb-abac-51ce695c1cfb c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=75a4ac04-89cb-42bb-abac-51ce695c1cfb, headerCount=16
+2026-03-21 13:14:59.269 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-autor/narrative, status=200, requestId=75a4ac04-89cb-42bb-abac-51ce695c1cfb
+2026-03-21 13:15:12.138 INFO  [parallel-8] [bff] traceId= requestId=cadd53ce-316d-43fe-ae85-ee860f4d3d73 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=cadd53ce-316d-43fe-ae85-ee860f4d3d73
+2026-03-21 13:15:12.138 DEBUG [parallel-8] [bff] traceId= requestId=cadd53ce-316d-43fe-ae85-ee860f4d3d73 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=cadd53ce-316d-43fe-ae85-ee860f4d3d73, headerCount=16
+2026-03-21 13:15:12.150 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=cadd53ce-316d-43fe-ae85-ee860f4d3d73
+2026-03-21 13:15:13.776 INFO  [parallel-1] [bff] traceId= requestId=324a5ba2-2049-4098-be4e-751603de7e9d c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-assunto/narrative, requestId=324a5ba2-2049-4098-be4e-751603de7e9d
+2026-03-21 13:15:13.777 DEBUG [parallel-1] [bff] traceId= requestId=324a5ba2-2049-4098-be4e-751603de7e9d c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=324a5ba2-2049-4098-be4e-751603de7e9d, headerCount=16
+2026-03-21 13:15:13.788 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-assunto/narrative, status=200, requestId=324a5ba2-2049-4098-be4e-751603de7e9d
+2026-03-21 13:16:39.103 INFO  [parallel-2] [bff] traceId= requestId=a8370070-dddf-414d-a9ec-d4117c1cd90c c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=a8370070-dddf-414d-a9ec-d4117c1cd90c
+2026-03-21 13:16:39.104 DEBUG [parallel-2] [bff] traceId= requestId=a8370070-dddf-414d-a9ec-d4117c1cd90c c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=a8370070-dddf-414d-a9ec-d4117c1cd90c, headerCount=16
+2026-03-21 13:16:39.121 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=a8370070-dddf-414d-a9ec-d4117c1cd90c
+2026-03-21 13:16:43.116 INFO  [parallel-3] [bff] traceId= requestId=ce359037-c24a-4abd-b655-8efbba38d8c7 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-autor/narrative, requestId=ce359037-c24a-4abd-b655-8efbba38d8c7
+2026-03-21 13:16:43.117 DEBUG [parallel-3] [bff] traceId= requestId=ce359037-c24a-4abd-b655-8efbba38d8c7 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=ce359037-c24a-4abd-b655-8efbba38d8c7, headerCount=16
+2026-03-21 13:16:43.125 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-autor/narrative, status=200, requestId=ce359037-c24a-4abd-b655-8efbba38d8c7
+2026-03-21 13:17:00.195 INFO  [parallel-4] [bff] traceId= requestId=b6e1517e-de62-4e77-8563-46edb133b9a4 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=b6e1517e-de62-4e77-8563-46edb133b9a4
+2026-03-21 13:17:00.196 DEBUG [parallel-4] [bff] traceId= requestId=b6e1517e-de62-4e77-8563-46edb133b9a4 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=b6e1517e-de62-4e77-8563-46edb133b9a4, headerCount=16
+2026-03-21 13:17:00.206 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=b6e1517e-de62-4e77-8563-46edb133b9a4
+2026-03-21 13:17:22.389 INFO  [parallel-5] [bff] traceId= requestId=434ed541-3984-484a-98d5-2e03b76fd047 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-livro/narrative, requestId=434ed541-3984-484a-98d5-2e03b76fd047
+2026-03-21 13:17:22.389 DEBUG [parallel-5] [bff] traceId= requestId=434ed541-3984-484a-98d5-2e03b76fd047 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=434ed541-3984-484a-98d5-2e03b76fd047, headerCount=16
+2026-03-21 13:17:22.399 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-livro/narrative, status=200, requestId=434ed541-3984-484a-98d5-2e03b76fd047
+2026-03-21 13:18:44.836 INFO  [parallel-6] [bff] traceId= requestId=8a58945a-f1e4-4d1f-af4b-afbaa80d8df5 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=8a58945a-f1e4-4d1f-af4b-afbaa80d8df5
+2026-03-21 13:18:44.837 DEBUG [parallel-6] [bff] traceId= requestId=8a58945a-f1e4-4d1f-af4b-afbaa80d8df5 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=8a58945a-f1e4-4d1f-af4b-afbaa80d8df5, headerCount=16
+2026-03-21 13:18:44.849 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=8a58945a-f1e4-4d1f-af4b-afbaa80d8df5
+2026-03-21 13:18:48.742 INFO  [parallel-7] [bff] traceId= requestId=0d916ece-873e-44f2-9703-0a8a339247f3 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/delete-assunto/narrative, requestId=0d916ece-873e-44f2-9703-0a8a339247f3
+2026-03-21 13:18:48.743 DEBUG [parallel-7] [bff] traceId= requestId=0d916ece-873e-44f2-9703-0a8a339247f3 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=0d916ece-873e-44f2-9703-0a8a339247f3, headerCount=16
+2026-03-21 13:18:48.761 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/delete-assunto/narrative, status=200, requestId=0d916ece-873e-44f2-9703-0a8a339247f3
+2026-03-21 13:19:48.843 INFO  [parallel-8] [bff] traceId= requestId=d9b76c2c-a12a-4c22-8c31-11c050ba72df c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=d9b76c2c-a12a-4c22-8c31-11c050ba72df
+2026-03-21 13:19:48.843 DEBUG [parallel-8] [bff] traceId= requestId=d9b76c2c-a12a-4c22-8c31-11c050ba72df c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=d9b76c2c-a12a-4c22-8c31-11c050ba72df, headerCount=16
+2026-03-21 13:19:48.859 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=d9b76c2c-a12a-4c22-8c31-11c050ba72df
+2026-03-21 13:21:02.046 INFO  [parallel-1] [bff] traceId= requestId=b3c90754-3865-44be-9263-8de86300e433 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=b3c90754-3865-44be-9263-8de86300e433
+2026-03-21 13:21:02.047 DEBUG [parallel-1] [bff] traceId= requestId=b3c90754-3865-44be-9263-8de86300e433 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=b3c90754-3865-44be-9263-8de86300e433, headerCount=16
+2026-03-21 13:21:02.064 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=b3c90754-3865-44be-9263-8de86300e433
+2026-03-21 13:21:06.827 INFO  [parallel-2] [bff] traceId= requestId=323de522-d2f5-4e12-8e17-de71070f90b5 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=323de522-d2f5-4e12-8e17-de71070f90b5
+2026-03-21 13:21:06.828 DEBUG [parallel-2] [bff] traceId= requestId=323de522-d2f5-4e12-8e17-de71070f90b5 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=323de522-d2f5-4e12-8e17-de71070f90b5, headerCount=16
+2026-03-21 13:21:06.841 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=323de522-d2f5-4e12-8e17-de71070f90b5
+2026-03-21 13:21:19.788 INFO  [parallel-3] [bff] traceId= requestId=59106ba8-a912-421d-8a52-b788605368b7 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=59106ba8-a912-421d-8a52-b788605368b7
+2026-03-21 13:21:19.789 DEBUG [parallel-3] [bff] traceId= requestId=59106ba8-a912-421d-8a52-b788605368b7 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=59106ba8-a912-421d-8a52-b788605368b7, headerCount=16
+2026-03-21 13:21:19.803 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=59106ba8-a912-421d-8a52-b788605368b7
+2026-03-21 13:21:28.586 INFO  [parallel-4] [bff] traceId= requestId=6835a947-2f43-4aba-8564-082466171244 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=6835a947-2f43-4aba-8564-082466171244
+2026-03-21 13:21:28.588 DEBUG [parallel-4] [bff] traceId= requestId=6835a947-2f43-4aba-8564-082466171244 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=6835a947-2f43-4aba-8564-082466171244, headerCount=16
+2026-03-21 13:21:28.607 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=6835a947-2f43-4aba-8564-082466171244
+2026-03-21 13:21:35.968 INFO  [parallel-5] [bff] traceId= requestId=7c2050b9-eeb1-42bd-89b2-08599677fdfa c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-autor/narrative, requestId=7c2050b9-eeb1-42bd-89b2-08599677fdfa
+2026-03-21 13:21:35.968 DEBUG [parallel-5] [bff] traceId= requestId=7c2050b9-eeb1-42bd-89b2-08599677fdfa c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=7c2050b9-eeb1-42bd-89b2-08599677fdfa, headerCount=16
+2026-03-21 13:21:35.976 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-autor/narrative, status=200, requestId=7c2050b9-eeb1-42bd-89b2-08599677fdfa
+2026-03-21 13:21:51.590 INFO  [parallel-6] [bff] traceId= requestId=9330a884-a17c-4d89-88b9-6902ef966706 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=9330a884-a17c-4d89-88b9-6902ef966706
+2026-03-21 13:21:51.596 DEBUG [parallel-6] [bff] traceId= requestId=9330a884-a17c-4d89-88b9-6902ef966706 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=9330a884-a17c-4d89-88b9-6902ef966706, headerCount=16
+2026-03-21 13:21:51.618 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=9330a884-a17c-4d89-88b9-6902ef966706
+2026-03-21 13:22:30.894 INFO  [parallel-7] [bff] traceId= requestId=b8c27e38-a6b1-4a27-a506-d9f6a6aec0ab c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=b8c27e38-a6b1-4a27-a506-d9f6a6aec0ab
+2026-03-21 13:22:30.895 DEBUG [parallel-7] [bff] traceId= requestId=b8c27e38-a6b1-4a27-a506-d9f6a6aec0ab c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=b8c27e38-a6b1-4a27-a506-d9f6a6aec0ab, headerCount=16
+2026-03-21 13:22:30.908 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=b8c27e38-a6b1-4a27-a506-d9f6a6aec0ab
+2026-03-21 13:22:32.787 INFO  [parallel-8] [bff] traceId= requestId=b44bccce-000a-486b-a22a-8c140654f876 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=b44bccce-000a-486b-a22a-8c140654f876
+2026-03-21 13:22:32.788 DEBUG [parallel-8] [bff] traceId= requestId=b44bccce-000a-486b-a22a-8c140654f876 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=b44bccce-000a-486b-a22a-8c140654f876, headerCount=16
+2026-03-21 13:22:32.798 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=b44bccce-000a-486b-a22a-8c140654f876
+2026-03-21 13:22:34.666 INFO  [parallel-1] [bff] traceId= requestId=11e29548-6f73-47c8-a692-e710ab34ac32 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-livro/narrative, requestId=11e29548-6f73-47c8-a692-e710ab34ac32
+2026-03-21 13:22:34.666 DEBUG [parallel-1] [bff] traceId= requestId=11e29548-6f73-47c8-a692-e710ab34ac32 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=11e29548-6f73-47c8-a692-e710ab34ac32, headerCount=16
+2026-03-21 13:22:34.680 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-livro/narrative, status=200, requestId=11e29548-6f73-47c8-a692-e710ab34ac32
+2026-03-21 13:22:58.055 INFO  [parallel-2] [bff] traceId= requestId=60e7647a-5294-4179-93f1-4c18d7a0d87f c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=60e7647a-5294-4179-93f1-4c18d7a0d87f
+2026-03-21 13:22:58.055 DEBUG [parallel-2] [bff] traceId= requestId=60e7647a-5294-4179-93f1-4c18d7a0d87f c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=60e7647a-5294-4179-93f1-4c18d7a0d87f, headerCount=16
+2026-03-21 13:22:58.113 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=60e7647a-5294-4179-93f1-4c18d7a0d87f
+2026-03-21 13:23:00.191 INFO  [parallel-3] [bff] traceId= requestId=a4a9ffc9-7e32-4e21-a6fd-2d3e429d0514 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=a4a9ffc9-7e32-4e21-a6fd-2d3e429d0514
+2026-03-21 13:23:00.193 DEBUG [parallel-3] [bff] traceId= requestId=a4a9ffc9-7e32-4e21-a6fd-2d3e429d0514 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=a4a9ffc9-7e32-4e21-a6fd-2d3e429d0514, headerCount=16
+2026-03-21 13:23:00.206 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=a4a9ffc9-7e32-4e21-a6fd-2d3e429d0514
+2026-03-21 13:23:12.266 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 13:23:12.433 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Starting BffSecurityTest using Java 25.0.2 with PID 112596 (started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 13:23:12.434 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-21 13:23:14.366 INFO  [main] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=1f558dc7-301d-365b-915a-fb19522b78c3
+2026-03-21 13:23:14.819 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 13:23:14.830 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:23:14.841 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:8081 to http://127.0.0.1:8081 to avoid IPv6 localhost resolution issues
+2026-03-21 13:23:14.855 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:23:16.210 INFO  [main] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 13:23:17.019 INFO  [main] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 38747 (http)
+2026-03-21 13:23:17.031 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Started BffSecurityTest in 5.89 seconds (process running for 15.132)
+2026-03-21 13:23:17.919 ERROR [main] [bff] traceId= requestId= c.s.l.b.o.RemoteLogsClient - Could not fetch logs from microservice
+java.lang.RuntimeException: timeout
+	at com.spassu.livros.bff.observability.RemoteLogsClientTest.lambda$fetchMicroserviceLogs_deveRetornarEntradaDeErroQuandoChamadaFalha$1(RemoteLogsClientTest.java:52)
+	Suppressed: The stacktrace has been enhanced by Reactor, refer to additional information below: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to GET http://microservice/internal/logs [DefaultWebClient]
+Original Stack Trace:
+		at com.spassu.livros.bff.observability.RemoteLogsClientTest.lambda$fetchMicroserviceLogs_deveRetornarEntradaDeErroQuandoChamadaFalha$1(RemoteLogsClientTest.java:52)
+		at org.springframework.web.reactive.function.client.DefaultWebClient$ObservationFilterFunction.filter(DefaultWebClient.java:760)
+		at org.springframework.web.reactive.function.client.ExchangeFilterFunction.lambda$apply$0(ExchangeFilterFunction.java:73)
+		at org.springframework.web.reactive.function.client.DefaultWebClient$DefaultRequestBodyUriSpec.lambda$exchange$3(DefaultWebClient.java:463)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:46)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:75)
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4569)
+		at reactor.core.publisher.Mono.block(Mono.java:1772)
+		at com.spassu.livros.bff.observability.RemoteLogsClientTest.fetchMicroserviceLogs_deveRetornarEntradaDeErroQuandoChamadaFalha(RemoteLogsClientTest.java:56)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+		at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+		at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+		at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+		at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+		at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+		at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+		at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+		at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+		at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+		at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+		at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+		at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+		at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+		at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+		at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+		at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+		at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+		at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:93)
+		at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+		at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:41)
+		at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+		at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:40)
+		at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+		at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+		at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194)
+		at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+		at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+		at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+		at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+		at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+		at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-03-21 13:23:17.953 INFO  [SpringApplicationShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-21 13:23:18.147 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 13:24:58.944 INFO  [parallel-4] [bff] traceId= requestId=b6c91bd9-b262-403d-b422-1932aa790505 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=b6c91bd9-b262-403d-b422-1932aa790505
+2026-03-21 13:24:58.948 DEBUG [parallel-4] [bff] traceId= requestId=b6c91bd9-b262-403d-b422-1932aa790505 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=b6c91bd9-b262-403d-b422-1932aa790505, headerCount=16
+2026-03-21 13:24:59.022 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=b6c91bd9-b262-403d-b422-1932aa790505
+2026-03-21 13:25:15.281 INFO  [background-preinit] [bff] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-21 13:25:15.571 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Starting BffSecurityTest using Java 25.0.2 with PID 121117 (started by pc in /home/pc/Projetos/Teste Spassu/bff)
+2026-03-21 13:25:15.575 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-21 13:25:21.925 INFO  [main] [bff] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=1f558dc7-301d-365b-915a-fb19522b78c3
+2026-03-21 13:25:22.636 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.SecurityConfig - BFF JWT issuer URI configured as http://localhost:8080/realms/master
+2026-03-21 13:25:22.647 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:25:22.657 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:8081 to http://127.0.0.1:8081 to avoid IPv6 localhost resolution issues
+2026-03-21 13:25:22.671 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.config.InfraConfig - Normalizing internal URL from http://localhost:9999 to http://127.0.0.1:9999 to avoid IPv6 localhost resolution issues
+2026-03-21 13:25:24.109 INFO  [main] [bff] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-21 13:25:24.872 INFO  [main] [bff] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 34295 (http)
+2026-03-21 13:25:24.887 INFO  [main] [bff] traceId= requestId= c.s.livros.bff.web.BffSecurityTest - Started BffSecurityTest in 12.633 seconds (process running for 32.212)
+2026-03-21 13:25:25.849 ERROR [main] [bff] traceId= requestId= c.s.l.b.o.RemoteLogsClient - Could not fetch logs from microservice
+java.lang.RuntimeException: timeout
+	at com.spassu.livros.bff.observability.RemoteLogsClientTest.lambda$fetchMicroserviceLogs_deveRetornarEntradaDeErroQuandoChamadaFalha$1(RemoteLogsClientTest.java:52)
+	Suppressed: The stacktrace has been enhanced by Reactor, refer to additional information below: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to GET http://microservice/internal/logs [DefaultWebClient]
+Original Stack Trace:
+		at com.spassu.livros.bff.observability.RemoteLogsClientTest.lambda$fetchMicroserviceLogs_deveRetornarEntradaDeErroQuandoChamadaFalha$1(RemoteLogsClientTest.java:52)
+		at org.springframework.web.reactive.function.client.DefaultWebClient$ObservationFilterFunction.filter(DefaultWebClient.java:760)
+		at org.springframework.web.reactive.function.client.ExchangeFilterFunction.lambda$apply$0(ExchangeFilterFunction.java:73)
+		at org.springframework.web.reactive.function.client.DefaultWebClient$DefaultRequestBodyUriSpec.lambda$exchange$3(DefaultWebClient.java:463)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:46)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:75)
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:56)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4569)
+		at reactor.core.publisher.Mono.block(Mono.java:1772)
+		at com.spassu.livros.bff.observability.RemoteLogsClientTest.fetchMicroserviceLogs_deveRetornarEntradaDeErroQuandoChamadaFalha(RemoteLogsClientTest.java:56)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+		at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+		at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+		at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+		at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+		at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+		at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+		at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+		at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+		at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+		at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+		at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+		at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+		at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+		at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+		at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+		at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+		at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+		at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+		at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+		at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+		at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+		at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:93)
+		at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+		at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:41)
+		at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+		at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:40)
+		at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+		at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+		at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194)
+		at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+		at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+		at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+		at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+		at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+		at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-03-21 13:25:25.887 INFO  [SpringApplicationShutdownHook] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-21 13:25:26.100 INFO  [netty-shutdown] [bff] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-21 13:25:35.682 INFO  [parallel-5] [bff] traceId= requestId=4b1b7b2b-9060-42de-9ca1-9040066a5a5d c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=4b1b7b2b-9060-42de-9ca1-9040066a5a5d
+2026-03-21 13:25:35.683 DEBUG [parallel-5] [bff] traceId= requestId=4b1b7b2b-9060-42de-9ca1-9040066a5a5d c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=4b1b7b2b-9060-42de-9ca1-9040066a5a5d, headerCount=16
+2026-03-21 13:25:35.689 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=4b1b7b2b-9060-42de-9ca1-9040066a5a5d
+2026-03-21 13:25:45.614 INFO  [parallel-6] [bff] traceId= requestId=20bd9900-f3ce-4318-a163-e4cfcc88e1a1 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=20bd9900-f3ce-4318-a163-e4cfcc88e1a1
+2026-03-21 13:25:45.614 DEBUG [parallel-6] [bff] traceId= requestId=20bd9900-f3ce-4318-a163-e4cfcc88e1a1 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=20bd9900-f3ce-4318-a163-e4cfcc88e1a1, headerCount=16
+2026-03-21 13:25:45.630 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=20bd9900-f3ce-4318-a163-e4cfcc88e1a1
+2026-03-21 13:25:46.418 INFO  [parallel-8] [bff] traceId= requestId=8f5c7413-60a7-44b8-ba59-7bf611da6953 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=8f5c7413-60a7-44b8-ba59-7bf611da6953
+2026-03-21 13:25:46.420 DEBUG [parallel-8] [bff] traceId= requestId=8f5c7413-60a7-44b8-ba59-7bf611da6953 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=8f5c7413-60a7-44b8-ba59-7bf611da6953, headerCount=16
+2026-03-21 13:25:46.425 INFO  [parallel-7] [bff] traceId= requestId=c1b79ec8-492a-4721-8769-2d5f88687404 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=c1b79ec8-492a-4721-8769-2d5f88687404
+2026-03-21 13:25:46.426 DEBUG [parallel-7] [bff] traceId= requestId=c1b79ec8-492a-4721-8769-2d5f88687404 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=c1b79ec8-492a-4721-8769-2d5f88687404, headerCount=16
+2026-03-21 13:25:46.435 INFO  [parallel-1] [bff] traceId= requestId=078c4a73-e419-415c-ba98-13ef92739aaa c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/livros?page=0&size=20, requestId=078c4a73-e419-415c-ba98-13ef92739aaa
+2026-03-21 13:25:46.435 DEBUG [parallel-1] [bff] traceId= requestId=078c4a73-e419-415c-ba98-13ef92739aaa c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=078c4a73-e419-415c-ba98-13ef92739aaa, headerCount=16
+2026-03-21 13:25:46.842 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=8f5c7413-60a7-44b8-ba59-7bf611da6953
+2026-03-21 13:25:46.843 INFO  [reactor-http-epoll-2] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=c1b79ec8-492a-4721-8769-2d5f88687404
+2026-03-21 13:25:46.847 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/livros?page=0&size=20, status=200, requestId=078c4a73-e419-415c-ba98-13ef92739aaa
+2026-03-21 13:25:47.104 INFO  [parallel-2] [bff] traceId= requestId=8b50e5cb-15a6-41f0-83b5-8173f7a1657b c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/autores, requestId=8b50e5cb-15a6-41f0-83b5-8173f7a1657b
+2026-03-21 13:25:47.104 DEBUG [parallel-2] [bff] traceId= requestId=8b50e5cb-15a6-41f0-83b5-8173f7a1657b c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=8b50e5cb-15a6-41f0-83b5-8173f7a1657b, headerCount=16
+2026-03-21 13:25:47.126 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/autores, status=200, requestId=8b50e5cb-15a6-41f0-83b5-8173f7a1657b
+2026-03-21 13:25:47.865 INFO  [parallel-3] [bff] traceId= requestId=e909e22d-f1c0-4625-912e-ced6acbc4439 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/api/assuntos, requestId=e909e22d-f1c0-4625-912e-ced6acbc4439
+2026-03-21 13:25:47.866 DEBUG [parallel-3] [bff] traceId= requestId=e909e22d-f1c0-4625-912e-ced6acbc4439 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=e909e22d-f1c0-4625-912e-ced6acbc4439, headerCount=16
+2026-03-21 13:25:47.891 INFO  [reactor-http-epoll-2] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/api/assuntos, status=200, requestId=e909e22d-f1c0-4625-912e-ced6acbc4439
+2026-03-21 13:27:59.510 INFO  [parallel-4] [bff] traceId= requestId=6c4d0cb4-6489-4129-b676-4c3a24e4d293 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows, requestId=6c4d0cb4-6489-4129-b676-4c3a24e4d293
+2026-03-21 13:27:59.511 DEBUG [parallel-4] [bff] traceId= requestId=6c4d0cb4-6489-4129-b676-4c3a24e4d293 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=6c4d0cb4-6489-4129-b676-4c3a24e4d293, headerCount=16
+2026-03-21 13:27:59.518 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows, status=200, requestId=6c4d0cb4-6489-4129-b676-4c3a24e4d293
+2026-03-21 13:28:00.870 INFO  [parallel-5] [bff] traceId= requestId=725aa23f-2b6e-44dc-9c09-e8030aad61d3 c.s.livros.bff.web.ProxyController - Proxying request to orchestration. method=GET, path=/flows/create-assunto/narrative, requestId=725aa23f-2b6e-44dc-9c09-e8030aad61d3
+2026-03-21 13:28:00.870 DEBUG [parallel-5] [bff] traceId= requestId=725aa23f-2b6e-44dc-9c09-e8030aad61d3 c.s.livros.bff.web.ProxyController - Proxy request headers received. requestId=725aa23f-2b6e-44dc-9c09-e8030aad61d3, headerCount=16
+2026-03-21 13:28:00.876 INFO  [reactor-http-epoll-4] [bff] traceId= requestId= c.s.livros.bff.web.ProxyController - Proxy response success. method=GET, path=/flows/create-assunto/narrative, status=200, requestId=725aa23f-2b6e-44dc-9c09-e8030aad61d3

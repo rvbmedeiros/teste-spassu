@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { nextTick } from 'vue'
 import FlowCockpitView from '../views/FlowCockpitView.vue'
 
 const flowStore = vi.hoisted(() => ({
@@ -7,16 +8,45 @@ const flowStore = vi.hoisted(() => ({
     id: 'create-livro',
     name: 'Criar Livro',
     description: 'Persiste livro',
-    steps: [
-      { order: 1, name: 'Validar payload', description: 'Bean validation', rollbackStep: 'N/A' },
-      { order: 2, name: 'Persistir', description: 'POST /api/livros', rollbackStep: 'Excluir' },
-      { order: 3, name: 'Publicar evento', description: 'RabbitMQ', rollbackStep: 'N/A' },
-      { order: 4, name: 'Confirmar resposta', description: 'Retorno 201', rollbackStep: 'N/A' },
+    owner: 'orchestration-team',
+    version: '1.0.0',
+    domainTag: 'livros',
+    businessGoal: 'Cadastrar livro',
+    nodes: [
+      {
+        nodeId: 'start',
+        type: 'START_EVENT',
+        order: 0,
+        name: 'Início',
+        description: '',
+        purpose: '',
+        inputHint: '',
+        outputHint: '',
+        failureHint: '',
+        rollbackStep: '',
+      },
+      {
+        nodeId: 'validar',
+        type: 'ACTIVITY',
+        order: 1,
+        name: 'Validar payload',
+        description: 'Bean validation',
+        purpose: 'Garantir consistência',
+        inputHint: 'LivroRequest',
+        outputHint: 'Payload válido',
+        failureHint: '422',
+        rollbackStep: 'N/A',
+      },
     ],
+    edges: [{ from: 'start', to: 'validar', label: '', edgeIntent: '' }],
   }],
   loadingFlows: false,
   flowsError: null as string | null,
+  narrative: { flowId: 'create-livro', flowName: 'Criar Livro', businessGoal: 'Cadastrar', paths: ['Início -> Validar'] },
+  loadingNarrative: false,
+  narrativeError: null as string | null,
   fetchFlows: vi.fn().mockResolvedValue(undefined),
+  fetchNarrative: vi.fn().mockResolvedValue(undefined),
 }))
 
 vi.mock('@/stores/flows', () => ({
@@ -26,6 +56,7 @@ vi.mock('@/stores/flows', () => ({
 describe('FlowCockpitView', () => {
   beforeEach(() => {
     flowStore.fetchFlows.mockClear()
+    flowStore.fetchNarrative.mockClear()
     flowStore.loadingFlows = false
     flowStore.flowsError = null
   })
@@ -42,5 +73,35 @@ describe('FlowCockpitView', () => {
     const wrapper = mount(FlowCockpitView)
 
     expect(wrapper.text()).toContain('Falha no endpoint de fluxos')
+  })
+
+  it('abre drawer de detalhes ao selecionar um nó', async () => {
+    const wrapper = mount(FlowCockpitView, { attachTo: document.body })
+
+    await nextTick()
+
+    await wrapper.find('button[aria-label="Selecionar workflow"]').trigger('click')
+    await nextTick()
+
+    const workflowOption = wrapper
+      .findAll('button')
+      .find(button => button.text().includes('Criar Livro') && button.attributes('aria-selected') === 'false')
+
+    expect(workflowOption).toBeTruthy()
+    await workflowOption!.trigger('click')
+    await nextTick()
+
+    const nodeButton = wrapper
+      .findAll('button')
+      .find(button => button.text().includes('Início'))
+
+    expect(nodeButton).toBeTruthy()
+    await nodeButton!.trigger('click')
+    await nextTick()
+
+    expect(document.body.textContent).toContain('Detalhes do nó')
+    expect(document.body.textContent).toContain('Fechar detalhes')
+
+    wrapper.unmount()
   })
 })

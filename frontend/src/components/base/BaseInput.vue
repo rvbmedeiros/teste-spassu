@@ -18,13 +18,12 @@ const emit = defineEmits<{
 
 const slots = useSlots()
 
-// Memoize static class strings to avoid re-evaluation on every keystroke
-const baseClass = 'w-full rounded-2xl border bg-white/75 px-4 py-3 text-sm text-[color:var(--ui-text)] shadow-[var(--shadow-soft)] outline-none transition-colors duration-200 dark:bg-white/6 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-[color:var(--ui-brand)] focus:ring-4 focus:ring-blue-500/12'
+const baseClass = 'field-shell focus:border-(--ui-brand) focus:ring-4 focus:ring-(--ui-focus-ring) disabled:cursor-not-allowed disabled:opacity-55'
 
 const inputClass = computed(() => {
   const errorClass = props.error
-    ? 'border-red-400/70 focus:border-red-500 focus:ring-red-500/12'
-    : 'border-[color:var(--ui-border-strong)]'
+    ? 'border-(--ui-danger) focus:border-(--ui-danger) focus:ring-(--ui-danger-soft)'
+    : 'border-(--ui-border-strong)'
   const paddingClass = `${slots.leading ? 'pl-11' : ''} ${slots.trailing ? 'pr-11' : ''}`
   return `${baseClass} ${errorClass} ${paddingClass}`
 })
@@ -53,12 +52,12 @@ function handleInput(event: Event) {
 
 <template>
   <div class="flex flex-col gap-2">
-    <label v-if="label" class="text-sm font-medium text-[color:var(--ui-text)]">
-      {{ label }}<span v-if="required" class="ml-0.5 text-red-500">*</span>
+    <label v-if="label" class="text-sm font-medium text-(--ui-text)">
+      {{ label }}<span v-if="required" class="ml-0.5 text-(--ui-danger)">*</span>
     </label>
 
     <div class="relative">
-      <div v-if="$slots.leading" class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 [&_svg]:h-4 [&_svg]:w-4">
+      <div v-if="$slots.leading" class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-(--ui-placeholder) [&_svg]:h-4 [&_svg]:w-4">
         <slot name="leading" />
       </div>
 
@@ -69,12 +68,12 @@ function handleInput(event: Event) {
         @input="handleInput"
       />
 
-      <div v-if="$slots.trailing" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 [&_svg]:h-4 [&_svg]:w-4">
+      <div v-if="$slots.trailing" class="absolute inset-y-0 right-0 flex items-center pr-3 text-(--ui-placeholder) [&_svg]:h-4 [&_svg]:w-4">
         <slot name="trailing" />
       </div>
     </div>
 
-    <p v-if="error || hint" :class="['text-xs leading-5', error ? 'text-red-500' : 'text-[color:var(--ui-text-muted)]']">
+    <p v-if="error || hint" :class="['text-xs leading-5', error ? 'text-(--ui-danger)' : 'text-(--ui-text-muted)']">
       {{ error || hint }}
     </p>
   </div>

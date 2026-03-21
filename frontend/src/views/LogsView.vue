@@ -52,10 +52,10 @@ function applyFilters(): void {
 
 function levelClass(level: LogEntry['level']): string {
   return {
-    TRACE: 'bg-slate-200 text-slate-700 dark:bg-white/10 dark:text-slate-200',
+    TRACE: 'bg-(--ui-panel-muted) text-(--ui-text-muted)',
     DEBUG: 'bg-(--ui-brand-soft) text-(--ui-brand)',
-    INFO: 'bg-emerald-500/12 text-emerald-700 dark:text-emerald-300',
-    WARN: 'bg-amber-500/12 text-amber-700 dark:text-amber-300',
+    INFO: 'bg-(--ui-success-soft) text-(--ui-success)',
+    WARN: 'bg-(--ui-warning-soft) text-(--ui-warning)',
     ERROR: 'bg-(--ui-danger-soft) text-(--ui-danger)',
   }[level]
 }
@@ -77,8 +77,8 @@ function levelClass(level: LogEntry['level']): string {
         </div>
 
         <div class="flex flex-wrap items-center gap-3">
-          <span :class="['chip', store.connected ? 'text-emerald-600 dark:text-emerald-400' : 'text-(--ui-text-muted)']">
-            <Radio class="h-3.5 w-3.5" :class="store.connected && store.polling ? 'animate-pulse text-emerald-500' : 'text-slate-400'" />
+          <span :class="['chip', store.connected ? 'text-(--ui-success)' : 'text-(--ui-text-muted)']">
+            <Radio class="h-3.5 w-3.5" :class="store.connected && store.polling ? 'animate-pulse text-(--ui-success)' : 'text-(--ui-placeholder)'" />
             {{ store.polling ? t('logs.pollingOn') : t('logs.pollingOff') }}
           </span>
           <BaseButton variant="secondary" size="sm" @click="store.reconnect(t)">
@@ -145,14 +145,14 @@ function levelClass(level: LogEntry['level']): string {
 
         <div class="flex flex-col gap-2">
           <label class="text-sm font-medium text-(--ui-text)">{{ t('logs.source') }}</label>
-          <select v-model="store.source" class="w-full rounded-2xl border border-(--ui-border-strong) bg-white/75 px-4 py-3 text-sm text-(--ui-text) shadow-(--shadow-soft) outline-none transition-colors duration-200 dark:bg-white/6">
+          <select v-model="store.source" class="field-shell focus:border-(--ui-brand) focus:ring-4 focus:ring-(--ui-focus-ring)">
             <option v-for="option in sourceOptions" :key="option.value" :value="option.value">{{ option.label }}</option>
           </select>
         </div>
 
         <div class="flex flex-col gap-2">
           <label class="text-sm font-medium text-(--ui-text)">{{ t('logs.level') }}</label>
-          <select v-model="store.level" class="w-full rounded-2xl border border-(--ui-border-strong) bg-white/75 px-4 py-3 text-sm text-(--ui-text) shadow-(--shadow-soft) outline-none transition-colors duration-200 dark:bg-white/6">
+          <select v-model="store.level" class="field-shell focus:border-(--ui-brand) focus:ring-4 focus:ring-(--ui-focus-ring)">
             <option v-for="option in levelOptions" :key="option" :value="option">{{ option }}</option>
           </select>
         </div>
@@ -164,12 +164,12 @@ function levelClass(level: LogEntry['level']): string {
     </BaseCard>
 
     <BaseCard :title="`${t('nav.logs')} (${store.logs.length})`" :padding="false">
-      <div v-if="store.loading && !store.logs.length" class="flex min-h-[24rem] flex-col items-center justify-center gap-3 px-6 text-(--ui-text-muted)">
+      <div v-if="store.loading && !store.logs.length" class="flex min-h-96 flex-col items-center justify-center gap-3 px-6 text-(--ui-text-muted)">
         <Activity class="h-8 w-8 animate-pulse text-(--ui-brand)" />
         <p class="text-sm font-medium">{{ t('common.loading') }}</p>
       </div>
 
-      <div v-else-if="store.error && !store.logs.length" class="flex min-h-[24rem] flex-col items-center justify-center gap-4 px-6 text-center">
+      <div v-else-if="store.error && !store.logs.length" class="flex min-h-96 flex-col items-center justify-center gap-4 px-6 text-center">
         <span class="rounded-3xl bg-(--ui-danger-soft) p-4 text-(--ui-danger)">
           <AlertTriangle class="h-6 w-6" />
         </span>
@@ -185,12 +185,12 @@ function levelClass(level: LogEntry['level']): string {
         </BaseButton>
       </div>
 
-      <div v-else-if="!store.logs.length" class="flex min-h-[24rem] flex-col items-center justify-center gap-3 px-6 text-center text-(--ui-text-muted)">
+      <div v-else-if="!store.logs.length" class="flex min-h-96 flex-col items-center justify-center gap-3 px-6 text-center text-(--ui-text-muted)">
         <Activity class="h-8 w-8 text-(--ui-brand)" />
         <p class="max-w-xs text-sm font-medium">{{ t('logs.empty') }}</p>
       </div>
 
-      <div v-else class="max-h-[42rem] divide-y divide-(--ui-border) overflow-y-auto">
+      <div v-else class="max-h-168 divide-y divide-(--ui-border) overflow-y-auto">
         <article v-for="entry in store.logs" :key="`${entry.source}-${entry.sequence}`" class="grid gap-4 px-5 py-4 lg:grid-cols-[8rem_minmax(0,1fr)_17rem] lg:items-start">
           <div class="space-y-2">
             <span :class="['inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]', levelClass(entry.level)]">{{ entry.level }}</span>
