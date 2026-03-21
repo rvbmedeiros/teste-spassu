@@ -1,0 +1,71 @@
+{
+  "id": "master",
+  "realm": "master",
+  "displayName": "Spassu Livros",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": false,
+  "editUsernameAllowed": false,
+  "bruteForceProtected": true,
+  "accessTokenLifespan": 300,
+  "roles": {
+    "realm": [
+      { "name": "ADMIN", "description": "Administrador do sistema" },
+      { "name": "USER",  "description": "Usuário padrão" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "spassu-frontend",
+      "name": "Spassu Frontend",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "http://localhost:3000/*",
+        "http://localhost:5173/*"
+      ],
+      "webOrigins": [
+        "http://localhost:3000",
+        "http://localhost:5173"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      }
+    },
+    {
+      "clientId": "spassu-bff",
+      "name": "Spassu BFF",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "spassu-bff-secret-2026",
+      "standardFlowEnabled": false,
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": false
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "email": "admin@spassu.com.br",
+      "enabled": true,
+      "credentials": [
+        { "type": "password", "value": "admin123", "temporary": false }
+      ],
+      "realmRoles": ["ADMIN", "USER"]
+    },
+    {
+      "username": "usuario",
+      "email": "usuario@spassu.com.br",
+      "enabled": true,
+      "credentials": [
+        { "type": "password", "value": "usuario123", "temporary": false }
+      ],
+      "realmRoles": ["USER"]
+    }
+  ]
+}

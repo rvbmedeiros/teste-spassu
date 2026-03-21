@@ -1,0 +1,1011 @@
+2026-03-20 18:48:21.545 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 18:48:21.569 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 584474 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 18:48:21.570 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 18:48:21.668 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 18:48:21.669 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 18:48:23.957 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 18:48:24.190 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 201 ms. Found 3 JPA repository interfaces.
+2026-03-20 18:48:25.090 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 18:48:25.795 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 18:48:25.814 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:48:25.816 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 18:48:25.816 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 18:48:25.864 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4194 ms
+2026-03-20 18:48:26.270 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 18:48:26.348 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 18:48:26.895 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 18:48:26.963 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 18:48:27.128 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46fb59da
+2026-03-20 18:48:27.130 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 18:48:27.169 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 18:48:27.194 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 18:48:28.176 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 18:48:28.303 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:48:28.401 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 18:48:31.499 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 18:48:31.607 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:48:31.623 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 18:48:31.628 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 18:48:31.690 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6a80e2ac:0/SimpleConnection@32b7e314 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=36612]
+2026-03-20 18:48:32.015 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 12.572 seconds (process running for 14.415)
+2026-03-20 18:48:32.238 ERROR [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.SpringApplication - Application run failed
+java.lang.RuntimeException: Error occurred during creation of AsyncAPI
+	at io.github.springwolf.core.asyncapi.DefaultAsyncApiService.getAsyncAPI(DefaultAsyncApiService.java:50)
+	at io.github.springwolf.core.SpringwolfInitApplicationListener.onApplicationEvent(SpringwolfInitApplicationListener.java:31)
+	at io.github.springwolf.core.SpringwolfInitApplicationListener.onApplicationEvent(SpringwolfInitApplicationListener.java:17)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:180)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:173)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:151)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:448)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:381)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:110)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$0(SpringApplicationRunListeners.java:82)
+	at java.base/java.util.ImmutableCollections$List12.forEach(ImmutableCollections.java:681)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:123)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:82)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.spassu.livros.microservice.MicroserviceApplication.main(MicroserviceApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: java.lang.NoClassDefFoundError: Assunto
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)
+	at io.github.springwolf.core.asyncapi.scanners.beans.DefaultBeanMethodsScanner.getBeanMethods(DefaultBeanMethodsScanner.java:28)
+	at io.github.springwolf.core.asyncapi.scanners.classes.SpringwolfClassScanner.scan(SpringwolfClassScanner.java:23)
+	at io.github.springwolf.core.asyncapi.scanners.channels.ChannelsInClassScannerAdapter.scan(ChannelsInClassScannerAdapter.java:23)
+	at io.github.springwolf.core.asyncapi.channels.DefaultChannelsService.findChannels(DefaultChannelsService.java:34)
+	at io.github.springwolf.core.asyncapi.DefaultAsyncApiService.initAsyncAPI(DefaultAsyncApiService.java:84)
+	at io.github.springwolf.core.asyncapi.DefaultAsyncApiService.getAsyncAPI(DefaultAsyncApiService.java:44)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Assunto
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	... 36 common frames omitted
+2026-03-20 18:48:32.256 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.257 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.258 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.259 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.261 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.263 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.277 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.278 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.282 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.286 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.289 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.289 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.290 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.291 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.295 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.296 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 18:48:32.881 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.886 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.894 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.901 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.909 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.916 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.923 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.933 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.940 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.947 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.956 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.964 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.972 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.979 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.989 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.997 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 18:48:32.998 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 18:48:33.001 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:48:33.002 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 18:48:33.003 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:48:33.020 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:48:33.026 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 18:48:33.028 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 18:49:11.995 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 18:49:11.995 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 586401 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 18:49:11.999 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 18:49:12.055 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 18:49:12.055 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 18:49:13.229 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 18:49:13.287 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2026-03-20 18:49:13.654 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 18:49:14.184 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 18:49:14.197 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:49:14.198 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 18:49:14.199 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 18:49:14.237 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2180 ms
+2026-03-20 18:49:14.516 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 18:49:14.579 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 18:49:15.063 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 18:49:15.097 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 18:49:15.235 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6230a151
+2026-03-20 18:49:15.236 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 18:49:15.267 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 18:49:15.287 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 18:49:16.276 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 18:49:16.407 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:49:16.434 WARN  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assuntoDtoMapperImpl': Lookup method resolution failed
+2026-03-20 18:49:16.434 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:49:16.440 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 18:49:16.442 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 18:49:16.449 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-03-20 18:49:16.467 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-20 18:49:16.488 ERROR [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assuntoDtoMapperImpl': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.spassu.livros.microservice.MicroserviceApplication.main(MicroserviceApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.spassu.livros.microservice.application.mapper.AssuntoDtoMapperImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3fda5cf3]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Assunto
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Assunto
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	... 30 common frames omitted
+2026-03-20 18:49:28.347 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 18:49:28.359 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 586964 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 18:49:28.360 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 18:49:28.408 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 18:49:28.408 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 18:49:29.511 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 18:49:29.565 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2026-03-20 18:49:29.850 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 18:49:30.318 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 18:49:30.329 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:49:30.330 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 18:49:30.331 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 18:49:30.367 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1957 ms
+2026-03-20 18:49:30.619 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 18:49:30.671 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 18:49:31.080 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 18:49:31.111 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 18:49:31.242 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2974167b
+2026-03-20 18:49:31.244 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 18:49:31.282 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 18:49:31.309 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 18:49:32.219 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 18:49:32.341 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:49:32.362 WARN  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assuntoDtoMapperImpl': Lookup method resolution failed
+2026-03-20 18:49:32.362 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:49:32.365 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 18:49:32.367 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 18:49:32.372 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-03-20 18:49:32.390 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-20 18:49:32.411 ERROR [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assuntoDtoMapperImpl': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.spassu.livros.microservice.MicroserviceApplication.main(MicroserviceApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.spassu.livros.microservice.application.mapper.AssuntoDtoMapperImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3fda5cf3]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Assunto
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Assunto
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	... 30 common frames omitted
+2026-03-20 18:49:47.977 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 18:49:47.979 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 587540 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 18:49:47.981 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 18:49:48.035 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 18:49:48.035 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 18:49:49.126 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 18:49:49.186 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2026-03-20 18:49:49.464 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 18:49:49.992 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 18:49:50.007 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:49:50.008 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 18:49:50.009 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 18:49:50.049 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2012 ms
+2026-03-20 18:49:50.308 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 18:49:50.361 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 18:49:50.838 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 18:49:50.872 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 18:49:51.038 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b8d7d22
+2026-03-20 18:49:51.039 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 18:49:51.069 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 18:49:51.089 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 18:49:52.041 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 18:49:52.153 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 18:49:52.232 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 18:49:55.043 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 18:49:55.166 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 18:49:55.183 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 18:49:55.187 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 18:49:55.252 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3b0e374f:0/SimpleConnection@45b093ab [delegate=amqp://spassu@127.0.0.1:5672/, localPort=51752]
+2026-03-20 18:49:55.520 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 8.856 seconds (process running for 9.529)
+2026-03-20 18:50:09.012 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 18:50:09.012 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 18:50:09.014 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-20 18:50:09.066 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=5c1dc8fe-69d7-43b9-a1e1-d7ce8c811143 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:13.564 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=62abd958-4430-498a-82d3-2c1f2fbce06c c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:19.384 INFO  [http-nio-8081-exec-3] [spassu-microservice] traceId= requestId=e28b5762-bd6f-4b0a-9531-7abd4b36444d c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:21.429 INFO  [http-nio-8081-exec-4] [spassu-microservice] traceId= requestId=e03efcc3-512d-4ae2-8ff8-08903e456a1a c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:24.357 INFO  [http-nio-8081-exec-5] [spassu-microservice] traceId= requestId=bd3b49a9-2ad2-4c53-ae61-3d4336b81615 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:29.413 INFO  [http-nio-8081-exec-6] [spassu-microservice] traceId= requestId=0381ee48-7e48-4a34-8a83-d03f07eeaef6 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:36.301 INFO  [http-nio-8081-exec-7] [spassu-microservice] traceId= requestId=3aec9c74-ae30-4198-807f-fc14d76b953a c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:41.289 INFO  [http-nio-8081-exec-8] [spassu-microservice] traceId= requestId=a43183aa-73f8-4e8d-8d48-80945b7610bc c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:46.293 INFO  [http-nio-8081-exec-9] [spassu-microservice] traceId= requestId=e4914a36-e137-4ef8-94de-a723e8eeb9e8 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:51.364 INFO  [http-nio-8081-exec-10] [spassu-microservice] traceId= requestId=83645aa6-fcfe-4780-ac4e-98a59fe9686c c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:50:56.330 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=0220faff-8663-4ba1-9085-8c76645cf69e c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:02.928 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=f7178d22-d687-4211-aaf1-37ace698b13a c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:07.925 INFO  [http-nio-8081-exec-3] [spassu-microservice] traceId= requestId=da2627c3-c263-4692-af75-159a8fabec72 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:12.935 INFO  [http-nio-8081-exec-4] [spassu-microservice] traceId= requestId=5faeea12-6637-4340-a8ad-4eee4619ccde c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:16.192 INFO  [http-nio-8081-exec-5] [spassu-microservice] traceId= requestId=8d8ad4a6-ba87-493e-946f-4acddacf698f c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=assun
+2026-03-20 18:51:17.949 INFO  [http-nio-8081-exec-6] [spassu-microservice] traceId= requestId=c5bac767-9792-47b6-8c2b-480fb8b24c91 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=assun
+2026-03-20 18:51:21.814 INFO  [http-nio-8081-exec-7] [spassu-microservice] traceId= requestId=4eb50868-7b74-4220-a33b-ff7bf82d2bdc c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:22.912 INFO  [http-nio-8081-exec-8] [spassu-microservice] traceId= requestId=480920f4-3a4f-4c28-ae6b-e26cfc263175 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:27.916 INFO  [http-nio-8081-exec-9] [spassu-microservice] traceId= requestId=3ac899f5-6fde-45e6-8912-870ab5ced965 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:32.915 INFO  [http-nio-8081-exec-10] [spassu-microservice] traceId= requestId=81560299-573d-477d-8d9e-dc81b05af824 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:37.917 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=1234c80d-f3be-4277-8f38-7ebbffafa45a c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:42.926 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=e45e13b1-399d-4000-9cb5-a16c98c1d7b7 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:47.941 INFO  [http-nio-8081-exec-3] [spassu-microservice] traceId= requestId=799b5e3e-e22f-4b09-ad54-7c870f724ffe c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:52.948 INFO  [http-nio-8081-exec-4] [spassu-microservice] traceId= requestId=00f98ee4-a026-48d9-abaa-95b3d51073ca c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:51:57.923 INFO  [http-nio-8081-exec-5] [spassu-microservice] traceId= requestId=619f2f55-14a1-4fde-9b5b-7a86647695ac c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:02.937 INFO  [http-nio-8081-exec-6] [spassu-microservice] traceId= requestId=71de6f40-0dc6-43e8-b15b-88a70baa429e c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:07.929 INFO  [http-nio-8081-exec-7] [spassu-microservice] traceId= requestId=435e1a0d-5871-441e-8936-8a552c91e5d1 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:12.930 INFO  [http-nio-8081-exec-8] [spassu-microservice] traceId= requestId=2b209a97-75e7-4b5a-8f94-a5492b1b5dee c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:17.938 INFO  [http-nio-8081-exec-9] [spassu-microservice] traceId= requestId=c59b095c-dfe2-4bef-bec4-062d8f125d0c c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:22.951 INFO  [http-nio-8081-exec-10] [spassu-microservice] traceId= requestId=5a5c4acf-efbb-470c-ba4c-8ae103c94397 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:27.930 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=4cc9ce7a-b6f3-4546-b0c0-e144c5ce90cc c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:32.932 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=560cff9c-2f37-4486-92fa-c7c4c6007a05 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:37.940 INFO  [http-nio-8081-exec-3] [spassu-microservice] traceId= requestId=871d720b-0432-47f7-ad05-bd9a290d9bbd c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:42.932 INFO  [http-nio-8081-exec-4] [spassu-microservice] traceId= requestId=7ad6d35c-86d7-4419-95f7-55ffea5102b8 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:47.951 INFO  [http-nio-8081-exec-5] [spassu-microservice] traceId= requestId=e1d1e008-56e7-4c86-b9fa-522995a70a63 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:52.960 INFO  [http-nio-8081-exec-6] [spassu-microservice] traceId= requestId=c3a423e4-5dab-4a72-acd6-96337022a064 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:52:57.934 INFO  [http-nio-8081-exec-7] [spassu-microservice] traceId= requestId=ab50138b-dab8-493a-bbdb-69d28a957106 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:02.936 INFO  [http-nio-8081-exec-8] [spassu-microservice] traceId= requestId=a23e9118-e612-4af3-b9f7-726d877bdb89 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:07.928 INFO  [http-nio-8081-exec-9] [spassu-microservice] traceId= requestId=3bb83c8e-f98d-4a20-b36c-3c3ab0a66467 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:12.934 INFO  [http-nio-8081-exec-10] [spassu-microservice] traceId= requestId=dd3fb668-49dc-482f-9a2f-a280c2ae19f3 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:17.941 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=c152d127-c081-4515-ac2b-ead919024640 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:23.035 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=fb47a76f-d901-47da-b88a-f14872cc6ee2 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:27.951 INFO  [http-nio-8081-exec-3] [spassu-microservice] traceId= requestId=b1a706e8-f55c-4d54-b340-ea9674943769 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:32.935 INFO  [http-nio-8081-exec-4] [spassu-microservice] traceId= requestId=188c5da2-c595-4e59-929f-3836d13d2975 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:37.945 INFO  [http-nio-8081-exec-5] [spassu-microservice] traceId= requestId=bcddaef9-7e6c-402d-8f51-4bb6fa521f99 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:42.932 INFO  [http-nio-8081-exec-6] [spassu-microservice] traceId= requestId=3d988477-c9e7-44c6-b842-9601f852f427 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:47.937 INFO  [http-nio-8081-exec-7] [spassu-microservice] traceId= requestId=7ff95c59-a9bb-4e44-85b2-83ac81fd180e c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:52.993 INFO  [http-nio-8081-exec-8] [spassu-microservice] traceId= requestId=735c766d-8bd7-401b-ac59-ee9521db1693 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:53:57.937 INFO  [http-nio-8081-exec-9] [spassu-microservice] traceId= requestId=c7af6286-1a8a-4788-b3fa-2ea82a3fd19a c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:54:02.960 INFO  [http-nio-8081-exec-10] [spassu-microservice] traceId= requestId=c3367a93-b19a-4751-b497-1612effc319e c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:54:07.945 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=d05335e8-c002-48c7-bf79-e32dce14f750 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:54:12.938 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=566d3dff-257e-4646-befe-cecad0ca0ed8 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 18:54:17.943 INFO  [http-nio-8081-exec-3] [spassu-microservice] traceId= requestId=b3d6cb64-bfa5-476d-bd09-22efa09ee877 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 19:00:03.667 INFO  [http-nio-8081-exec-5] [spassu-microservice] traceId= requestId=1fd5638c-496b-44dd-9b16-a3fa559bf4ed c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=150, level=INFO, search=
+2026-03-20 19:00:06.159 INFO  [http-nio-8081-exec-6] [spassu-microservice] traceId= requestId=8545024a-ae91-4347-ad15-97a50aed3423 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=INFO, search=
+2026-03-20 19:00:11.157 INFO  [http-nio-8081-exec-7] [spassu-microservice] traceId= requestId=9cf4e8ab-7ed8-444f-a8ae-9a5920e14cc8 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=INFO, search=
+2026-03-20 19:00:11.964 INFO  [http-nio-8081-exec-8] [spassu-microservice] traceId= requestId=01327211-663a-4e4f-a0fe-77c5c5a677b1 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:16.155 INFO  [http-nio-8081-exec-9] [spassu-microservice] traceId= requestId=4a6419ff-dd4b-4a53-ba74-fc1e480e4934 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:21.146 INFO  [http-nio-8081-exec-10] [spassu-microservice] traceId= requestId=3a5f3b3d-9505-40b7-9979-4832d06ce317 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:26.139 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId=fa255406-4cdf-45a1-88fc-e23d6b31512d c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:31.142 INFO  [http-nio-8081-exec-2] [spassu-microservice] traceId= requestId=f8899b76-933a-472d-864a-b4539eb0e3f2 c.s.l.m.i.web.LogsController - Listing internal microservice logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:32.330 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.331 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.334 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.336 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.337 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.339 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.341 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.343 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.345 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.346 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.348 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.349 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.350 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.352 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.353 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.355 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:00:32.356 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.415 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.520 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.524 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.527 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.528 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.539 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.539 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.553 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.559 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.560 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.569 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.570 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.578 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:32.585 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:33.278 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:00:33.280 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:00:33.283 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:00:33.305 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:00:33.315 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:00:33.317 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:00:58.629 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:00:58.629 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 606061 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:00:58.636 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:00:58.941 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:00:58.942 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:01:01.283 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:01:01.385 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:01:01.866 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 19:01:02.830 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:01:02.850 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:01:02.852 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:01:02.852 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:01:02.924 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3980 ms
+2026-03-20 19:01:03.330 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:01:03.432 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:01:04.146 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:01:04.187 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:01:04.374 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@693a04f2
+2026-03-20 19:01:04.376 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:01:04.415 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:01:04.443 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:01:05.596 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:01:05.718 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:01:05.801 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:01:09.368 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:01:09.488 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:01:09.505 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:01:09.510 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:01:09.579 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#148a715:0/SimpleConnection@235cc49f [delegate=amqp://spassu@127.0.0.1:5672/, localPort=58472]
+2026-03-20 19:01:09.911 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 16.989 seconds (process running for 18.97)
+2026-03-20 19:01:12.696 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:01:12.697 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:01:12.699 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-20 19:07:14.893 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.895 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.896 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.897 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.898 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.899 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.900 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.901 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.902 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.903 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.937 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.938 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:14.938 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.939 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:14.941 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.943 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.946 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:14.947 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:07:15.815 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.823 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.836 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.847 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.848 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.857 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.867 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.882 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.891 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.897 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.937 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.937 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.938 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.938 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:07:15.942 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:07:15.949 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:07:15.977 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:07:15.992 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:07:15.995 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:09:20.689 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:09:20.719 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 618485 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:09:20.723 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:09:20.837 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:09:20.837 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:09:23.515 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:09:23.626 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:09:24.178 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 19:09:25.290 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:09:25.308 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:09:25.310 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:09:25.311 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:09:25.358 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4516 ms
+2026-03-20 19:09:25.883 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:09:26.104 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:09:27.001 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:09:27.060 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:09:27.274 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6adebd0b
+2026-03-20 19:09:27.276 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:09:27.323 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:09:27.349 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:09:28.554 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:09:28.675 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:09:28.778 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:09:31.517 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:09:31.660 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:09:31.681 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:09:31.687 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:09:31.754 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6f593990:0/SimpleConnection@4ee4a6d5 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=51016]
+2026-03-20 19:09:32.048 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 13.723 seconds (process running for 15.444)
+2026-03-20 19:09:49.776 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:09:49.777 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:09:49.779 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-20 19:12:38.285 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-1] [spassu-microservice] traceId= requestId= c.s.l.m.i.m.RelatorioRpcListener - RPC relatorio gerado. bytes=1566
+2026-03-20 19:14:59.107 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.107 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.108 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.109 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.110 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.111 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.134 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.134 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.135 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:14:59.136 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.138 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.140 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.141 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.142 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.143 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.143 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.144 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:14:59.148 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:14:59.310 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:14:59.981 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:14:59.990 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:14:59.993 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.003 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.004 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.010 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.024 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.024 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.033 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.034 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.047 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.063 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.098 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:15:00.101 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:15:00.107 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:15:00.132 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:15:00.143 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:15:00.148 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:15:23.654 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:15:23.735 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 630267 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:15:23.737 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:15:24.026 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:15:24.027 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:15:27.096 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:15:27.230 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:15:27.919 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 19:15:28.679 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:15:28.697 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:15:28.700 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:15:28.702 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:15:28.757 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4728 ms
+2026-03-20 19:15:29.125 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:15:29.245 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:15:30.072 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:15:30.108 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:15:30.283 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5db91e01
+2026-03-20 19:15:30.285 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:15:30.340 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:15:30.364 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:15:31.517 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:15:31.669 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:15:31.773 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:15:34.680 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:15:34.788 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:15:34.802 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:15:34.806 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:15:34.855 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3dddb840:0/SimpleConnection@78d7ba29 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=57760]
+2026-03-20 19:15:35.208 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 16.058 seconds (process running for 19.056)
+2026-03-20 19:17:30.931 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:17:30.937 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:17:30.965 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 26 ms
+2026-03-20 19:22:35.054 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.056 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.054 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.057 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.058 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.058 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.059 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.060 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.061 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.062 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.063 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.064 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.064 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.065 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.066 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.066 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:22:35.165 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.203 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.204 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.204 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.211 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.230 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.241 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.248 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.249 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.254 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.254 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.279 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.288 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.292 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.308 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.327 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:22:35.331 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:22:35.339 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:22:35.369 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:22:35.387 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:22:35.391 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:23:13.004 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:23:13.022 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 644430 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:23:13.023 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:23:13.136 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:23:13.137 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:23:14.827 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:23:14.929 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:23:15.379 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 19:23:16.239 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:23:16.256 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:23:16.258 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:23:16.258 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:23:16.302 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3159 ms
+2026-03-20 19:23:16.585 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:23:16.647 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:23:17.207 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:23:17.249 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:23:17.478 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5db91e01
+2026-03-20 19:23:17.481 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:23:17.523 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:23:17.577 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:23:18.694 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:23:18.820 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:23:18.902 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:23:21.359 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:23:21.472 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:23:21.491 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:23:21.496 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:23:21.559 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3dddb840:0/SimpleConnection@4ee4a6d5 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=60052]
+2026-03-20 19:23:21.817 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 10.956 seconds (process running for 12.271)
+2026-03-20 19:23:44.395 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:23:44.395 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:23:44.397 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-20 19:26:15.635 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.637 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.639 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.642 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.645 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.649 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.651 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.653 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.655 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.657 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.658 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.659 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.660 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.661 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.662 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.662 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:26:15.759 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.765 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.773 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.775 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.780 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.783 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.789 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.795 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.795 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.801 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.805 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.812 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.819 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.824 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:15.829 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:16.257 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:26:16.260 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:26:16.264 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:26:16.287 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:26:16.297 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:26:16.299 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:26:34.488 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:26:34.504 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 650336 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:26:34.506 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:26:34.625 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:26:34.625 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:26:37.007 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:26:37.103 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:26:37.595 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=e0f825fc-453d-37fa-8b75-3bf34141122e
+2026-03-20 19:26:38.492 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:26:38.514 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:26:38.517 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:26:38.518 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:26:38.590 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3964 ms
+2026-03-20 19:26:38.973 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:26:39.059 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:26:40.006 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:26:40.044 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:26:40.196 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6130deaf
+2026-03-20 19:26:40.198 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:26:40.238 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:26:40.263 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:26:41.488 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:26:41.642 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:26:41.768 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:26:44.927 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:26:45.082 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:26:45.114 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:26:45.119 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:26:45.208 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#32aec73d:0/SimpleConnection@3ddc19ca [delegate=amqp://spassu@127.0.0.1:5672/, localPort=32922]
+2026-03-20 19:26:45.535 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 13.282 seconds (process running for 14.684)
+2026-03-20 19:27:47.785 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:27:47.787 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:27:47.790 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-20 19:46:04.104 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.105 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.105 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.106 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.107 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.108 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.108 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.109 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.110 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.112 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.113 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.114 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.115 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.116 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.118 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.119 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:46:04.317 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.336 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.414 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.560 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.565 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.565 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.576 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.579 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.591 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.593 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.594 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.596 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.596 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.612 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.627 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.637 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:46:04.639 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:46:04.647 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:46:04.670 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:46:04.676 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:46:04.677 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:46:15.630 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:46:15.637 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 679367 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:46:15.639 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:46:15.722 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:46:15.723 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:46:17.136 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:46:17.195 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:46:17.463 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=0a91fb4e-2d8b-3c8b-9838-af9da26959b0
+2026-03-20 19:46:18.051 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:46:18.064 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:46:18.066 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:46:18.066 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:46:18.099 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2375 ms
+2026-03-20 19:46:18.356 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:46:18.416 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:46:18.820 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:46:18.849 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:46:18.956 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61d27b8f
+2026-03-20 19:46:18.958 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:46:18.982 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:46:19.002 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:46:19.816 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:46:19.914 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:46:19.990 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:46:22.315 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:46:22.415 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:46:22.434 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:46:22.438 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:46:22.502 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#284866f0:0/SimpleConnection@155a92ef [delegate=amqp://spassu@127.0.0.1:5672/, localPort=54818]
+2026-03-20 19:46:22.743 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 8.485 seconds (process running for 9.248)
+2026-03-20 19:46:26.190 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:46:26.191 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:46:26.194 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-20 19:48:08.234 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.235 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.235 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.236 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.236 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.237 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.238 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.239 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.239 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.240 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.241 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.241 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.242 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.243 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.243 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.244 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:48:08.689 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.696 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.699 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.710 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.709 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.713 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.715 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.716 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.718 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.721 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.727 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.730 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.737 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.740 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.745 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.745 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:48:08.748 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:48:08.754 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:48:08.779 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:48:08.785 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:48:08.787 INFO  [SpringContextShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-20 19:48:13.908 INFO  [background-preinit] [spassu-microservice] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:48:13.913 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Starting MicroserviceApplication using Java 25.0.2 with PID 682492 (/home/pc/Projetos/Teste Spassu/microservice/target/classes started by pc in /home/pc/Projetos/Teste Spassu/microservice)
+2026-03-20 19:48:13.914 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - The following 1 profile is active: "local"
+2026-03-20 19:48:13.960 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:48:13.961 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:48:14.932 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-20 19:48:14.986 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-03-20 19:48:15.247 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=0a91fb4e-2d8b-3c8b-9838-af9da26959b0
+2026-03-20 19:48:15.674 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-03-20 19:48:15.684 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:48:15.686 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:48:15.686 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:48:15.723 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1761 ms
+2026-03-20 19:48:15.959 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-20 19:48:16.016 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-20 19:48:16.418 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-20 19:48:16.447 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-20 19:48:16.546 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ddc4a44
+2026-03-20 19:48:16.548 INFO  [restartedMain] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-20 19:48:16.575 WARN  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-20 19:48:16.595 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spassu]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: spassu/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-20 19:48:17.474 INFO  [restartedMain] [spassu-microservice] traceId= requestId= org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-20 19:48:17.579 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:48:17.656 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-20 19:48:19.775 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:48:19.867 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-03-20 19:48:19.879 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-03-20 19:48:19.882 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:48:19.936 INFO  [restartedMain] [spassu-microservice] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#73664dfd:0/SimpleConnection@306442e9 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=45836]
+2026-03-20 19:48:20.192 INFO  [restartedMain] [spassu-microservice] traceId= requestId= c.s.l.m.MicroserviceApplication - Started MicroserviceApplication in 7.537 seconds (process running for 8.123)
+2026-03-20 19:48:22.730 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:48:22.731 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:48:22.733 INFO  [http-nio-8081-exec-1] [spassu-microservice] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-20 19:51:25.444 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.445 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.447 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.449 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.450 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.452 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.453 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.454 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.455 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.457 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.461 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.463 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.464 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.465 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.466 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:25.467 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-03-20 19:51:26.127 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#12-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.139 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#10-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.142 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#11-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.146 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.151 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.156 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.165 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.170 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.176 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#6-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.180 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#7-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.191 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#9-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.195 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#14-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.200 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#15-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.289 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.294 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#8-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.365 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#13-2] [spassu-microservice] traceId= requestId= o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-03-20 19:51:26.366 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:51:26.370 INFO  [tomcat-shutdown] [spassu-microservice] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:51:26.393 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-20 19:51:26.400 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-20 19:51:26.403 INFO  [SpringApplicationShutdownHook] [spassu-microservice] traceId= requestId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

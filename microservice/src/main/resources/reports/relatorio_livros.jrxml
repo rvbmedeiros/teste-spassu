@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="relatorio_livros" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1b2c3d4-e5f6-7890-abcd-ef1234567890">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Spassu DataSource"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="autorNome" class="java.lang.String"/>
+	<field name="livroTitulo" class="java.lang.String"/>
+	<field name="livroEditora" class="java.lang.String"/>
+	<field name="livroEdicao" class="java.lang.Integer"/>
+	<field name="livroAnoPublicacao" class="java.lang.String"/>
+	<field name="livroValor" class="java.math.BigDecimal"/>
+	<field name="assuntos" class="java.lang.String"/>
+	<group name="autorGroup">
+		<groupHeader>
+			<band height="22" splitType="Stretch">
+				<element kind="staticText" uuid="11111111-1111-1111-1111-111111111111" x="0" y="0" width="60" height="20" backcolor="#3B5F97" forecolor="#FFFFFF" bold="true" fontSize="11">
+					<text><![CDATA[Autor:]]></text>
+				</element>
+				<element kind="textField" uuid="22222222-2222-2222-2222-222222222222" x="60" y="0" width="475" height="20" forecolor="#FFFFFF" bold="true" fontSize="11">
+					<expression><![CDATA[$F{autorNome}]]></expression>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="2" splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="50" splitType="Stretch">
+		<element kind="staticText" uuid="33333333-3333-3333-3333-333333333333" x="0" y="5" width="535" height="30" hTextAlign="Center" bold="true" fontSize="16">
+			<text><![CDATA[Relatório de Livros por Autor]]></text>
+		</element>
+	</title>
+	<pageHeader height="0" splitType="Stretch"/>
+	<columnHeader height="20" splitType="Stretch">
+		<element kind="staticText" uuid="44444444-4444-4444-4444-444444444444" x="0" y="0" width="120" height="18" backcolor="#D0D8E4" bold="true" fontSize="8">
+			<text><![CDATA[Título]]></text>
+		</element>
+		<element kind="staticText" uuid="55555555-5555-5555-5555-555555555555" x="120" y="0" width="90" height="18" backcolor="#D0D8E4" bold="true" fontSize="8">
+			<text><![CDATA[Editora]]></text>
+		</element>
+		<element kind="staticText" uuid="66666666-6666-6666-6666-666666666666" x="210" y="0" width="50" height="18" backcolor="#D0D8E4" hTextAlign="Center" bold="true" fontSize="8">
+			<text><![CDATA[Ed.]]></text>
+		</element>
+		<element kind="staticText" uuid="77777777-7777-7777-7777-777777777777" x="260" y="0" width="50" height="18" backcolor="#D0D8E4" hTextAlign="Center" bold="true" fontSize="8">
+			<text><![CDATA[Ano]]></text>
+		</element>
+		<element kind="staticText" uuid="88888888-8888-8888-8888-888888888888" x="310" y="0" width="75" height="18" backcolor="#D0D8E4" hTextAlign="Right" bold="true" fontSize="8">
+			<text><![CDATA[Valor (R$)]]></text>
+		</element>
+		<element kind="staticText" uuid="99999999-9999-9999-9999-999999999999" x="385" y="0" width="150" height="18" backcolor="#D0D8E4" bold="true" fontSize="8">
+			<text><![CDATA[Assuntos]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<element kind="textField" uuid="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa" x="0" y="0" width="120" height="16" fontSize="8">
+				<expression><![CDATA[$F{livroTitulo}]]></expression>
+			</element>
+			<element kind="textField" uuid="bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb" x="120" y="0" width="90" height="16" fontSize="8">
+				<expression><![CDATA[$F{livroEditora}]]></expression>
+			</element>
+			<element kind="textField" uuid="cccccccc-cccc-cccc-cccc-cccccccccccc" x="210" y="0" width="50" height="16" hTextAlign="Center" fontSize="8">
+				<expression><![CDATA[$F{livroEdicao}]]></expression>
+			</element>
+			<element kind="textField" uuid="dddddddd-dddd-dddd-dddd-dddddddddddd" x="260" y="0" width="50" height="16" hTextAlign="Center" fontSize="8">
+				<expression><![CDATA[$F{livroAnoPublicacao}]]></expression>
+			</element>
+			<element kind="textField" uuid="eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee" x="310" y="0" width="75" height="16" hTextAlign="Right" fontSize="8">
+				<expression><![CDATA[$F{livroValor}]]></expression>
+			</element>
+			<element kind="textField" uuid="ffffffff-ffff-ffff-ffff-ffffffffffff" x="385" y="0" width="150" height="16" fontSize="8">
+				<expression><![CDATA[$F{assuntos}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="0" splitType="Stretch"/>
+	<pageFooter height="20" splitType="Stretch">
+		<element kind="textField" uuid="12345678-1234-1234-1234-123456789012" x="400" y="2" width="135" height="14" hTextAlign="Right" fontSize="7">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+	<summary height="0" splitType="Stretch"/>
+</jasperReport>

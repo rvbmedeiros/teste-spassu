@@ -1,0 +1,55 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: bff
+
+  config:
+    import: "optional:vault://"
+
+  cloud:
+    vault:
+      uri: "http://${VAULT_HOST:localhost}:${VAULT_PORT:8200}"
+      token: "${VAULT_TOKEN:spassu-dev-token}"
+      kv:
+        enabled: true
+        default-context: application
+        application-name: spassu/bff
+        backend: secret
+        profile-separator: "/"
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "${spassu.keycloak.issuer-uri:http://localhost:8080/realms/master}"
+
+  devtools:
+    restart:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,loggers
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  file:
+    name: bff.log
+  level:
+    root: INFO
+    '[com.spassu.livros.bff]': INFO
+    '[com.spassu.livros.bff.web.ProxyController]': DEBUG
+    '[org.springdoc]': error
+    '[org.springframework.vault.core.env.LeaseAwareVaultPropertySource]': warn

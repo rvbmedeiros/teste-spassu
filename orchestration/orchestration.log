@@ -1,0 +1,1111 @@
+2026-03-20 18:48:20.040 INFO  [background-preinit] [orchestration] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 18:48:20.043 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Starting OrchestrationApplication using Java 25.0.2 with PID 584314 (/home/pc/Projetos/Teste Spassu/orchestration/target/classes started by pc in /home/pc/Projetos/Teste Spassu/orchestration)
+2026-03-20 18:48:20.045 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - The following 1 profile is active: "local"
+2026-03-20 18:48:20.142 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/spassu/orchestration/local] not resolvable: Not found
+2026-03-20 18:48:20.142 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/application/local] not resolvable: Not found
+2026-03-20 18:48:20.148 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 18:48:20.148 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 18:48:22.554 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=bf52aae9-5ef9-3fbd-a1eb-42448acc4f8a
+2026-03-20 18:48:23.337 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-03-20 18:48:23.357 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-03-20 18:48:23.359 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 18:48:23.359 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 18:48:23.432 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3283 ms
+2026-03-20 18:48:25.825 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 18:48:25.897 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-03-20 18:48:25.912 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-03-20 18:48:25.947 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Started OrchestrationApplication in 10.636 seconds (process running for 13.357)
+2026-03-20 18:48:26.394 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-20 18:48:28.650 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 18:48:28.650 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 18:48:28.653 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-20 18:48:28.726 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:48:33.564 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:48:38.550 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:48:43.611 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:49:03.799 INFO  [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:49:08.573 INFO  [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:08.950 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:13.566 INFO  [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:19.384 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:21.429 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:24.356 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:29.410 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:32.483 DEBUG [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 18:50:32.483 DEBUG [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 18:50:32.491 DEBUG [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list livros. page=0, size=20
+2026-03-20 18:50:32.625 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 18:50:32.728 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#27f85c0e:0/SimpleConnection@25fd103b [delegate=amqp://spassu@127.0.0.1:5672/, localPort=49142]
+2026-03-20 18:50:32.803 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Container initialized for queues: [amq.rabbitmq.reply-to]
+2026-03-20 18:50:32.819 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-i-vKi8MnsmRIum6t9tgeVQ identity=58f9df3e] started
+2026-03-20 18:50:32.824 INFO  [boundedElastic-2] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=1, consumerTag=amq.ctag-ziJpTcmbP-NSYD7v93TgGQ identity=6b8c0075] started
+2026-03-20 18:50:32.828 INFO  [boundedElastic-3] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=2, consumerTag=amq.ctag-IDQbkJyg6Y9XVoa84DYqUg identity=1d8a3370] started
+2026-03-20 18:50:33.227 DEBUG [boundedElastic-1] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 18:50:33.227 DEBUG [boundedElastic-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 18:50:33.231 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Livros listing via RPC completed. size=3
+2026-03-20 18:50:34.444 DEBUG [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 18:50:34.465 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 18:50:35.267 DEBUG [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 18:50:35.286 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 18:50:36.301 INFO  [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:41.290 INFO  [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:46.292 INFO  [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:51.364 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:50:56.331 INFO  [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:00.305 DEBUG [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 18:51:00.325 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 18:51:02.927 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:07.925 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:12.939 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:16.191 INFO  [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=assun
+2026-03-20 18:51:17.951 INFO  [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=assun
+2026-03-20 18:51:21.813 INFO  [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:22.912 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:27.915 INFO  [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:32.914 INFO  [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=assunto
+2026-03-20 18:51:37.917 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:42.927 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:47.941 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:52.948 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:51:57.923 INFO  [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:02.937 INFO  [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:07.929 INFO  [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:12.929 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:17.938 INFO  [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:22.951 INFO  [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:27.930 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:32.931 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:37.939 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:42.932 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:47.950 INFO  [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:52.960 INFO  [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:52:57.934 INFO  [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:02.935 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:07.928 INFO  [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:12.934 INFO  [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:17.939 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:23.029 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:27.947 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:32.933 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:37.945 INFO  [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:42.932 INFO  [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:47.937 INFO  [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:52.991 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:53:57.936 INFO  [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:54:02.960 INFO  [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:54:07.945 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:54:12.938 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 18:54:17.941 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 19:00:03.666 INFO  [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=150, level=INFO, search=
+2026-03-20 19:00:06.157 INFO  [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=50, level=INFO, search=
+2026-03-20 19:00:11.157 INFO  [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=50, level=INFO, search=
+2026-03-20 19:00:11.962 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:16.151 INFO  [http-nio-8082-exec-3] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:21.145 INFO  [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:26.138 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.web.LogsController - Listing internal orchestration logs. limit=50, level=DEBUG, search=
+2026-03-20 19:00:30.466 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:00:30.470 INFO  [tomcat-shutdown] [orchestration] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:00:30.475 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Successfully waited for consumers to finish.
+2026-03-20 19:00:59.768 INFO  [background-preinit] [orchestration] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:00:59.800 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Starting OrchestrationApplication using Java 25.0.2 with PID 606030 (/home/pc/Projetos/Teste Spassu/orchestration/target/classes started by pc in /home/pc/Projetos/Teste Spassu/orchestration)
+2026-03-20 19:00:59.801 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - The following 1 profile is active: "local"
+2026-03-20 19:00:59.896 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/spassu/orchestration/local] not resolvable: Not found
+2026-03-20 19:00:59.897 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/application/local] not resolvable: Not found
+2026-03-20 19:00:59.900 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:00:59.900 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:01:02.056 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=bf52aae9-5ef9-3fbd-a1eb-42448acc4f8a
+2026-03-20 19:01:02.800 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-03-20 19:01:02.821 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-03-20 19:01:02.824 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:01:02.825 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:01:02.914 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3013 ms
+2026-03-20 19:01:04.601 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:01:04.676 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-03-20 19:01:04.686 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-03-20 19:01:04.704 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Started OrchestrationApplication in 11.999 seconds (process running for 14.327)
+2026-03-20 19:01:05.095 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-20 19:01:08.486 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:01:08.486 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:01:08.491 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-03-20 19:09:21.722 INFO  [background-preinit] [orchestration] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:09:21.732 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Starting OrchestrationApplication using Java 25.0.2 with PID 618455 (/home/pc/Projetos/Teste Spassu/orchestration/target/classes started by pc in /home/pc/Projetos/Teste Spassu/orchestration)
+2026-03-20 19:09:21.734 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - The following 1 profile is active: "local"
+2026-03-20 19:09:21.839 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/spassu/orchestration/local] not resolvable: Not found
+2026-03-20 19:09:21.842 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/application/local] not resolvable: Not found
+2026-03-20 19:09:21.846 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:09:21.846 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:09:24.109 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=bf52aae9-5ef9-3fbd-a1eb-42448acc4f8a
+2026-03-20 19:09:24.990 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-03-20 19:09:25.021 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-03-20 19:09:25.025 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-20 19:09:25.026 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-20 19:09:25.134 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3287 ms
+2026-03-20 19:09:27.414 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:09:27.469 INFO  [restartedMain] [orchestration] traceId= requestId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-03-20 19:09:27.481 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-03-20 19:09:27.499 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Started OrchestrationApplication in 9.387 seconds (process running for 11.209)
+2026-03-20 19:09:27.968 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-20 19:09:49.776 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-20 19:09:49.776 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-20 19:09:49.778 INFO  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-20 19:10:05.437 WARN  [http-nio-8082-exec-2] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:10:05.699 WARN  [http-nio-8082-exec-3] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:10:49.774 DEBUG [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:10:49.780 DEBUG [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:10:49.780 DEBUG [http-nio-8082-exec-8] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list livros. page=0, size=20
+2026-03-20 19:10:49.848 INFO  [boundedElastic-3] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:10:49.924 INFO  [boundedElastic-3] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#27f85c0e:0/SimpleConnection@114141f [delegate=amqp://spassu@127.0.0.1:5672/, localPort=44282]
+2026-03-20 19:10:49.986 INFO  [boundedElastic-3] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Container initialized for queues: [amq.rabbitmq.reply-to]
+2026-03-20 19:10:49.999 INFO  [boundedElastic-3] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-SBfmcGTLmxUYuh8-7Wd8sw identity=153811ee] started
+2026-03-20 19:10:50.003 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=1, consumerTag=amq.ctag-rngsmv38jcSSjKwJgCERJQ identity=5781429d] started
+2026-03-20 19:10:50.007 INFO  [boundedElastic-2] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=2, consumerTag=amq.ctag-HJxNpV94q1PeL7WyOoWvYA identity=2593239e] started
+2026-03-20 19:10:50.293 DEBUG [boundedElastic-1] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:10:50.294 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:10:50.297 DEBUG [boundedElastic-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Livros listing via RPC completed. size=3
+2026-03-20 19:10:51.503 DEBUG [http-nio-8082-exec-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:10:51.517 DEBUG [boundedElastic-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:10:52.514 DEBUG [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:10:52.532 DEBUG [boundedElastic-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:11:15.334 WARN  [http-nio-8082-exec-3] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.352 WARN  [http-nio-8082-exec-4] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:214)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.367 WARN  [http-nio-8082-exec-5] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.380 WARN  [http-nio-8082-exec-7] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:214)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.397 WARN  [http-nio-8082-exec-8] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.413 WARN  [http-nio-8082-exec-6] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:214)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.467 WARN  [http-nio-8082-exec-2] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:15.490 WARN  [http-nio-8082-exec-4] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:214)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:16.273 WARN  [http-nio-8082-exec-8] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:16.290 WARN  [http-nio-8082-exec-6] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:214)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:29.897 WARN  [http-nio-8082-exec-2] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:29.901 WARN  [http-nio-8082-exec-4] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:29.898 WARN  [http-nio-8082-exec-3] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:11:30.068 WARN  [http-nio-8082-exec-5] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:12:29.176 DEBUG [http-nio-8082-exec-10] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:12:29.183 INFO  [boundedElastic-4] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-hz9QaX4PURPso6WVHEZXyQ identity=699f4918] started
+2026-03-20 19:12:29.217 DEBUG [boundedElastic-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:12:30.275 DEBUG [http-nio-8082-exec-5] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:12:30.289 DEBUG [boundedElastic-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:12:31.060 DEBUG [http-nio-8082-exec-6] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:12:31.081 DEBUG [boundedElastic-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:12:31.085 DEBUG [http-nio-8082-exec-9] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:12:31.091 DEBUG [http-nio-8082-exec-7] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list livros. page=0, size=20
+2026-03-20 19:12:31.101 INFO  [boundedElastic-5] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=1, consumerTag=amq.ctag-aj3xuUB_Hu_1oPVqHw1CBA identity=7af2d481] started
+2026-03-20 19:12:31.102 DEBUG [boundedElastic-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:12:31.140 DEBUG [boundedElastic-5] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Livros listing via RPC completed. size=3
+2026-03-20 19:12:34.289 INFO  [http-nio-8082-exec-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Calling microservice RPC to generate relatorio PDF
+2026-03-20 19:12:38.313 INFO  [boundedElastic-5] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Relatorio PDF generated via RPC. bytes=1566
+2026-03-20 19:12:42.614 WARN  [http-nio-8082-exec-1] [orchestration] traceId= requestId= o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.spassu.livros.orchestration.web.GlobalExceptionHandler#handleGeneric(Exception, ServerWebExchange)
+java.lang.IllegalStateException: Could not resolve parameter [1] in public org.springframework.http.ProblemDetail com.spassu.livros.orchestration.web.GlobalExceptionHandler.handleGeneric(java.lang.Exception,org.springframework.web.server.ServerWebExchange): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-03-20 19:14:59.618 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:14:59.624 INFO  [tomcat-shutdown] [orchestration] traceId= requestId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:14:59.630 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Successfully waited for consumers to finish.
+2026-03-20 19:15:28.162 INFO  [background-preinit] [orchestration] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:15:28.206 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Starting OrchestrationApplication using Java 25.0.2 with PID 630467 (/home/pc/Projetos/Teste Spassu/orchestration/target/classes started by pc in /home/pc/Projetos/Teste Spassu/orchestration)
+2026-03-20 19:15:28.208 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - The following 1 profile is active: "local"
+2026-03-20 19:15:28.283 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/spassu/orchestration/local] not resolvable: Not found
+2026-03-20 19:15:28.283 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/application/local] not resolvable: Not found
+2026-03-20 19:15:28.286 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:15:28.286 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:15:30.162 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=75f9df73-9a21-314c-abd8-03ed7bfb9ee2
+2026-03-20 19:15:31.257 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:15:31.800 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 8082 (http)
+2026-03-20 19:15:31.821 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Started OrchestrationApplication in 7.787 seconds (process running for 10.407)
+2026-03-20 19:15:32.488 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-20 19:15:32.488 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-20 19:17:31.575 INFO  [reactor-http-epoll-4] [orchestration] traceId= requestId=6006a173-16a2-45f3-a074-e2aba7c95eaa o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1272 ms
+2026-03-20 19:22:35.438 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:22:35.447 INFO  [netty-shutdown] [orchestration] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:23:11.509 INFO  [background-preinit] [orchestration] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:23:11.556 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Starting OrchestrationApplication using Java 25.0.2 with PID 644328 (/home/pc/Projetos/Teste Spassu/orchestration/target/classes started by pc in /home/pc/Projetos/Teste Spassu/orchestration)
+2026-03-20 19:23:11.557 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - The following 1 profile is active: "local"
+2026-03-20 19:23:11.638 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/spassu/orchestration/local] not resolvable: Not found
+2026-03-20 19:23:11.639 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/application/local] not resolvable: Not found
+2026-03-20 19:23:11.641 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:23:11.641 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:23:13.683 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=75f9df73-9a21-314c-abd8-03ed7bfb9ee2
+2026-03-20 19:23:14.861 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:23:15.583 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 8082 (http)
+2026-03-20 19:23:15.610 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Started OrchestrationApplication in 7.772 seconds (process running for 9.589)
+2026-03-20 19:23:16.150 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-20 19:23:16.150 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-20 19:23:28.419 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=45398b81-7ca1-4f8c-87bb-31c8f3ada704 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:23:28.471 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:23:28.519 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#33b2c48:0/SimpleConnection@768847ff [delegate=amqp://spassu@127.0.0.1:5672/, localPort=43248]
+2026-03-20 19:23:28.552 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Container initialized for queues: [amq.rabbitmq.reply-to]
+2026-03-20 19:23:28.562 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-VsULz7fFkXf7jW1iHhhT7A identity=73d0e70b] started
+2026-03-20 19:23:28.799 DEBUG [boundedElastic-1] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:23:33.215 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=3990b2f9-9ec6-4575-96fa-683b90731a35 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:23:33.241 DEBUG [boundedElastic-1] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:23:43.582 INFO  [reactor-http-epoll-8] [orchestration] traceId= requestId=23b2cce6-a304-44b4-ba89-cc92f032bc64 o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 519 ms
+2026-03-20 19:26:16.231 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:26:16.239 INFO  [netty-shutdown] [orchestration] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:26:16.242 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Successfully waited for consumers to finish.
+2026-03-20 19:26:35.592 INFO  [background-preinit] [orchestration] traceId= requestId= o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-20 19:26:35.614 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Starting OrchestrationApplication using Java 25.0.2 with PID 650368 (/home/pc/Projetos/Teste Spassu/orchestration/target/classes started by pc in /home/pc/Projetos/Teste Spassu/orchestration)
+2026-03-20 19:26:35.615 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - The following 1 profile is active: "local"
+2026-03-20 19:26:35.695 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/spassu/orchestration/local] not resolvable: Not found
+2026-03-20 19:26:35.696 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.v.c.e.LeaseAwareVaultPropertySource - Vault location [secret/application/local] not resolvable: Not found
+2026-03-20 19:26:35.699 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-20 19:26:35.701 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-20 19:26:37.777 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.cloud.context.scope.GenericScope - BeanFactory id=75f9df73-9a21-314c-abd8-03ed7bfb9ee2
+2026-03-20 19:26:39.142 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-20 19:26:40.039 INFO  [restartedMain] [orchestration] traceId= requestId= o.s.b.reactor.netty.NettyWebServer - Netty started on port 8082 (http)
+2026-03-20 19:26:40.056 INFO  [restartedMain] [orchestration] traceId= requestId= c.s.l.o.OrchestrationApplication - Started OrchestrationApplication in 7.427 seconds (process running for 8.564)
+2026-03-20 19:26:40.471 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-20 19:26:40.472 WARN  [restartedMain] [orchestration] traceId= requestId= o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-20 19:27:46.233 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=be252693-55e8-4215-8c45-b0ff5ca01828 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:27:46.274 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2026-03-20 19:27:46.314 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#33b2c48:0/SimpleConnection@388a6650 [delegate=amqp://spassu@127.0.0.1:5672/, localPort=38112]
+2026-03-20 19:27:46.352 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Container initialized for queues: [amq.rabbitmq.reply-to]
+2026-03-20 19:27:46.366 INFO  [boundedElastic-1] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-61oWgg3WAhnyhn6NmIvrBA identity=286df707] started
+2026-03-20 19:27:46.656 DEBUG [boundedElastic-1] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:33:19.576 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=2a1497ab-b276-4458-9f35-021180e7a9a0 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:33:19.583 INFO  [boundedElastic-2] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-wdOYgrNW7uFoWeYnuBMcCw identity=7d7b9869] started
+2026-03-20 19:33:19.614 DEBUG [boundedElastic-2] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:42:04.025 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=2c8cf5e9-f1a1-40bc-924c-cd3f0a5297ef c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:42:04.034 INFO  [boundedElastic-3] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-_6dwpXKTS9BPkIxL_GbCpg identity=89dbc4e] started
+2026-03-20 19:42:04.046 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:42:05.269 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=dc96d61c-b6d8-4b33-9bf5-6e58f7b413c7 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:42:05.280 DEBUG [reactor-http-epoll-8] [orchestration] traceId= requestId=8e18017c-8c08-4eab-baf8-a7e259692317 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list livros. page=0, size=20
+2026-03-20 19:42:05.294 DEBUG [reactor-http-epoll-1] [orchestration] traceId= requestId=45908eb0-e07f-4eb8-ad45-0ff39a2a038f c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:42:05.294 INFO  [boundedElastic-4] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=1, consumerTag=amq.ctag-IKgVxxPcZj6Vv7Y7WCBnYw identity=1c54bc1a] started
+2026-03-20 19:42:05.295 DEBUG [boundedElastic-3] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:42:05.313 DEBUG [boundedElastic-5] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:42:05.394 DEBUG [boundedElastic-4] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Livros listing via RPC completed. size=3
+2026-03-20 19:42:47.894 INFO  [reactor-http-epoll-2] [orchestration] traceId= requestId=3b5ee5f8-e3dd-4f07-af64-cfacea312b07 o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 416 ms
+2026-03-20 19:51:16.361 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=f0183d07-cb31-444d-803d-1075eaa7cdee c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:51:16.374 INFO  [boundedElastic-6] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=0, consumerTag=amq.ctag-uVtD7fyGd0v86z9BdyxWTw identity=f0fc2c8] started
+2026-03-20 19:51:16.564 DEBUG [boundedElastic-6] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:51:17.661 DEBUG [reactor-http-epoll-1] [orchestration] traceId= requestId=d4912c48-6608-4920-b1bd-cfe5c1d4bfac c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:51:17.674 DEBUG [boundedElastic-6] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:51:18.255 DEBUG [reactor-http-epoll-8] [orchestration] traceId= requestId=0f1774ea-159a-44cd-9077-b6acfeff4ace c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list autores
+2026-03-20 19:51:18.260 DEBUG [reactor-http-epoll-7] [orchestration] traceId= requestId=e6c92312-6251-4b12-8fe3-42592bd18c29 c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list assuntos
+2026-03-20 19:51:18.264 DEBUG [reactor-http-epoll-1] [orchestration] traceId= requestId=ed8bee1c-0074-4fa6-b0bb-61847eb188ca c.s.l.o.client.MicroserviceClient - Calling microservice RPC to list livros. page=0, size=20
+2026-03-20 19:51:18.268 INFO  [boundedElastic-7] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=1, consumerTag=amq.ctag-I_9-iGk2Z3sVILawSKpIDg identity=4a89915e] started
+2026-03-20 19:51:18.278 INFO  [boundedElastic-8] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - SimpleConsumer [queue=amq.rabbitmq.reply-to, index=2, consumerTag=amq.ctag-2nqMag8LgD4YFWwOfk6twg identity=671b24a6] started
+2026-03-20 19:51:18.290 DEBUG [boundedElastic-7] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Assuntos listing via RPC completed. size=2
+2026-03-20 19:51:18.292 DEBUG [boundedElastic-6] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Autores listing via RPC completed. size=1
+2026-03-20 19:51:18.366 DEBUG [boundedElastic-8] [orchestration] traceId= requestId= c.s.l.o.client.MicroserviceClient - Livros listing via RPC completed. size=3
+2026-03-20 19:51:25.484 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-20 19:51:25.496 INFO  [netty-shutdown] [orchestration] traceId= requestId= o.s.b.reactor.netty.GracefulShutdown - Graceful shutdown complete
+2026-03-20 19:51:25.506 INFO  [SpringContextShutdownHook] [orchestration] traceId= requestId= o.s.a.r.l.DirectReplyToMessageListenerContainer - Successfully waited for consumers to finish.

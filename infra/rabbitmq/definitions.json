@@ -1,0 +1,19 @@
+{
+  "rabbit_version": "4.0.0",
+  "users": [
+    {
+      "name": "spassu",
+      "password_hash": "9RwUF8Hb2o/DdOUiiSvBtUEfFXhjeABekB4FC/kjdb8zT3G2",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": ["administrator"]
+    }
+  ],
+  "vhosts": [{ "name": "/" }],
+  "permissions": [
+    { "user": "spassu", "vhost": "/", "configure": ".*", "write": ".*", "read": ".*" }
+  ],
+  "exchanges": [],
+  "queues": [],
+  "bindings": []
+}
+

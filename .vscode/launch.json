@@ -1,0 +1,80 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // ─── Microservice (Spring MVC · app:8081 · debug:5801) ────────────────
+    {
+      "type": "java",
+      "name": "Debug: Microservice",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5801,
+      "preLaunchTask": "spring: start microservice"
+    },
+
+    // ─── Orchestration (Spring WebFlux + AMQP · app:8082 · debug:5802) ────
+    {
+      "type": "java",
+      "name": "Debug: Orchestration",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5802,
+      "preLaunchTask": "spring: start orchestration"
+    },
+
+    // ─── BFF (Spring WebFlux · app:8083 · debug:5803) ─────────────────────
+    {
+      "type": "java",
+      "name": "Debug: BFF",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5803,
+      "preLaunchTask": "spring: start bff"
+    },
+
+    // ─── Frontend: inicia o dev-server Vite ───────────────────────────────
+    {
+      "type": "node",
+      "name": "Dev: Frontend (Vite)",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "envFile": "${workspaceFolder}/frontend/.env",
+      "cwd": "${workspaceFolder}/frontend",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+  ],
+
+  // ─── Stacks compostas ─────────────────────────────────────────────────────
+  "compounds": [
+    {
+      "name": "Full Stack (todos os serviços)",
+      "configurations": [
+        "Debug: Microservice",
+        "Debug: Orchestration",
+        "Debug: BFF",
+        "Dev: Frontend (Vite)"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "compound",
+        "order": 1
+      }
+    },
+    {
+      "name": "Backend (sem frontend)",
+      "configurations": [
+        "Debug: Microservice",
+        "Debug: Orchestration",
+        "Debug: BFF"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "compound",
+        "order": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --ui-bg: #f3f7fc;
+  --ui-bg-elevated: #ffffff;
+  --ui-panel: rgba(255, 255, 255, 0.76);
+  --ui-panel-strong: rgba(255, 255, 255, 0.9);
+  --ui-panel-muted: rgba(226, 232, 240, 0.55);
+  --ui-border: rgba(148, 163, 184, 0.18);
+  --ui-border-strong: rgba(100, 116, 139, 0.28);
+  --ui-text: #0f172a;
+  --ui-text-muted: #475569;
+  --ui-brand: #2563eb;
+  --ui-brand-strong: #1d4ed8;
+  --ui-brand-soft: rgba(37, 99, 235, 0.1);
+  --ui-success: #059669;
+  --ui-success-soft: rgba(5, 150, 105, 0.12);
+  --ui-danger: #dc2626;
+  --ui-danger-soft: rgba(220, 38, 38, 0.12);
+  --ui-warning: #d97706;
+  --ui-warning-soft: rgba(217, 119, 6, 0.12);
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --shadow-panel: 0 20px 60px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.dark {
+  color-scheme: dark;
+  --ui-bg: #08111f;
+  --ui-bg-elevated: #0f172a;
+  --ui-panel: rgba(15, 23, 42, 0.7);
+  --ui-panel-strong: rgba(15, 23, 42, 0.86);
+  --ui-panel-muted: rgba(30, 41, 59, 0.74);
+  --ui-border: rgba(148, 163, 184, 0.14);
+  --ui-border-strong: rgba(148, 163, 184, 0.2);
+  --ui-text: #e5eefb;
+  --ui-text-muted: #94a3b8;
+  --ui-brand-soft: rgba(96, 165, 250, 0.14);
+  --ui-success-soft: rgba(16, 185, 129, 0.16);
+  --ui-danger-soft: rgba(248, 113, 113, 0.16);
+  --ui-warning-soft: rgba(251, 191, 36, 0.14);
+  --shadow-panel: 0 20px 60px rgba(2, 6, 23, 0.42);
+  --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.3);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ui-bg);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 35%),
+    var(--ui-bg);
+  color: var(--ui-text);
+  font-family: Manrope, "Space Grotesk", "Segoe UI Variable Text", "Noto Sans", sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+@layer components {
+  .surface-panel {
+    background: var(--ui-panel);
+    border: 1px solid var(--ui-border);
+    box-shadow: var(--shadow-panel);
+    backdrop-filter: blur(18px);
+  }
+
+  .surface-panel-strong {
+    background: var(--ui-panel-strong);
+    border: 1px solid var(--ui-border-strong);
+    box-shadow: var(--shadow-panel);
+    /* blur(18px) removed — caused 150-250ms GPU stall during modal transitions */
+  }
+
+  .surface-muted {
+    background: var(--ui-panel-muted);
+    border: 1px solid var(--ui-border);
+  }
+
+  .page-shell {
+    @apply space-y-6;
+  }
+
+  .page-title {
+    color: var(--ui-text);
+    @apply text-3xl font-semibold tracking-tight sm:text-4xl;
+  }
+
+  .page-subtitle {
+    color: var(--ui-text-muted);
+    @apply max-w-2xl text-sm leading-6 sm:text-base;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em];
+    background: var(--ui-brand-soft);
+    color: var(--ui-brand);
+  }
+
+  .metric-tile {
+    @apply rounded-[1.5rem] p-4 sm:p-5;
+    background: var(--ui-panel);
+    border: 1px solid var(--ui-border);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(16px);
+  }
+
+  .table-shell {
+    @apply overflow-hidden rounded-[1.5rem];
+    border: 1px solid var(--ui-border);
+    background: color-mix(in srgb, var(--ui-panel-strong) 86%, transparent);
+  }
+
+  .table-head {
+    color: var(--ui-text-muted);
+    @apply text-left text-xs font-semibold uppercase tracking-[0.16em];
+  }
+
+  .table-row {
+    border-top: 1px solid var(--ui-border);
+    @apply transition-colors duration-200;
+  }
+
+  .table-row:hover {
+    background: color-mix(in srgb, var(--ui-brand-soft) 36%, transparent);
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium;
+    border: 1px solid var(--ui-border-strong);
+    background: color-mix(in srgb, var(--ui-panel-strong) 82%, transparent);
+    color: var(--ui-text-muted);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.45);
+  border-radius: 999px;
+}

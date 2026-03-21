@@ -1,0 +1,93 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // ─── Microservice ──────────────────────────────────────────────────────
+    {
+      "label": "spring: start microservice",
+      "type": "shell",
+      "command": "mvn spring-boot:run -pl microservice -Dspring-boot.run.jvmArguments=\"-Dspring.profiles.active=local -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5801\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "VAULT_TOKEN": "spassu-dev-token"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "pattern": [{ "regexp": ".", "file": 1, "location": 2, "message": 3 }],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^\\[INFO\\] Building",
+            "endsPattern": "Started MicroserviceApplication"
+          }
+        }
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      
+      }
+    },
+
+    // ─── Orchestration ─────────────────────────────────────────────────────
+    {
+      "label": "spring: start orchestration",
+      "type": "shell",
+      "command": "mvn spring-boot:run -pl orchestration -Dspring-boot.run.jvmArguments=\"-Dspring.profiles.active=local -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5802\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "VAULT_TOKEN": "spassu-dev-token"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "pattern": [{ "regexp": ".", "file": 1, "location": 2, "message": 3 }],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^\\[INFO\\] Building",
+            "endsPattern": "Started OrchestrationApplication"
+          }
+        }
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+
+      }
+    },
+
+    // ─── BFF ───────────────────────────────────────────────────────────────
+    {
+      "label": "spring: start bff",
+      "type": "shell",
+      "command": "mvn spring-boot:run -pl bff -Dspring-boot.run.jvmArguments=\"-Dspring.profiles.active=local -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5803\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "VAULT_TOKEN": "spassu-dev-token"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "pattern": [{ "regexp": ".", "file": 1, "location": 2, "message": 3 }],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^\\[INFO\\] Building",
+            "endsPattern": "Started BffApplication"
+          }
+        }
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

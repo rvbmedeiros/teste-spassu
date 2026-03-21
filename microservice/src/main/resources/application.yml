@@ -1,0 +1,107 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: spassu-microservice
+
+  # ─── Spring Cloud Vault ─────────────────────────────────────────────────────
+  cloud:
+    vault:
+      host: ${VAULT_HOST:localhost}
+      port: ${VAULT_PORT:8200}
+      scheme: http
+      authentication: TOKEN
+      token: ${VAULT_TOKEN:spassu-dev-token}
+      kv:
+        enabled: true
+        backend: secret
+        default-context: application
+        application-name: spassu/microservice
+      generic:
+        enabled: false
+  config:
+    import: "vault://"
+
+  # ─── Datasource (values resolved from Vault at startup) ──────────────────
+  datasource:
+    url: ${spring.datasource.url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+
+  flyway:
+    enabled: false
+
+  # ─── RabbitMQ (values resolved from Vault) ───────────────────────────────
+  rabbitmq:
+    host: ${spring.rabbitmq.host}
+    port: ${spring.rabbitmq.port:5672}
+    username: ${spring.rabbitmq.username}
+    password: ${spring.rabbitmq.password}
+
+  devtools:
+    restart:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,loggers
+  endpoint:
+    health:
+      show-details: when-authorized
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+    tagsSorter: alpha
+
+springwolf:
+  enabled: true
+  use-fqn: false
+  scanner:
+    async-publisher:
+      enabled: false
+  ui:
+    defaults:
+      show-bindings: false
+      show-headers: false
+  plugin:
+    amqp:
+      publishing:
+        enabled: false
+  docket:
+    base-package: com.spassu.livros.microservice
+    info:
+      title: Spassu Livros — Microservice Async API
+      version: 1.0.0
+      description: Documentação dos consumidores assíncronos via RabbitMQ (@RabbitListener)
+    servers:
+      rabbit-server:
+        protocol: amqp
+        host: ${spring.rabbitmq.host}:${spring.rabbitmq.port:5672}
+
+logging:
+  file:
+    name: microservice.log
+  level:
+    root: INFO
+    '[com.spassu.livros.microservice]': INFO
+    '[org.springdoc]': error
+    '[org.springframework.vault.core.env.LeaseAwareVaultPropertySource]': warn

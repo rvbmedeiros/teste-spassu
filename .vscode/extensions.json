@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    // Vue - Official (Volar): required for .vue file support + TS integration
+    "vue.volar",
+    // TypeScript Vue Plugin (if using Volar v1 — not needed for Vue Official v2+)
+    // "vue.vscode-typescript-vue-plugin",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

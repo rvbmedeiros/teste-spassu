@@ -1,0 +1,10 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+
+    // Use the workspace TypeScript installation (not VSCode's bundled one)
+    "typescript.tsdk": "spassu-livros/frontend/node_modules/typescript/lib",
+
+    // Vue - Official: use Volar's TS + Vue integration
+    "vue.server.hybridMode": true,
+    "java.compile.nullAnalysis.mode": "automatic"
+}

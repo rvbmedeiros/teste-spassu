@@ -1,0 +1,280 @@
+services:
+  # ─── Infrastructure ────────────────────────────────────────────────────────
+
+  vault:
+    image: hashicorp/vault:latest
+    container_name: spassu-vault
+    restart: unless-stopped
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: ${VAULT_TOKEN}
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+    ports:
+      - "8200:8200"
+    volumes:
+      - vault-data:/vault/data
+      - ./infra/vault/vault-init.sh:/vault-init.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "vault status -address=http://localhost:8200 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  vault-init:
+    image: hashicorp/vault:latest
+    container_name: spassu-vault-init
+    restart: on-failure
+    environment:
+      VAULT_ADDR: http://vault:8200
+      VAULT_TOKEN: ${VAULT_TOKEN}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      KEYCLOAK_JWK_SET_URI: ${KEYCLOAK_JWK_SET_URI}
+      BFF_ORIGIN: ${BFF_ORIGIN}
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN}
+    volumes:
+      - ./infra/vault/vault-init.sh:/vault-init.sh:ro
+    entrypoint: ["sh", "/vault-init.sh"]
+    depends_on:
+      vault:
+        condition: service_healthy
+  postgres:
+    image: postgres:18-alpine
+    container_name: spassu-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  postgres-view-init:
+    image: postgres:18-alpine
+    container_name: spassu-postgres-view-init
+    restart: on-failure
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      MAX_ATTEMPTS: 120
+      SLEEP_SECONDS: 2
+    volumes:
+      - ./infra/postgres/init-relatorio-view.sh:/scripts/init-relatorio-view.sh:ro
+      - ./infra/postgres/init-relatorio-view.sql:/scripts/init-relatorio-view.sql:ro
+    entrypoint: ["sh", "/scripts/init-relatorio-view.sh"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      microservice:
+        condition: service_healthy
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.5.1
+    container_name: spassu-keycloak
+    restart: unless-stopped
+    command: start-dev --import-realm
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
+      KC_DB_USERNAME: ${POSTGRES_USER}
+      KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN_USER}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_HTTP_PORT: 8080
+      KC_HOSTNAME: localhost
+      KC_REALM_IMPORT_STRATEGY: OVERWRITE
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./infra/keycloak:/opt/keycloak/data/import
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health/ready || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+  rabbitmq:
+    image: rabbitmq:4-management-alpine
+    container_name: spassu-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./infra/rabbitmq/definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./infra/rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.124.1
+    container_name: spassu-otel-collector
+    restart: unless-stopped
+    command: ["--config=/etc/otelcol-contrib/config.yaml"]
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+    volumes:
+      - ./infra/observability/otel-collector-config.yaml:/etc/otelcol-contrib/config.yaml:ro
+    depends_on:
+      jaeger:
+        condition: service_started
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.67.0
+    container_name: spassu-jaeger
+    restart: unless-stopped
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports:
+      - "16686:16686"
+
+  # ─── Application Services ──────────────────────────────────────────────────
+  microservice:
+    build:
+      context: ./microservice
+      dockerfile: Dockerfile
+    container_name: spassu-microservice
+    restart: unless-stopped
+    environment:
+      VAULT_HOST: vault
+      VAULT_PORT: 8200
+      VAULT_TOKEN: ${VAULT_TOKEN}
+      OTEL_SERVICE_NAME: spassu-microservice
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_METRICS_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+    ports:
+      - "8081:8081"
+    depends_on:
+      vault-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      otel-collector:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8081/actuator/health || exit 1"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+
+  orchestration:
+    build:
+      context: ./orchestration
+      dockerfile: Dockerfile
+    container_name: spassu-orchestration
+    restart: unless-stopped
+    environment:
+      VAULT_HOST: vault
+      VAULT_PORT: 8200
+      VAULT_TOKEN: ${VAULT_TOKEN}
+      OTEL_SERVICE_NAME: spassu-orchestration
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_METRICS_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+    ports:
+      - "8082:8082"
+    depends_on:
+      vault-init:
+        condition: service_completed_successfully
+      microservice:
+        condition: service_healthy
+      postgres-view-init:
+        condition: service_completed_successfully
+      rabbitmq:
+        condition: service_healthy
+      otel-collector:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8082/actuator/health || exit 1"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+
+  bff:
+    build:
+      context: ./bff
+      dockerfile: Dockerfile
+    container_name: spassu-bff
+    restart: unless-stopped
+    environment:
+      VAULT_HOST: vault
+      VAULT_PORT: 8200
+      VAULT_TOKEN: ${VAULT_TOKEN}
+      OTEL_SERVICE_NAME: spassu-bff
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_METRICS_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+    ports:
+      - "8083:8083"
+    depends_on:
+      vault-init:
+        condition: service_completed_successfully
+      orchestration:
+        condition: service_healthy
+      otel-collector:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8083/actuator/health || exit 1"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+        VITE_KEYCLOAK_URL: ${VITE_KEYCLOAK_URL}
+        VITE_KEYCLOAK_REALM: ${VITE_KEYCLOAK_REALM}
+        VITE_KEYCLOAK_CLIENT_ID: ${VITE_KEYCLOAK_CLIENT_ID}
+    container_name: spassu-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      bff:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:80/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
+  rabbitmq-data:
+  vault-data:
