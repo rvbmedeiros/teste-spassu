@@ -1,0 +1,10 @@
+# Maven build output
+target/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# VS Code / GitHub Copilot instructions (não versionar)
+.github/
+.vscode/

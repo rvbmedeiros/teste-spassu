@@ -1,0 +1,68 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: orchestration
+
+  main:
+    web-application-type: reactive
+
+  config:
+    import: "vault://"
+
+  cloud:
+    vault:
+      uri: "http://${VAULT_HOST:localhost}:${VAULT_PORT:8200}"
+      token: "${VAULT_TOKEN:spassu-dev-token}"
+      kv:
+        enabled: true
+        default-context: application
+        application-name: spassu/orchestration
+        backend: secret
+        profile-separator: "/"
+
+  rabbitmq:
+    host: ${spring.rabbitmq.host}
+    port: ${spring.rabbitmq.port}
+    username: ${spring.rabbitmq.username}
+    password: ${spring.rabbitmq.password}
+
+  webflux:
+    base-path: /
+
+  devtools:
+    restart:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,loggers
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+springwolf:
+  enabled: true
+  docket:
+    base-package: com.spassu.livros.orchestration
+    info:
+      title: "Spassu Orchestration — Async API"
+      version: "1.0.0"
+
+logging:
+  file:
+    name: orchestration.log
+  level:
+    root: INFO
+    '[com.spassu.livros.orchestration]': INFO
+    '[com.spassu.livros.orchestration.client.MicroserviceClient]': DEBUG
+    '[org.springdoc.core.configuration.SpringDocAppInitializer]': error
